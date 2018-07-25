@@ -1,0 +1,6 @@
+framework module Pods_EFI {
+  umbrella header "Pods-EFI-umbrella.h"
+
+  export *
+  module * { export * }
+}

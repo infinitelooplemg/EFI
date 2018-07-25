@@ -1,0 +1,77 @@
+PODS:
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
+  - Disk (0.3.3)
+  - Fakery (3.3.0)
+  - FlexibleGauge (0.1.0)
+  - FSCalendar (2.7.9)
+  - IQKeyboardManagerSwift (6.1.1)
+  - PINCache (3.0.1-beta.6):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
+    - PINCache/Core (= 3.0.1-beta.6)
+  - PINCache/Arc-exception-safe (3.0.1-beta.6):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.6):
+    - PINOperation (~> 1.1.0)
+  - PINOperation (1.1.1)
+  - PINRemoteImage/Core (3.0.0-beta.13):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0-beta.13):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.13):
+    - PINCache (= 3.0.1-beta.6)
+    - PINRemoteImage/Core
+  - ReachabilitySwift (4.1.0)
+  - StatusAlert (0.10.1)
+  - Texture (2.7):
+    - Texture/PINRemoteImage (= 2.7)
+  - Texture/Core (2.7)
+  - Texture/PINRemoteImage (2.7):
+    - PINRemoteImage/iOS (= 3.0.0-beta.13)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+
+DEPENDENCIES:
+  - Charts
+  - Disk (~> 0.3.3)
+  - Fakery
+  - FlexibleGauge
+  - FSCalendar
+  - IQKeyboardManagerSwift
+  - ReachabilitySwift
+  - StatusAlert (~> 0.10.1)
+  - Texture
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Charts
+    - Disk
+    - Fakery
+    - FlexibleGauge
+    - FSCalendar
+    - IQKeyboardManagerSwift
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - ReachabilitySwift
+    - StatusAlert
+    - Texture
+
+SPEC CHECKSUMS:
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
+  Disk: d1f55cd61f6ca20f368232d0c6e37e3c3dfcb63e
+  Fakery: 3aae11a87721c807c18c6456500d088c1230d3e5
+  FlexibleGauge: 37be098ee29707ff00ac1859fc0654dd81a015f8
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
+  PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
+  PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
+  PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
+  StatusAlert: 123d79043ee371f0a57102b35e79e2c8c8684388
+  Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
+
+PODFILE CHECKSUM: 1bb6c1a146b18b6aaa7e7c4b22fc349a8df5266c
+
+COCOAPODS: 1.5.3
