@@ -12,16 +12,16 @@ class BusinessHomeNode: ASScrollNode {
     
     var energyConsumptionNode:BusinessEnergyConsumptionNode!
     var paymentStatusNode:PaymentStatusNode!
-    var localizationNode:LocalizationNode!
+    var localizationNode:HomeLocationNode!
     var estadoDeCuentaHeader:CTTTextNode!
     
-    override init() {
+    init(locationNodeDelegate:HomeLocationNodeDelegate) {
         
         super.init()
 
         paymentStatusNode = PaymentStatusNode()
         paymentStatusNode.style.flexGrow = 1
-        localizationNode = LocalizationNode()
+        localizationNode = HomeLocationNode(delegate: locationNodeDelegate)
         energyConsumptionNode = BusinessEnergyConsumptionNode()
         
         estadoDeCuentaHeader = CTTTextNode(withFontSize: 30, color: .black, with: "Estado de Cuenta")

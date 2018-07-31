@@ -8,21 +8,20 @@
 
 import Foundation
 import  AsyncDisplayKit
-class LocalizationNode:CCTNode{
+class HomeLocationNode:CCTNode{
     
     var locationTextNode:CTTTextNode!
     var rateTextNode:CTTTextNode!
     var headerTextNode:CTTTextNode!
     var mapNode:ASMapNode!
-    
     var seeLocationsButtons:CCTBorderButtonNode!
-    
-    
     var chooseRateButtonNode:CCTBorderButtonNode!
     
-    override init() {
+    weak var delegate:HomeLocationNodeDelegate?
+    
+    init(delegate:HomeLocationNodeDelegate) {
         super.init()
-        
+        self.delegate = delegate
         mapNode = ASMapNode()
         mapNode.style.preferredSize = CGSize(width: 300.0, height: 300.0)
         let coord = CLLocationCoordinate2DMake(19.127646044853897, -96.12060140320244)
@@ -35,6 +34,7 @@ class LocalizationNode:CCTNode{
         
         chooseRateButtonNode = CCTBorderButtonNode(fontSize: 11, textColor: .white, with: "Localizaciones")
         chooseRateButtonNode.backgroundColor = UIColor.con100tGreenColor
+        chooseRateButtonNode.addTarget(self, action: #selector(showLocations), forControlEvents: .touchUpInside)
        
         automaticallyManagesSubnodes = true
         clipsToBounds = true
@@ -69,5 +69,9 @@ class LocalizationNode:CCTNode{
         
         
         return back
+    }
+    
+    @objc func showLocations(){
+        delegate?.showLocations()
     }
 }

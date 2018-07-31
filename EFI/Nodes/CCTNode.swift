@@ -13,8 +13,10 @@ class CCTNode:ASDisplayNode{
     override init() {
         super.init()
         // gradientBackground(gradient: gradient)
-        backgroundColor = UIColor.con100tLightGrayColor
-        cornerRadius = 5
+//        backgroundColor = UIColor.con100tLightGrayColor
+//        cornerRadius = 5
+        borderWidth = 0.5
+        borderColor = UIColor.lightGray.cgColor
         automaticallyManagesSubnodes = true
     }
 }

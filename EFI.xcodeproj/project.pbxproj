@@ -7,6 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B361D1210F9B4100019102 /* RealTimeActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361D0210F9B4100019102 /* RealTimeActivityViewController.swift */; };
+		01B361D3210F9B9F00019102 /* Measurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361D2210F9B9F00019102 /* Measurer.swift */; };
+		01B361D6210F9C7400019102 /* RTActivityNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361D5210F9C7400019102 /* RTActivityNode.swift */; };
+		01B361D8210F9CD100019102 /* RTVoltageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361D7210F9CD100019102 /* RTVoltageNode.swift */; };
+		01B361DA210F9D0600019102 /* CCTPhasesHorizontalStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361D9210F9D0600019102 /* CCTPhasesHorizontalStack.swift */; };
+		01B361DD210F9D3D00019102 /* CCTPhaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361DC210F9D3D00019102 /* CCTPhaseNode.swift */; };
+		01B361DF210F9DC500019102 /* PhaseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361DE210F9DC500019102 /* PhaseIdentifier.swift */; };
+		01B361E1210F9E6700019102 /* Phases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361E0210F9E6700019102 /* Phases.swift */; };
+		01B361E3210F9F0200019102 /* RTEnergyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361E2210F9F0200019102 /* RTEnergyNode.swift */; };
+		01B361E5210F9F1800019102 /* CCTNeutralPhasesHorizontalStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361E4210F9F1800019102 /* CCTNeutralPhasesHorizontalStack.swift */; };
+		01B361E7210FA02300019102 /* ElectricalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361E6210FA02300019102 /* ElectricalVariables.swift */; };
+		01B361E9210FA17F00019102 /* RTPowerFactorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361E8210FA17F00019102 /* RTPowerFactorNode.swift */; };
+		01B361EB210FA1F900019102 /* RTPowerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361EA210FA1F900019102 /* RTPowerNode.swift */; };
+		01B361ED210FA25600019102 /* EnergyPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361EC210FA25600019102 /* EnergyPower.swift */; };
+		01B361EF210FA3A200019102 /* InstantActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361EE210FA3A200019102 /* InstantActivity.swift */; };
+		01B361F2210FAEBA00019102 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361F1210FAEBA00019102 /* LocationsViewController.swift */; };
+		01B361F4210FAF1800019102 /* LocationsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361F3210FAF1800019102 /* LocationsDataManager.swift */; };
+		01B361F7210FAF4900019102 /* LocationCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361F6210FAF4900019102 /* LocationCellDelegate.swift */; };
+		01B361FA210FAFC300019102 /* LocationCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361F9210FAFC300019102 /* LocationCellNode.swift */; };
+		01B361FE210FB71C00019102 /* MeasurersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361FD210FB71C00019102 /* MeasurersViewController.swift */; };
+		01B36201210FB75100019102 /* MeasurersDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B36200210FB75100019102 /* MeasurersDataManager.swift */; };
+		01B36204210FB7DA00019102 /* MeasurerCellNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B36203210FB7DA00019102 /* MeasurerCellNodeDelegate.swift */; };
+		01B36206210FB8D600019102 /* MeasurerCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B36205210FB8D600019102 /* MeasurerCellNode.swift */; };
+		01B36208210FB98300019102 /* MeasurersRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B36207210FB98300019102 /* MeasurersRequestParameters.swift */; };
+		01B3620A210FB9AC00019102 /* MeasurersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B36209210FB9AC00019102 /* MeasurersResponse.swift */; };
+		01B3620D210FC4D800019102 /* RegisterMeasurerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3620C210FC4D800019102 /* RegisterMeasurerViewController.swift */; };
+		01B36210210FC54500019102 /* RegisterMeasurerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3620F210FC54500019102 /* RegisterMeasurerNode.swift */; };
+		01BBF828210A4567001EA9B9 /* CCTApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBF827210A4567001EA9B9 /* CCTApiService.swift */; };
+		01BBF82A210A4677001EA9B9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBF829210A4677001EA9B9 /* Location.swift */; };
+		01BBF82C210A46AE001EA9B9 /* LocationsRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBF82B210A46AE001EA9B9 /* LocationsRequestParameters.swift */; };
+		01BBF82E210A46CC001EA9B9 /* LocationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBF82D210A46CC001EA9B9 /* LocationsResponse.swift */; };
+		01BBF830210A48BE001EA9B9 /* HomeLocationNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBF82F210A48BE001EA9B9 /* HomeLocationNodeDelegate.swift */; };
 		0BDC5C2D01830097CF64F567 /* Pods_EFI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D6FCD2882FAFCA6EB8FBDA /* Pods_EFI.framework */; };
 		A007C383210812E70011DB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007C382210812E70011DB93 /* AppDelegate.swift */; };
 		A007C38A210812E90011DB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A007C389210812E90011DB93 /* Assets.xcassets */; };
@@ -22,7 +54,7 @@
 		A0D9A7D7210821AC00979F07 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7D6210821AC00979F07 /* UIColor.swift */; };
 		A0D9A7D9210821F900979F07 /* CCTBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7D8210821F900979F07 /* CCTBorderButton.swift */; };
 		A0D9A7DC2108222F00979F07 /* CCTTitleValueHorizontalStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7DB2108222F00979F07 /* CCTTitleValueHorizontalStack.swift */; };
-		A0D9A7DE2108228700979F07 /* LocalizationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7DD2108228700979F07 /* LocalizationNode.swift */; };
+		A0D9A7DE2108228700979F07 /* HomeLocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7DD2108228700979F07 /* HomeLocationNode.swift */; };
 		A0D9A7E0210822EF00979F07 /* BusinessEnergyConsumptionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7DF210822EF00979F07 /* BusinessEnergyConsumptionNode.swift */; };
 		A0D9A7E22108231700979F07 /* BasicConsumptionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7E12108231700979F07 /* BasicConsumptionNode.swift */; };
 		A0D9A7E42108235C00979F07 /* IntermediateConsumptionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7E32108235C00979F07 /* IntermediateConsumptionNode.swift */; };
@@ -31,6 +63,38 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01B361D0210F9B4100019102 /* RealTimeActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeActivityViewController.swift; sourceTree = "<group>"; };
+		01B361D2210F9B9F00019102 /* Measurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Measurer.swift; path = EFI/RealtimeActitivy/Measurer.swift; sourceTree = SOURCE_ROOT; };
+		01B361D5210F9C7400019102 /* RTActivityNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTActivityNode.swift; sourceTree = "<group>"; };
+		01B361D7210F9CD100019102 /* RTVoltageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTVoltageNode.swift; sourceTree = "<group>"; };
+		01B361D9210F9D0600019102 /* CCTPhasesHorizontalStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTPhasesHorizontalStack.swift; sourceTree = "<group>"; };
+		01B361DC210F9D3D00019102 /* CCTPhaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTPhaseNode.swift; sourceTree = "<group>"; };
+		01B361DE210F9DC500019102 /* PhaseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseIdentifier.swift; sourceTree = "<group>"; };
+		01B361E0210F9E6700019102 /* Phases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Phases.swift; path = EFI/Enums/Phases.swift; sourceTree = SOURCE_ROOT; };
+		01B361E2210F9F0200019102 /* RTEnergyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTEnergyNode.swift; sourceTree = "<group>"; };
+		01B361E4210F9F1800019102 /* CCTNeutralPhasesHorizontalStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTNeutralPhasesHorizontalStack.swift; sourceTree = "<group>"; };
+		01B361E6210FA02300019102 /* ElectricalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ElectricalVariables.swift; path = EFI/Enums/ElectricalVariables.swift; sourceTree = SOURCE_ROOT; };
+		01B361E8210FA17F00019102 /* RTPowerFactorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTPowerFactorNode.swift; sourceTree = "<group>"; };
+		01B361EA210FA1F900019102 /* RTPowerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTPowerNode.swift; sourceTree = "<group>"; };
+		01B361EC210FA25600019102 /* EnergyPower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnergyPower.swift; path = EFI/RealtimeActitivy/Nodes/EnergyPower.swift; sourceTree = SOURCE_ROOT; };
+		01B361EE210FA3A200019102 /* InstantActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InstantActivity.swift; path = EFI/RealtimeActitivy/Nodes/InstantActivity.swift; sourceTree = SOURCE_ROOT; };
+		01B361F1210FAEBA00019102 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		01B361F3210FAF1800019102 /* LocationsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDataManager.swift; sourceTree = "<group>"; };
+		01B361F6210FAF4900019102 /* LocationCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellDelegate.swift; sourceTree = "<group>"; };
+		01B361F9210FAFC300019102 /* LocationCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellNode.swift; sourceTree = "<group>"; };
+		01B361FD210FB71C00019102 /* MeasurersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurersViewController.swift; sourceTree = "<group>"; };
+		01B36200210FB75100019102 /* MeasurersDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurersDataManager.swift; sourceTree = "<group>"; };
+		01B36203210FB7DA00019102 /* MeasurerCellNodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurerCellNodeDelegate.swift; sourceTree = "<group>"; };
+		01B36205210FB8D600019102 /* MeasurerCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurerCellNode.swift; sourceTree = "<group>"; };
+		01B36207210FB98300019102 /* MeasurersRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeasurersRequestParameters.swift; path = EFI/Measurers/MeasurersRequestParameters.swift; sourceTree = SOURCE_ROOT; };
+		01B36209210FB9AC00019102 /* MeasurersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeasurersResponse.swift; path = EFI/Measurers/MeasurersResponse.swift; sourceTree = SOURCE_ROOT; };
+		01B3620C210FC4D800019102 /* RegisterMeasurerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMeasurerViewController.swift; sourceTree = "<group>"; };
+		01B3620F210FC54500019102 /* RegisterMeasurerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMeasurerNode.swift; sourceTree = "<group>"; };
+		01BBF827210A4567001EA9B9 /* CCTApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTApiService.swift; sourceTree = "<group>"; };
+		01BBF829210A4677001EA9B9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Location.swift; path = EFI/Location.swift; sourceTree = SOURCE_ROOT; };
+		01BBF82B210A46AE001EA9B9 /* LocationsRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationsRequestParameters.swift; path = EFI/LocationsRequestParameters.swift; sourceTree = SOURCE_ROOT; };
+		01BBF82D210A46CC001EA9B9 /* LocationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationsResponse.swift; path = EFI/LocationsResponse.swift; sourceTree = SOURCE_ROOT; };
+		01BBF82F210A48BE001EA9B9 /* HomeLocationNodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocationNodeDelegate.swift; sourceTree = "<group>"; };
 		071BACF4C564F5C3D3E2CED5 /* Pods-EFI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFI/Pods-EFI.debug.xcconfig"; sourceTree = "<group>"; };
 		54F8C5C1FD8F61BF74E6BFF6 /* Pods-EFI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFI.release.xcconfig"; path = "Pods/Target Support Files/Pods-EFI/Pods-EFI.release.xcconfig"; sourceTree = "<group>"; };
 		A007C37F210812E70011DB93 /* EFI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EFI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +113,7 @@
 		A0D9A7D6210821AC00979F07 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A0D9A7D8210821F900979F07 /* CCTBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTBorderButton.swift; sourceTree = "<group>"; };
 		A0D9A7DB2108222F00979F07 /* CCTTitleValueHorizontalStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTTitleValueHorizontalStack.swift; sourceTree = "<group>"; };
-		A0D9A7DD2108228700979F07 /* LocalizationNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationNode.swift; sourceTree = "<group>"; };
+		A0D9A7DD2108228700979F07 /* HomeLocationNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocationNode.swift; sourceTree = "<group>"; };
 		A0D9A7DF210822EF00979F07 /* BusinessEnergyConsumptionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessEnergyConsumptionNode.swift; sourceTree = "<group>"; };
 		A0D9A7E12108231700979F07 /* BasicConsumptionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicConsumptionNode.swift; sourceTree = "<group>"; };
 		A0D9A7E32108235C00979F07 /* IntermediateConsumptionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediateConsumptionNode.swift; sourceTree = "<group>"; };
@@ -70,6 +134,125 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B361CF210F9B1800019102 /* RealtimeActitivy */ = {
+			isa = PBXGroup;
+			children = (
+				01B361DB210F9D2200019102 /* LayoutSpecs */,
+				01B361D4210F9C6800019102 /* Nodes */,
+				01B361D0210F9B4100019102 /* RealTimeActivityViewController.swift */,
+			);
+			path = RealtimeActitivy;
+			sourceTree = "<group>";
+		};
+		01B361D4210F9C6800019102 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				01B361D5210F9C7400019102 /* RTActivityNode.swift */,
+				01B361D7210F9CD100019102 /* RTVoltageNode.swift */,
+				01B361E2210F9F0200019102 /* RTEnergyNode.swift */,
+				01B361E8210FA17F00019102 /* RTPowerFactorNode.swift */,
+				01B361EA210FA1F900019102 /* RTPowerNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		01B361DB210F9D2200019102 /* LayoutSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				01B361D9210F9D0600019102 /* CCTPhasesHorizontalStack.swift */,
+				01B361DC210F9D3D00019102 /* CCTPhaseNode.swift */,
+				01B361E4210F9F1800019102 /* CCTNeutralPhasesHorizontalStack.swift */,
+			);
+			path = LayoutSpecs;
+			sourceTree = "<group>";
+		};
+		01B361F0210FAE8B00019102 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				01B361FB210FB55300019102 /* DataSource */,
+				01B361F8210FAFAF00019102 /* Nodes */,
+				01B361F5210FAF3E00019102 /* Delegate */,
+				01B361F1210FAEBA00019102 /* LocationsViewController.swift */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		01B361F5210FAF3E00019102 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				01B361F6210FAF4900019102 /* LocationCellDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		01B361F8210FAFAF00019102 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				01B361F9210FAFC300019102 /* LocationCellNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		01B361FB210FB55300019102 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				01B361F3210FAF1800019102 /* LocationsDataManager.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		01B361FC210FB70800019102 /* Measurers */ = {
+			isa = PBXGroup;
+			children = (
+				01B36202210FB7CD00019102 /* Delegate */,
+				01B361FF210FB74200019102 /* DataSource */,
+				01B361FD210FB71C00019102 /* MeasurersViewController.swift */,
+				01B36205210FB8D600019102 /* MeasurerCellNode.swift */,
+			);
+			path = Measurers;
+			sourceTree = "<group>";
+		};
+		01B361FF210FB74200019102 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				01B36200210FB75100019102 /* MeasurersDataManager.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		01B36202210FB7CD00019102 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				01B36203210FB7DA00019102 /* MeasurerCellNodeDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		01B3620B210FC4AE00019102 /* RegisterMeasurer */ = {
+			isa = PBXGroup;
+			children = (
+				01B3620E210FC53100019102 /* Nodes */,
+				01B3620C210FC4D800019102 /* RegisterMeasurerViewController.swift */,
+			);
+			path = RegisterMeasurer;
+			sourceTree = "<group>";
+		};
+		01B3620E210FC53100019102 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				01B3620F210FC54500019102 /* RegisterMeasurerNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		01BBF831210A48C8001EA9B9 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				01BBF82F210A48BE001EA9B9 /* HomeLocationNodeDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		224531BDEA65A4D0B65E2083 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,10 +291,14 @@
 		A007C381210812E70011DB93 /* EFI */ = {
 			isa = PBXGroup;
 			children = (
+				01B3620B210FC4AE00019102 /* RegisterMeasurer */,
 				A0D9A7DA2108221500979F07 /* LayoutSpecs */,
 				A0D9A7D52108219E00979F07 /* Extensions */,
 				A0D9A7D02108213000979F07 /* Nodes */,
 				A0D9A73921081A5800979F07 /* BusinessHome */,
+				01B361FC210FB70800019102 /* Measurers */,
+				01B361F0210FAE8B00019102 /* Locations */,
+				01B361CF210F9B1800019102 /* RealtimeActitivy */,
 				A0D9A732210819A100979F07 /* Models */,
 				A0D9A72E210818D800979F07 /* CCTBusinessTabController */,
 				A0D9A72F2108194E00979F07 /* Enums */,
@@ -120,6 +307,7 @@
 				A007C38B210812E90011DB93 /* LaunchScreen.storyboard */,
 				A007C38E210812E90011DB93 /* Info.plist */,
 				A0D9A73C21081AA000979F07 /* Con100tNTService.swift */,
+				01BBF827210A4567001EA9B9 /* CCTApiService.swift */,
 			);
 			path = EFI;
 			sourceTree = "<group>";
@@ -135,7 +323,9 @@
 		A0D9A72F2108194E00979F07 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				01B361E6210FA02300019102 /* ElectricalVariables.swift */,
 				A0D9A7302108196300979F07 /* OfflineStorageNameFiles.swift */,
+				01B361DE210F9DC500019102 /* PhaseIdentifier.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -143,6 +333,15 @@
 		A0D9A732210819A100979F07 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				01BBF829210A4677001EA9B9 /* Location.swift */,
+				01BBF82B210A46AE001EA9B9 /* LocationsRequestParameters.swift */,
+				01BBF82D210A46CC001EA9B9 /* LocationsResponse.swift */,
+				01B361D2210F9B9F00019102 /* Measurer.swift */,
+				01B36207210FB98300019102 /* MeasurersRequestParameters.swift */,
+				01B361E0210F9E6700019102 /* Phases.swift */,
+				01B361EC210FA25600019102 /* EnergyPower.swift */,
+				01B361EE210FA3A200019102 /* InstantActivity.swift */,
+				01B36209210FB9AC00019102 /* MeasurersResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,6 +349,7 @@
 		A0D9A73921081A5800979F07 /* BusinessHome */ = {
 			isa = PBXGroup;
 			children = (
+				01BBF831210A48C8001EA9B9 /* Delegates */,
 				A0D9A7CB2108205500979F07 /* Nodes */,
 				A0D9A73A21081A6900979F07 /* BusinessHomeViewController.swift */,
 			);
@@ -161,7 +361,7 @@
 			children = (
 				A0D9A7CC2108209700979F07 /* BusinessHomeNode.swift */,
 				A0D9A7CE210820FC00979F07 /* PaymentStatusNode.swift */,
-				A0D9A7DD2108228700979F07 /* LocalizationNode.swift */,
+				A0D9A7DD2108228700979F07 /* HomeLocationNode.swift */,
 				A0D9A7DF210822EF00979F07 /* BusinessEnergyConsumptionNode.swift */,
 				A0D9A7E12108231700979F07 /* BasicConsumptionNode.swift */,
 				A0D9A7E32108235C00979F07 /* IntermediateConsumptionNode.swift */,
@@ -331,22 +531,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D9A7D22108214000979F07 /* CCTNode.swift in Sources */,
+				01B361E9210FA17F00019102 /* RTPowerFactorNode.swift in Sources */,
+				01BBF82E210A46CC001EA9B9 /* LocationsResponse.swift in Sources */,
 				A0D9A7CD2108209700979F07 /* BusinessHomeNode.swift in Sources */,
+				01B361E3210F9F0200019102 /* RTEnergyNode.swift in Sources */,
+				01BBF82A210A4677001EA9B9 /* Location.swift in Sources */,
 				A0D9A73D21081AA000979F07 /* Con100tNTService.swift in Sources */,
 				A0D9A7CF210820FC00979F07 /* PaymentStatusNode.swift in Sources */,
+				01B361F2210FAEBA00019102 /* LocationsViewController.swift in Sources */,
+				01BBF830210A48BE001EA9B9 /* HomeLocationNodeDelegate.swift in Sources */,
+				01B361FE210FB71C00019102 /* MeasurersViewController.swift in Sources */,
+				01B361EB210FA1F900019102 /* RTPowerNode.swift in Sources */,
+				01B361E1210F9E6700019102 /* Phases.swift in Sources */,
+				01B361DA210F9D0600019102 /* CCTPhasesHorizontalStack.swift in Sources */,
 				A0D9A7E42108235C00979F07 /* IntermediateConsumptionNode.swift in Sources */,
+				01B36206210FB8D600019102 /* MeasurerCellNode.swift in Sources */,
 				A0D9A7312108196300979F07 /* OfflineStorageNameFiles.swift in Sources */,
 				A0D9A7E8210823A900979F07 /* TotalConsumptionNode.swift in Sources */,
 				A0D9A7E0210822EF00979F07 /* BusinessEnergyConsumptionNode.swift in Sources */,
 				A0D9A7E22108231700979F07 /* BasicConsumptionNode.swift in Sources */,
 				A0D9A7D9210821F900979F07 /* CCTBorderButton.swift in Sources */,
+				01B3620D210FC4D800019102 /* RegisterMeasurerViewController.swift in Sources */,
+				01B36210210FC54500019102 /* RegisterMeasurerNode.swift in Sources */,
+				01B361DF210F9DC500019102 /* PhaseIdentifier.swift in Sources */,
 				A0D9A7D42108217900979F07 /* CTTTextNode.swift in Sources */,
 				A007C383210812E70011DB93 /* AppDelegate.swift in Sources */,
+				01B3620A210FB9AC00019102 /* MeasurersResponse.swift in Sources */,
+				01B361F7210FAF4900019102 /* LocationCellDelegate.swift in Sources */,
+				01B361E5210F9F1800019102 /* CCTNeutralPhasesHorizontalStack.swift in Sources */,
 				A0D9A73B21081A6900979F07 /* BusinessHomeViewController.swift in Sources */,
-				A0D9A7DE2108228700979F07 /* LocalizationNode.swift in Sources */,
+				01B361D6210F9C7400019102 /* RTActivityNode.swift in Sources */,
+				01B361ED210FA25600019102 /* EnergyPower.swift in Sources */,
+				A0D9A7DE2108228700979F07 /* HomeLocationNode.swift in Sources */,
+				01B361D8210F9CD100019102 /* RTVoltageNode.swift in Sources */,
 				A0D9A7E62108237C00979F07 /* TopConsumptionNode.swift in Sources */,
+				01B361E7210FA02300019102 /* ElectricalVariables.swift in Sources */,
+				01B361F4210FAF1800019102 /* LocationsDataManager.swift in Sources */,
 				A0D9A72D210818D400979F07 /* CCTBusinessTabController.swift in Sources */,
+				01BBF82C210A46AE001EA9B9 /* LocationsRequestParameters.swift in Sources */,
+				01B361FA210FAFC300019102 /* LocationCellNode.swift in Sources */,
+				01BBF828210A4567001EA9B9 /* CCTApiService.swift in Sources */,
+				01B36204210FB7DA00019102 /* MeasurerCellNodeDelegate.swift in Sources */,
+				01B361EF210FA3A200019102 /* InstantActivity.swift in Sources */,
 				A0D9A7DC2108222F00979F07 /* CCTTitleValueHorizontalStack.swift in Sources */,
+				01B361D3210F9B9F00019102 /* Measurer.swift in Sources */,
+				01B36208210FB98300019102 /* MeasurersRequestParameters.swift in Sources */,
+				01B361DD210F9D3D00019102 /* CCTPhaseNode.swift in Sources */,
+				01B36201210FB75100019102 /* MeasurersDataManager.swift in Sources */,
+				01B361D1210F9B4100019102 /* RealTimeActivityViewController.swift in Sources */,
 				A0D9A7D7210821AC00979F07 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
