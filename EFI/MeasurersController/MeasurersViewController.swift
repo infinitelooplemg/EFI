@@ -39,11 +39,11 @@ class MeasurersViewController: ASViewController<ASTableNode> {
     
     
     @objc func registerMeasurer(){
-//        let vc = RegisterMeasurerViewController()
-//        vc.location = self.location
-//        vc.networkService = networkService
-//        present(ASNavigationController( rootViewController: vc), animated: true, completion: nil)
-//
+        let vc = RegisterMeasurerViewController()
+        vc.location = self.location
+        vc.networkService = networkService
+        present(ASNavigationController( rootViewController: vc), animated: true, completion: nil)
+
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
