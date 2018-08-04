@@ -27,28 +27,30 @@ class MeasurersDataManager:NSObject,ASTableDataSource,ASTableDelegate {
         self.tableNode.delegate = self
         self.tableNode.dataSource = self
     }
-
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
             
             let measurerToDelete = measurers[indexPath.row]
-            measurers.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.right)
-            
-            //            networkService.delete(measurer: measurerToDelete, for: location) { [weak self] (response, error) in
-            //                if error != nil {
-            //                    self?.viewController.showAlert(with:"Error de Conexión", message: "Verifique su conexión a internet y vuelva a intentarlo", image: nil,for: .error)
-            //                    return
-            //                }
-            //                if response?.Codigo == 200 {
-            //                    self?.measurers.remove(at: indexPath.row)
-            //                    tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.right)
-            //                    self?.viewController.showAlert(with:"Eliminación Completa", message: "El medidor se elimino de la localizacion correctamente", image: nil, for: .success)
-            //                } else {
-            //                    self?.viewController.showAlert(with:"Error", message: (response?.Status)!, image: nil, for: .error)
-            //                }
-            //            }
+
+            networkService.delete(measurer: measurerToDelete, for: location) { [weak self] (response, error) in
+                
+                
+                if error != nil {
+                    
+                    return
+                }
+                if response?.Codigo == 200 {
+                    DispatchQueue.main.async {
+                        self?.measurers.remove(at: indexPath.row)
+                        tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.right)
+                    }
+                } else {
+                    
+                }
+                
+            }
             
             
         }

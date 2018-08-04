@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B1A6DB211259A6002F0A28 /* NewMeasurerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1A6DA211259A6002F0A28 /* NewMeasurerResponse.swift */; };
+		01B1A6DD21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1A6DC21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift */; };
+		01B1A6DF211260CD002F0A28 /* RegisterMeasurerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1A6DE211260CD002F0A28 /* RegisterMeasurerDelegate.swift */; };
 		01B361D1210F9B4100019102 /* RealTimeActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361D0210F9B4100019102 /* RealTimeActivityViewController.swift */; };
 		01B361D6210F9C7400019102 /* RTActivityNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361D5210F9C7400019102 /* RTActivityNode.swift */; };
 		01B361D8210F9CD100019102 /* RTVoltageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361D7210F9CD100019102 /* RTVoltageNode.swift */; };
@@ -29,6 +32,8 @@
 		01B36206210FB8D600019102 /* MeasurerCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B36205210FB8D600019102 /* MeasurerCellNode.swift */; };
 		01B3620D210FC4D800019102 /* RegisterMeasurerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3620C210FC4D800019102 /* RegisterMeasurerViewController.swift */; };
 		01B36210210FC54500019102 /* RegisterMeasurerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3620F210FC54500019102 /* RegisterMeasurerNode.swift */; };
+		01BB0CA4211238A900830A09 /* DeleteMeasurerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BB0CA3211238A900830A09 /* DeleteMeasurerResponse.swift */; };
+		01BB0CA6211238D300830A09 /* DeleteMeasurerRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BB0CA5211238D300830A09 /* DeleteMeasurerRequestParameters.swift */; };
 		01BBF828210A4567001EA9B9 /* CCTApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBF827210A4567001EA9B9 /* CCTApiService.swift */; };
 		01BBF82A210A4677001EA9B9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBF829210A4677001EA9B9 /* Location.swift */; };
 		01BBF82C210A46AE001EA9B9 /* LocationsRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BBF82B210A46AE001EA9B9 /* LocationsRequestParameters.swift */; };
@@ -73,6 +78,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01B1A6DA211259A6002F0A28 /* NewMeasurerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMeasurerResponse.swift; sourceTree = "<group>"; };
+		01B1A6DC21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMeasurerNodeDelegate.swift; sourceTree = "<group>"; };
+		01B1A6DE211260CD002F0A28 /* RegisterMeasurerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMeasurerDelegate.swift; sourceTree = "<group>"; };
 		01B361D0210F9B4100019102 /* RealTimeActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeActivityViewController.swift; sourceTree = "<group>"; };
 		01B361D5210F9C7400019102 /* RTActivityNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTActivityNode.swift; sourceTree = "<group>"; };
 		01B361D7210F9CD100019102 /* RTVoltageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTVoltageNode.swift; sourceTree = "<group>"; };
@@ -95,6 +103,8 @@
 		01B36205210FB8D600019102 /* MeasurerCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurerCellNode.swift; sourceTree = "<group>"; };
 		01B3620C210FC4D800019102 /* RegisterMeasurerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMeasurerViewController.swift; sourceTree = "<group>"; };
 		01B3620F210FC54500019102 /* RegisterMeasurerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMeasurerNode.swift; sourceTree = "<group>"; };
+		01BB0CA3211238A900830A09 /* DeleteMeasurerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMeasurerResponse.swift; sourceTree = "<group>"; };
+		01BB0CA5211238D300830A09 /* DeleteMeasurerRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMeasurerRequestParameters.swift; sourceTree = "<group>"; };
 		01BBF827210A4567001EA9B9 /* CCTApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTApiService.swift; sourceTree = "<group>"; };
 		01BBF829210A4677001EA9B9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Location.swift; path = EFI/Location.swift; sourceTree = SOURCE_ROOT; };
 		01BBF82B210A46AE001EA9B9 /* LocationsRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationsRequestParameters.swift; path = EFI/LocationsRequestParameters.swift; sourceTree = SOURCE_ROOT; };
@@ -244,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				01B36203210FB7DA00019102 /* MeasurerCellNodeDelegate.swift */,
+				01B1A6DE211260CD002F0A28 /* RegisterMeasurerDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -344,6 +355,7 @@
 			children = (
 				A040D5B4210FF4130004599E /* MeasurerNodeDelegate.swift */,
 				A040D5BA210FFE8D0004599E /* MeasurerScannerDelegate.swift */,
+				01B1A6DC21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -387,6 +399,9 @@
 				A07DE61D211003FB008D678A /* EnergyPower.swift */,
 				A07DE61F21100416008D678A /* Measurer.swift */,
 				A07DE62121100453008D678A /* MeasurersRequestParameters.swift */,
+				01BB0CA3211238A900830A09 /* DeleteMeasurerResponse.swift */,
+				01BB0CA5211238D300830A09 /* DeleteMeasurerRequestParameters.swift */,
+				01B1A6DA211259A6002F0A28 /* NewMeasurerResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -576,7 +591,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BB0CA6211238D300830A09 /* DeleteMeasurerRequestParameters.swift in Sources */,
+				01B1A6DD21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift in Sources */,
 				A0D9A7D22108214000979F07 /* CCTNode.swift in Sources */,
+				01B1A6DF211260CD002F0A28 /* RegisterMeasurerDelegate.swift in Sources */,
 				01B361E9210FA17F00019102 /* RTPowerFactorNode.swift in Sources */,
 				01BBF82E210A46CC001EA9B9 /* LocationsResponse.swift in Sources */,
 				A0D9A7CD2108209700979F07 /* BusinessHomeNode.swift in Sources */,
@@ -615,6 +633,7 @@
 				A0D9A73B21081A6900979F07 /* BusinessHomeViewController.swift in Sources */,
 				01B361D6210F9C7400019102 /* RTActivityNode.swift in Sources */,
 				A0D9A7DE2108228700979F07 /* HomeLocationNode.swift in Sources */,
+				01BB0CA4211238A900830A09 /* DeleteMeasurerResponse.swift in Sources */,
 				A040D5B9210FF5140004599E /* MeasurerAlarmNode.swift in Sources */,
 				01B361D8210F9CD100019102 /* RTVoltageNode.swift in Sources */,
 				A0D9A7E62108237C00979F07 /* TopConsumptionNode.swift in Sources */,
@@ -622,6 +641,7 @@
 				01B361E7210FA02300019102 /* ElectricalVariables.swift in Sources */,
 				A040D5AC210FF2C40004599E /* ASEditableTextNode.swift in Sources */,
 				01B361F4210FAF1800019102 /* LocationsDataManager.swift in Sources */,
+				01B1A6DB211259A6002F0A28 /* NewMeasurerResponse.swift in Sources */,
 				A0D9A72D210818D400979F07 /* CCTBusinessTabController.swift in Sources */,
 				01BBF82C210A46AE001EA9B9 /* LocationsRequestParameters.swift in Sources */,
 				01B361FA210FAFC300019102 /* LocationCellNode.swift in Sources */,

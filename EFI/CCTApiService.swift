@@ -101,7 +101,85 @@ final class CCTApiService {
         }
         task.resume()
     }
-
+    
+    
+    func delete(measurer:Measurer,for location:Location, completion: @escaping (_ results: DeleteMeasurerResponse?, _ error: Error?) ->()) {
+        
+        components.path = "/api/ios/v1/medidor"
+        guard let url = components.url else { fatalError("Could not create URL from components") }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "DELETE"
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        request.allHTTPHeaderFields = headers
+        
+        
+        var parameters = DeleteMeasurerRequestParameters()
+        parameters.NS = measurer.Clave
+        parameters.ClaveLocalizacion = location.Clave!
+        request.httpBody = encodeToJson(parameters: parameters)
+        
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) { (responseData, response, responseError) in
+            
+            guard let data = responseData else {
+                completion(nil,responseError)
+                return
+            }
+            do {
+                
+                let response = try JSONDecoder().decode(DeleteMeasurerResponse.self, from: data)
+                print(response)
+                completion(response,nil)
+                
+            } catch let jsonErr {
+                print(jsonErr)
+            }
+            
+        }
+        
+        task.resume()
+    }
+    
+    func newMeasurer(parameter:RegisterMeasurerRequestParameters, completion: @escaping (_ results: NewMeasurerResponse?, _ error: Error?) -> ()){
+        components.path = "/api/ios/v1/medidor"
+        
+        guard let url = components.url else { fatalError("Could not create URL from components") }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = encodeToJson(parameters: parameter)
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) { (responseData, response, responseError) in
+            
+    
+                guard let data = responseData else {
+                    
+                    completion(nil,responseError)
+                    return
+                }
+                do {
+                    
+                    let response = try JSONDecoder().decode(NewMeasurerResponse.self, from: data)
+                    
+                    completion(response,nil)
+                    
+                } catch let jsonErr {
+                    print(jsonErr)
+                }
+            
+        }
+        
+        task.resume()
+    }
 }
 
 

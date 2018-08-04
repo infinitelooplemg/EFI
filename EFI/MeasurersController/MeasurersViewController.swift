@@ -26,6 +26,8 @@ class MeasurersViewController: ASViewController<ASTableNode> {
     }
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableNode.backgroundColor = .white
@@ -40,6 +42,7 @@ class MeasurersViewController: ASViewController<ASTableNode> {
     
     @objc func registerMeasurer(){
         let vc = RegisterMeasurerViewController()
+        vc.delegate = self
         vc.location = self.location
         vc.networkService = networkService
         present(ASNavigationController( rootViewController: vc), animated: true, completion: nil)
@@ -55,4 +58,16 @@ extension MeasurersViewController:MeasurerCellNodeDelegate {
     func monitor(measurer: Measurer) {
         print(measurer)
     }
+}
+
+extension MeasurersViewController:RegisterMeasurerDelegate {
+    func receiveRegistered(measurer: Measurer) {
+        dataManager.measurers.append(measurer)
+        DispatchQueue.main.async { [weak self] in
+            self?.tableNode.reloadData()
+        }
+  
+    }
+    
+    
 }

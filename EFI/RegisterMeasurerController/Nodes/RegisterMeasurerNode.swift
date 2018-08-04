@@ -17,11 +17,13 @@ class RegisterMeasurerNode:ASScrollNode {
     var measurerNode:MeasurerNode!
     var saveButton:CCTBorderButtonNode!
     var measurerParameters:RegisterMeasurerRequestParameters!
+    weak var delegate:RegisterMeasurerNodeDelegate?
     var alarmNode:MeasurerAlarmNode!
     var location:Location!
+    var measureID:String?
     
     init(location:Location) {
-      //  self.delegate = delegate
+        //  self.delegate = delegate
         measurerParameters = RegisterMeasurerRequestParameters()
         self.location = location
         super.init()
@@ -37,7 +39,6 @@ class RegisterMeasurerNode:ASScrollNode {
         energyMultiplierNode = EnergyMultiplierNode()
         voltageMultiplierNode = MeasurerVoltageMultiplierNode()
         measurerNode = MeasurerNode()
-        measurerNode.delegate = self
         
         alarmNode = MeasurerAlarmNode()
         
@@ -99,20 +100,14 @@ class RegisterMeasurerNode:ASScrollNode {
             measurerParameters.PorcPotenciaMaxAlarma = 0
         }
         
+        guard let id = measurerNode.measurerIDNode.attributedText?.string else {
+            return
+        }
         
+        measurerParameters.NS = id
         
-        
-        //        guard let model = model else {
-        //            showAlert(with: "Ooops!", message: "Todavia no escaneas tu medidor", image: nil, for: .error)
-        //            return
-        //        }
-        
-   //     measurerParameters.NS = model.NS
-        
-        
-        print(measurerParameters)
-        //  delegate?.save(measurer: measurer)
-        
+        delegate?.passParametersFor(measurer: measurerParameters)
+      
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -131,23 +126,4 @@ class RegisterMeasurerNode:ASScrollNode {
     }
 }
 
-extension RegisterMeasurerNode:MeasurerNodeDelegate {
-    func startMeasurerScanning() {
-//        if let vc = closestViewController {
-//
-//            AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
-//
-//                if response {
-//                    let scanVC = MeasurerScannerViewController(delegate: self)
-//                    vc.present(UINavigationController(rootViewController: scanVC), animated: true, completion: nil)
-//                } else {
-//                    if let appSettings = URL(string: UIApplicationOpenSettingsURLString) {
-//                        UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
-//                    }
-//                }
-//            }
-//
-//
-//        }
-    }
-}
+

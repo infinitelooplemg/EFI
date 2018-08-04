@@ -11,9 +11,9 @@ import AsyncDisplayKit
 extension ASEditableTextNode{
     convenience init(placeHolder:String) {
         self.init()
-        self.attributedPlaceholderText = NSAttributedString(string: placeHolder, attributes: [NSAttributedStringKey.foregroundColor:UIColor.lightGray,NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize: 25)])
+        self.attributedPlaceholderText = NSAttributedString(string: placeHolder, attributes: [NSAttributedStringKey.foregroundColor:UIColor.lightGray,NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize: 20)])
         self.textContainerInset = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
-        self.typingAttributes = [NSAttributedStringKey.foregroundColor.rawValue:UIColor.lightGray,NSAttributedStringKey.font.rawValue:UIFont.boldSystemFont(ofSize: 25)]
+        self.typingAttributes = [NSAttributedStringKey.foregroundColor.rawValue:UIColor.lightGray,NSAttributedStringKey.font.rawValue:UIFont.boldSystemFont(ofSize: 20)]
         
     }
     

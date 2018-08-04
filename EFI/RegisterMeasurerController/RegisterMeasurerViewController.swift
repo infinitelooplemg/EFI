@@ -11,9 +11,10 @@ import AsyncDisplayKit
 import  StatusAlert
 
 class RegisterMeasurerViewController:UIViewController {
-    var node:ASScrollNode!
+    var node:RegisterMeasurerNode!
     var notification = UINotificationFeedbackGenerator()
     var location:Location?
+    weak var delegate:RegisterMeasurerDelegate?
     
     weak var networkService:CCTApiService?
     
@@ -26,6 +27,7 @@ class RegisterMeasurerViewController:UIViewController {
         title = "Nuevo Medidor"
         
         node = RegisterMeasurerNode(location: location!)
+        node.delegate = self
         view.addSubnode(node)
         
         let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
@@ -54,5 +56,25 @@ class RegisterMeasurerViewController:UIViewController {
             node.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         }
     }
+    
+}
+
+
+extension RegisterMeasurerViewController:RegisterMeasurerNodeDelegate {
+    func passParametersFor(measurer: RegisterMeasurerRequestParameters) {
+  
+        networkService?.newMeasurer(parameter: measurer, completion: { [weak self] (response, error) in
+
+            self?.dismiss(animated: true, completion: {
+                
+                    self?.delegate?.receiveRegistered(measurer: (response?.Respuesta)!)
+                
+            })
+           
+        
+            
+        })
+    }
+    
     
 }
