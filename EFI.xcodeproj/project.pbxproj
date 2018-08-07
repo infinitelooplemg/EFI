@@ -58,6 +58,7 @@
 		A07DE61E211003FB008D678A /* EnergyPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DE61D211003FB008D678A /* EnergyPower.swift */; };
 		A07DE62021100416008D678A /* Measurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DE61F21100416008D678A /* Measurer.swift */; };
 		A07DE62221100453008D678A /* MeasurersRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DE62121100453008D678A /* MeasurersRequestParameters.swift */; };
+		A0A2233021153977003FA50C /* EmptyMeasurersCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2232F21153977003FA50C /* EmptyMeasurersCellNode.swift */; };
 		A0D9A72D210818D400979F07 /* CCTBusinessTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A72C210818D400979F07 /* CCTBusinessTabController.swift */; };
 		A0D9A7312108196300979F07 /* OfflineStorageNameFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7302108196300979F07 /* OfflineStorageNameFiles.swift */; };
 		A0D9A73B21081A6900979F07 /* BusinessHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A73A21081A6900979F07 /* BusinessHomeViewController.swift */; };
@@ -132,6 +133,7 @@
 		A07DE61D211003FB008D678A /* EnergyPower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyPower.swift; sourceTree = "<group>"; };
 		A07DE61F21100416008D678A /* Measurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurer.swift; sourceTree = "<group>"; };
 		A07DE62121100453008D678A /* MeasurersRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurersRequestParameters.swift; sourceTree = "<group>"; };
+		A0A2232F21153977003FA50C /* EmptyMeasurersCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyMeasurersCellNode.swift; sourceTree = "<group>"; };
 		A0D9A72C210818D400979F07 /* CCTBusinessTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTBusinessTabController.swift; sourceTree = "<group>"; };
 		A0D9A7302108196300979F07 /* OfflineStorageNameFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineStorageNameFiles.swift; sourceTree = "<group>"; };
 		A0D9A73A21081A6900979F07 /* BusinessHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessHomeViewController.swift; sourceTree = "<group>"; };
@@ -234,10 +236,10 @@
 		01B361FC210FB70800019102 /* MeasurersController */ = {
 			isa = PBXGroup;
 			children = (
+				A0A223312115397B003FA50C /* Nodes */,
 				01B36202210FB7CD00019102 /* Delegate */,
 				01B361FF210FB74200019102 /* DataSource */,
 				01B361FD210FB71C00019102 /* MeasurersViewController.swift */,
-				01B36205210FB8D600019102 /* MeasurerCellNode.swift */,
 			);
 			path = MeasurersController;
 			sourceTree = "<group>";
@@ -366,6 +368,15 @@
 				A040D5BF2110012C0004599E /* MeasurerScannerViewController.swift */,
 			);
 			path = MeasurerScannerController;
+			sourceTree = "<group>";
+		};
+		A0A223312115397B003FA50C /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				01B36205210FB8D600019102 /* MeasurerCellNode.swift */,
+				A0A2232F21153977003FA50C /* EmptyMeasurersCellNode.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 		A0D9A72E210818D800979F07 /* CCTBusinessTabController */ = {
@@ -626,6 +637,7 @@
 				A0D9A7D42108217900979F07 /* CTTTextNode.swift in Sources */,
 				A07DE62221100453008D678A /* MeasurersRequestParameters.swift in Sources */,
 				A007C383210812E70011DB93 /* AppDelegate.swift in Sources */,
+				A0A2233021153977003FA50C /* EmptyMeasurersCellNode.swift in Sources */,
 				A040D5B2210FF38F0004599E /* MeasurerNode.swift in Sources */,
 				A07DE61E211003FB008D678A /* EnergyPower.swift in Sources */,
 				01B361F7210FAF4900019102 /* LocationCellDelegate.swift in Sources */,

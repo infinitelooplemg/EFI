@@ -34,7 +34,6 @@ class MeasurerCellNode:ASCellNode {
     }
     
     @objc func monitor(){
-        
         delegate.monitor(measurer: measurer)
     }
     
@@ -52,6 +51,7 @@ class MeasurerCellNode:ASCellNode {
         let display = ASDisplayNode()
         display.backgroundColor = .white
         display.borderWidth = 0.5
+        display.cornerRadius = 5
         display.borderColor = UIColor.lightGray.cgColor
         display.style.flexGrow = 1
         

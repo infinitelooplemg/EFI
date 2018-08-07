@@ -18,6 +18,7 @@ class LocationCellNode:ASCellNode {
     var rateTextNode:CTTTextNode!
     var asignButtNode:CCTBorderButtonNode!
     var location:Location!
+    var mapNode:ASMapNode!
     
     weak var delegate:LocationCellDelegate!
     
@@ -42,7 +43,16 @@ class LocationCellNode:ASCellNode {
         asignButtNode.addTarget(self, action: #selector(asign), forControlEvents: .touchUpInside)
         
         rateTextNode =  CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: location.NombreTarifaCRE!)
- 
+        
+        mapNode = ASMapNode()
+        mapNode.style.preferredSize = CGSize(width: 300.0, height: 300.0)
+        mapNode.cornerRadius = 5
+        mapNode.borderWidth = 0.5
+        mapNode.borderColor = UIColor.lightGray.cgColor
+        
+        let coord = CLLocationCoordinate2DMake(19.127646044853897, -96.12060140320244)
+        mapNode.region = MKCoordinateRegionMakeWithDistance(coord, 20000, 20000)
+        
         automaticallyManagesSubnodes  = true
     }
     
@@ -73,16 +83,19 @@ class LocationCellNode:ASCellNode {
         let display = ASDisplayNode()
         display.backgroundColor = .white
         display.borderWidth = 0.5
+        display.cornerRadius = 5
         display.borderColor = UIColor.lightGray.cgColor
         display.style.flexGrow = 1
         
         let internalInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         let internalInsetSpecs = ASInsetLayoutSpec(insets: internalInsets, child: horizontalStack)
         
-        let overlay = ASBackgroundLayoutSpec(child: internalInsetSpecs, background: display)
+        let back = ASBackgroundLayoutSpec(child: internalInsetSpecs, background: mapNode)
+        
+     
         
         let insets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-        let insetSpecs = ASInsetLayoutSpec(insets: insets, child: overlay)
+        let insetSpecs = ASInsetLayoutSpec(insets: insets, child: back)
         
         return insetSpecs
     }

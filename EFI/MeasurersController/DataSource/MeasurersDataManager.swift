@@ -33,7 +33,7 @@ class MeasurersDataManager:NSObject,ASTableDataSource,ASTableDelegate {
         if editingStyle == .delete {
             
             let measurerToDelete = measurers[indexPath.row]
-
+            
             networkService.delete(measurer: measurerToDelete, for: location) { [weak self] (response, error) in
                 
                 
@@ -59,20 +59,25 @@ class MeasurersDataManager:NSObject,ASTableDataSource,ASTableDelegate {
     
     
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-        return measurers.count
+        let numberOfMeasurers = measurers.count
+        return numberOfMeasurers
     }
     
     
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
-        let measurer = measurers[indexPath.row]
         
-        // this may be executed on a background thread - it is important to make sure it is thread safe
-        let cellNodeBlock = { [weak self] () -> ASCellNode in
-            let cellNode = MeasurerCellNode(measurer: measurer,delegate:(self?.cellDelegate)!)
-            return cellNode
-        }
+      
+            let measurer = measurers[indexPath.row]
+            
+            
+            let cellNodeBlock = { [weak self] () -> ASCellNode in
+                let cellNode = MeasurerCellNode(measurer: measurer,delegate:(self?.cellDelegate)!)
+                return cellNode
+            }
+            
+            return cellNodeBlock
+     
         
-        return cellNodeBlock
     }
 }
 

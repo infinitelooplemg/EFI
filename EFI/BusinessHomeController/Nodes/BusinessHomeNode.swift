@@ -35,7 +35,7 @@ class BusinessHomeNode: ASScrollNode {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         
         let stack = ASStackLayoutSpec.vertical()
-        stack.spacing = 4
+        stack.spacing = 8
         stack.children = [energyConsumptionNode,paymentStatusNode,localizationNode]
         
         let insets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)

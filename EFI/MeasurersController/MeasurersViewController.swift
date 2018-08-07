@@ -14,13 +14,16 @@ class MeasurersViewController: ASViewController<ASTableNode> {
     var dataManager:MeasurersDataManager!
     weak var networkService:CCTApiService?
     var location:Location!
+    var measurers:[Measurer]!
     
     init(measurers:[Measurer],location:Location,networkService:CCTApiService) {
         tableNode = ASTableNode()
+        self.measurers = measurers
         self.location = location
         self.networkService = networkService
         super.init(node: tableNode)
         extendedLayoutIncludesOpaqueBars = false
+        
         dataManager = MeasurersDataManager(tableNode: tableNode,location:location, networkService: self.networkService!, viewController: self, cellDelegate: self)
         dataManager.measurers = measurers
     }
@@ -34,9 +37,19 @@ class MeasurersViewController: ASViewController<ASTableNode> {
         tableNode.view.separatorStyle = .none
         tableNode.allowsSelection = true
         
+        navigationItem.title = "Medidores"
+        
         let newLocationBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(registerMeasurer))
         navigationItem.rightBarButtonItem = newLocationBarButton
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if measurers.count == 0 {
+            askForMeasurerRegistration()
+        }
     }
     
     
@@ -46,10 +59,30 @@ class MeasurersViewController: ASViewController<ASTableNode> {
         vc.location = self.location
         vc.networkService = networkService
         present(ASNavigationController( rootViewController: vc), animated: true, completion: nil)
-
+        
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func askForMeasurerRegistration(){
+        
+        let alert = UIAlertController(title: "Atención", message: "Al parecer no cuenta con ningun EFI registrado en \(self.location.Nombre!)", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Registrar un EFI", comment: ""), style: .default, handler: { [weak self] _ in
+            let vc = RegisterMeasurerViewController()
+            vc.delegate = self
+            vc.location = self?.location
+            vc.networkService = self?.networkService
+            self?.present(ASNavigationController( rootViewController: vc), animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancelar", comment: ""), style: .cancel, handler: { _ in
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
 }
@@ -66,7 +99,7 @@ extension MeasurersViewController:RegisterMeasurerDelegate {
         DispatchQueue.main.async { [weak self] in
             self?.tableNode.reloadData()
         }
-  
+        
     }
     
     
