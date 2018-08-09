@@ -25,7 +25,7 @@ class BusinessEnergyConsumptionNode:ASDisplayNode {
   
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        let w = (UIScreen.main.bounds.width - 24) / 2
+        let w = (UIScreen.main.bounds.width - 16) / 2
         
         baseCell.style.preferredSize.width = w
         intermediaCell.style.preferredSize.width = w
@@ -34,10 +34,10 @@ class BusinessEnergyConsumptionNode:ASDisplayNode {
         
         
         let vertical = ASStackLayoutSpec.horizontal()
-        vertical.spacing = 8
+        vertical.justifyContent = .spaceBetween
         vertical.children = [baseCell,intermediaCell]
         let vertical2 = ASStackLayoutSpec.horizontal()
-        vertical2.spacing = 8
+        vertical2.justifyContent = .spaceBetween
         vertical2.children = [puntaCell,totalCell]
         let horizontal = ASStackLayoutSpec.vertical()
         horizontal.spacing = 8

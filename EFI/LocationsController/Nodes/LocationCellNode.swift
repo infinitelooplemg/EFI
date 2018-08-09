@@ -28,18 +28,18 @@ class LocationCellNode:ASCellNode {
         super.init()
         self.location = location
         
-        backgroundColor = .white
+      
         
         selectionStyle = .none
         
         stateTextNode = CTTTextNode(withFontSize: 20, color: UIColor.black, with: location.Nombre!)
         
         editButtonNode = CCTBorderButtonNode(fontSize: 13, textColor: .white, with: "Detalles")
-        editButtonNode.backgroundColor = UIColor.con100tGreenColor
+        editButtonNode.backgroundColor = UIColor.con100tBlueColor
         editButtonNode.addTarget(self, action: #selector(edit), forControlEvents: .touchUpInside)
         
-        asignButtNode = CCTBorderButtonNode(fontSize: 13, textColor: .white, with: "Medidores")
-        asignButtNode.backgroundColor = UIColor.con100tGreenColor
+        asignButtNode = CCTBorderButtonNode(fontSize: 13, textColor: UIColor.con100tBlueColor, with: "Medidores")
+        asignButtNode.backgroundColor = UIColor.con100tGrayColor
         asignButtNode.addTarget(self, action: #selector(asign), forControlEvents: .touchUpInside)
         
         rateTextNode =  CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: location.NombreTarifaCRE!)
@@ -47,8 +47,7 @@ class LocationCellNode:ASCellNode {
         mapNode = ASMapNode()
         mapNode.style.preferredSize = CGSize(width: 300.0, height: 300.0)
         mapNode.cornerRadius = 5
-        mapNode.borderWidth = 0.5
-        mapNode.borderColor = UIColor.lightGray.cgColor
+       
         
         let coord = CLLocationCoordinate2DMake(19.127646044853897, -96.12060140320244)
         mapNode.region = MKCoordinateRegionMakeWithDistance(coord, 20000, 20000)
@@ -94,7 +93,7 @@ class LocationCellNode:ASCellNode {
         
      
         
-        let insets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        let insets = UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8)
         let insetSpecs = ASInsetLayoutSpec(insets: insets, child: back)
         
         return insetSpecs

@@ -21,9 +21,9 @@ class RegisterMeasurerNode:ASScrollNode {
     var alarmNode:MeasurerAlarmNode!
     var location:Location!
     var measureID:String?
+    var measurer:Measurer?
     
     init(location:Location) {
-        //  self.delegate = delegate
         measurerParameters = RegisterMeasurerRequestParameters()
         self.location = location
         super.init()
@@ -33,6 +33,16 @@ class RegisterMeasurerNode:ASScrollNode {
         setupNodes()
     }
     
+    init(location:Location,measurer:Measurer) {
+        super.init()
+        self.measurer = measurer
+        self.location = location
+        measurerParameters = RegisterMeasurerRequestParameters()
+        automaticallyManagesSubnodes = true
+        automaticallyManagesContentSize = true
+        setupNodes()
+        fillData()
+    }
     
     func setupNodes() {
         nickNameNode = MeasurerNickNameNode()
@@ -45,8 +55,13 @@ class RegisterMeasurerNode:ASScrollNode {
         saveButton = CCTBorderButtonNode(fontSize: 13, textColor: .white, with: "Guardar")
         saveButton.addTarget(self, action: #selector(save), forControlEvents: .touchUpInside)
         saveButton.style.preferredSize.height = 44
-        saveButton.backgroundColor = UIColor.con100tGreenColor
+        saveButton.backgroundColor = UIColor.con100tBlueColor
         
+    }
+    
+    func fillData(){
+        nickNameNode.measurerNickNameTextNode.set(text: (measurer?.Nombre!)!)
+        measurerNode.measurerIDNode.set(text: (measurer?.Clave!)!)
     }
     
     @objc func save() {
@@ -107,7 +122,7 @@ class RegisterMeasurerNode:ASScrollNode {
         measurerParameters.NS = id
         
         delegate?.passParametersFor(measurer: measurerParameters)
-      
+        
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

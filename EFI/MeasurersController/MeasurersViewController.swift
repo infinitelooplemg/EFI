@@ -33,7 +33,7 @@ class MeasurersViewController: ASViewController<ASTableNode> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableNode.backgroundColor = .white
+        tableNode.backgroundColor = UIColor.con100tGrayColor
         tableNode.view.separatorStyle = .none
         tableNode.allowsSelection = true
         
@@ -54,9 +54,8 @@ class MeasurersViewController: ASViewController<ASTableNode> {
     
     
     @objc func registerMeasurer(){
-        let vc = RegisterMeasurerViewController()
+        let vc = MeasurerConfigurationViewController(location: self.location)
         vc.delegate = self
-        vc.location = self.location
         vc.networkService = networkService
         present(ASNavigationController( rootViewController: vc), animated: true, completion: nil)
         
@@ -70,9 +69,8 @@ class MeasurersViewController: ASViewController<ASTableNode> {
         let alert = UIAlertController(title: "Atención", message: "Al parecer no cuenta con ningun EFI registrado en \(self.location.Nombre!)", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("Registrar un EFI", comment: ""), style: .default, handler: { [weak self] _ in
-            let vc = RegisterMeasurerViewController()
+            let vc = MeasurerConfigurationViewController(location: (self?.location)!)
             vc.delegate = self
-            vc.location = self?.location
             vc.networkService = self?.networkService
             self?.present(ASNavigationController( rootViewController: vc), animated: true, completion: nil)
         }))
@@ -89,7 +87,10 @@ class MeasurersViewController: ASViewController<ASTableNode> {
 
 extension MeasurersViewController:MeasurerCellNodeDelegate {
     func monitor(measurer: Measurer) {
-        print(measurer)
+        let vc = MeasurerConfigurationViewController(location: self.location, measurer: measurer)
+        vc.delegate = self
+        vc.networkService = self.networkService
+        self.present(ASNavigationController( rootViewController: vc), animated: true, completion: nil)
     }
 }
 

@@ -10,13 +10,32 @@
 import AsyncDisplayKit
 import  StatusAlert
 
-class RegisterMeasurerViewController:UIViewController {
+class MeasurerConfigurationViewController:UIViewController {
     var node:RegisterMeasurerNode!
     var notification = UINotificationFeedbackGenerator()
     var location:Location?
     weak var delegate:RegisterMeasurerDelegate?
+    var configurationMode:ConfigurationMode!
+    var measurer:Measurer?
     
     weak var networkService:CCTApiService?
+    
+    init(location:Location,measurer:Measurer) {
+        self.location = location
+        self.measurer = measurer
+        super.init(nibName: nil, bundle: nil)
+        configurationMode = .edit
+    }
+    
+    init(location:Location) {
+        self.location = location
+        super.init(nibName: nil, bundle: nil)
+        configurationMode = .add
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +45,15 @@ class RegisterMeasurerViewController:UIViewController {
     func setupViews() {
         title = "Nuevo Medidor"
         
-        node = RegisterMeasurerNode(location: location!)
+        switch configurationMode {
+        case .edit:
+            node = RegisterMeasurerNode(location: location!,measurer:self.measurer!)
+        case .add:
+            node = RegisterMeasurerNode(location: location!)
+        default: break
+        }
+        
+        
         node.delegate = self
         view.addSubnode(node)
         
@@ -34,7 +61,7 @@ class RegisterMeasurerViewController:UIViewController {
         navigationItem.leftBarButtonItem = cancelButton
         
         view.layoutIfNeeded()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.con100tGrayColor
     }
     
     @objc func cancel(){
@@ -60,20 +87,15 @@ class RegisterMeasurerViewController:UIViewController {
 }
 
 
-extension RegisterMeasurerViewController:RegisterMeasurerNodeDelegate {
+extension MeasurerConfigurationViewController:RegisterMeasurerNodeDelegate {
     func passParametersFor(measurer: RegisterMeasurerRequestParameters) {
-  
-        networkService?.newMeasurer(parameter: measurer, completion: { [weak self] (response, error) in
-
-            self?.dismiss(animated: true, completion: {
-                
-                    self?.delegate?.receiveRegistered(measurer: (response?.Respuesta)!)
-                
-            })
-           
         
-            
+        networkService?.newMeasurer(parameter: measurer, completion: { [weak self] (response, error) in
+            self?.dismiss(animated: true, completion: {
+                self?.delegate?.receiveRegistered(measurer: (response?.Respuesta)!)
+            })
         })
+        
     }
     
     

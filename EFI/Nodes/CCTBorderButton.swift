@@ -10,9 +10,8 @@ class CCTBorderButtonNode:ASButtonNode {
     
     init(fontSize:Float,textColor:UIColor,with text:String) {
         super.init()
-        cornerRadius = 5
         setTitle(text, with: UIFont.boldSystemFont(ofSize: CGFloat(fontSize)), with: textColor, for: .normal)
-        cornerRadius = 5
+        cornerRadius = 10
         clipsToBounds = true
         contentEdgeInsets = UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8)
         

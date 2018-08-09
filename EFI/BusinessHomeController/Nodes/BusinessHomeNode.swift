@@ -28,8 +28,7 @@ class BusinessHomeNode: ASScrollNode {
         
         automaticallyManagesSubnodes = true
         automaticallyManagesContentSize = true
-        backgroundColor = UIColor.white
-        
+        backgroundColor = UIColor.con100tGrayColor
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -38,7 +37,7 @@ class BusinessHomeNode: ASScrollNode {
         stack.spacing = 8
         stack.children = [energyConsumptionNode,paymentStatusNode,localizationNode]
         
-        let insets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        let insets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         let insetSpecs = ASInsetLayoutSpec(insets: insets, child: stack)
         
         return insetSpecs

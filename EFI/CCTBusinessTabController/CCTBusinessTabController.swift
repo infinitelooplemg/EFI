@@ -13,6 +13,10 @@ class CCTBusinessTabController:ASTabBarController {
     
     var networkService = CCTApiService()
     
+    var currentMeasurer:Measurer?
+    var currentRate:CRERate?
+    var currentLocation:Location?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,9 +28,16 @@ class CCTBusinessTabController:ASTabBarController {
         let vc2 = RealTimeActivityViewController()
         vc2.networkService = networkService
         vc2.tabBarItem.image = #imageLiteral(resourceName: "map-location")
+        vc2.tabBarItem.title = "Instantaneos"
         let nc2 = UINavigationController(rootViewController: vc2)
         
-        self.viewControllers = [nc,nc2]
+        let vc3 = CalendarViewController()
+        vc3.networkService = networkService
+        vc3.tabBarItem.title = "Historial"
+        vc3.tabBarItem.image = #imageLiteral(resourceName: "calendar")
+        let nc3 = UINavigationController(rootViewController: vc3)
+        
+        self.viewControllers = [nc,nc2,nc3]
         
         tabBar.isTranslucent = false
         
@@ -34,11 +45,22 @@ class CCTBusinessTabController:ASTabBarController {
         
     }
     
+    func checkCurrentData() -> Bool {
+        return false
+    }
+    
 }
 
 extension CCTBusinessTabController:UITabBarControllerDelegate {
+    
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         
+//        if !checkCurrentData() {
+//            if viewControllers![2] == viewController  ||  viewControllers![1] == viewController{
+//                return false
+//            }
+//        }
+//        
         guard let fromView = selectedViewController?.view, let toView = viewController.view else {
             return false // Make sure you want this as false
         }

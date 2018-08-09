@@ -7,6 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010E9F2A211A22C7006E0D7E /* RTActivelMeasurerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F29211A22C7006E0D7E /* RTActivelMeasurerNode.swift */; };
+		010E9F2C211A289F006E0D7E /* ConfigurationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F2B211A289F006E0D7E /* ConfigurationMode.swift */; };
+		010E9F2F211A379B006E0D7E /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F2E211A379B006E0D7E /* CalendarViewController.swift */; };
+		010E9F32211A37CE006E0D7E /* CalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F31211A37CE006E0D7E /* CalendarDataSource.swift */; };
+		010E9F34211A37F8006E0D7E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F33211A37F8006E0D7E /* Date.swift */; };
+		010E9F36211A3813006E0D7E /* CalendarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F35211A3813006E0D7E /* CalendarDelegate.swift */; };
+		010E9F39211A3840006E0D7E /* ShowDayDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F38211A3840006E0D7E /* ShowDayDetailDelegate.swift */; };
+		010E9F3B211A3A74006E0D7E /* CCTCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F3A211A3A74006E0D7E /* CCTCalendarView.swift */; };
+		010E9F3D211A3AD5006E0D7E /* CRERate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F3C211A3AD5006E0D7E /* CRERate.swift */; };
+		010E9F41211A3B88006E0D7E /* CalendarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F40211A3B88006E0D7E /* CalendarNode.swift */; };
+		010E9F44211A479A006E0D7E /* RegisterLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F43211A479A006E0D7E /* RegisterLocationViewController.swift */; };
+		010E9F47211A47E0006E0D7E /* RegisterLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F46211A47E0006E0D7E /* RegisterLocationDelegate.swift */; };
+		010E9F4A211A4880006E0D7E /* RegisterLocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F49211A4880006E0D7E /* RegisterLocationNode.swift */; };
+		010E9F4C211A48D8006E0D7E /* RegisterLocationNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F4B211A48D8006E0D7E /* RegisterLocationNodeDelegate.swift */; };
+		010E9F4E211A4913006E0D7E /* RateForLocationRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F4D211A4913006E0D7E /* RateForLocationRequestParameters.swift */; };
+		010E9F50211A492C006E0D7E /* LocationNameNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F4F211A492C006E0D7E /* LocationNameNode.swift */; };
+		010E9F52211A4969006E0D7E /* LocationInitialConNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F51211A4969006E0D7E /* LocationInitialConNode.swift */; };
+		010E9F54211A4980006E0D7E /* LocationPeriodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F53211A4980006E0D7E /* LocationPeriodNode.swift */; };
+		010E9F56211A499C006E0D7E /* LocationRateNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F55211A499C006E0D7E /* LocationRateNode.swift */; };
+		010E9F58211A49D9006E0D7E /* RateSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F57211A49D9006E0D7E /* RateSelectionDelegate.swift */; };
+		010E9F5A211A4C19006E0D7E /* LocationMaximusDemandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F59211A4C19006E0D7E /* LocationMaximusDemandNode.swift */; };
+		010E9F5C211A4C57006E0D7E /* CTTIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F5B211A4C57006E0D7E /* CTTIconButton.swift */; };
+		010E9F5E211A4CF8006E0D7E /* LocationPeriodNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F5D211A4CF8006E0D7E /* LocationPeriodNodeDelegate.swift */; };
+		010E9F60211A4D23006E0D7E /* DateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F5F211A4D23006E0D7E /* DateType.swift */; };
+		010E9F63211A4E01006E0D7E /* DateChooserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F62211A4E01006E0D7E /* DateChooserDelegate.swift */; };
+		010E9F66211A4E34006E0D7E /* DateChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F65211A4E34006E0D7E /* DateChooserViewController.swift */; };
+		010E9F68211A4F8E006E0D7E /* DateChooserNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F67211A4F8E006E0D7E /* DateChooserNodeDelegate.swift */; };
+		010E9F6B211A4FED006E0D7E /* DateChooserNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F6A211A4FED006E0D7E /* DateChooserNode.swift */; };
+		010E9F6D211A5035006E0D7E /* NewDateNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F6C211A5035006E0D7E /* NewDateNode.swift */; };
+		010E9F6F211A5066006E0D7E /* PreviousDateNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F6E211A5066006E0D7E /* PreviousDateNode.swift */; };
+		010E9F71211A59AB006E0D7E /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F70211A59AB006E0D7E /* State.swift */; };
+		010E9F73211A59EE006E0D7E /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F72211A59EE006E0D7E /* States.swift */; };
+		010E9F75211A5A53006E0D7E /* County.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F74211A5A53006E0D7E /* County.swift */; };
+		010E9F77211A5A7B006E0D7E /* Counties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F76211A5A7B006E0D7E /* Counties.swift */; };
+		010E9F79211A5B04006E0D7E /* CountyRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F78211A5B04006E0D7E /* CountyRequestParameters.swift */; };
+		010E9F7B211A5B33006E0D7E /* ElectricalDivision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F7A211A5B33006E0D7E /* ElectricalDivision.swift */; };
+		010E9F7D211A5B4E006E0D7E /* ElectricalDivisionRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F7C211A5B4E006E0D7E /* ElectricalDivisionRequestParameters.swift */; };
+		010E9F7F211A5B74006E0D7E /* ElectricalDivisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F7E211A5B74006E0D7E /* ElectricalDivisions.swift */; };
 		01B1A6DB211259A6002F0A28 /* NewMeasurerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1A6DA211259A6002F0A28 /* NewMeasurerResponse.swift */; };
 		01B1A6DD21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1A6DC21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift */; };
 		01B1A6DF211260CD002F0A28 /* RegisterMeasurerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1A6DE211260CD002F0A28 /* RegisterMeasurerDelegate.swift */; };
@@ -30,7 +68,7 @@
 		01B36201210FB75100019102 /* MeasurersDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B36200210FB75100019102 /* MeasurersDataManager.swift */; };
 		01B36204210FB7DA00019102 /* MeasurerCellNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B36203210FB7DA00019102 /* MeasurerCellNodeDelegate.swift */; };
 		01B36206210FB8D600019102 /* MeasurerCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B36205210FB8D600019102 /* MeasurerCellNode.swift */; };
-		01B3620D210FC4D800019102 /* RegisterMeasurerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3620C210FC4D800019102 /* RegisterMeasurerViewController.swift */; };
+		01B3620D210FC4D800019102 /* MeasurerConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3620C210FC4D800019102 /* MeasurerConfigurationViewController.swift */; };
 		01B36210210FC54500019102 /* RegisterMeasurerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3620F210FC54500019102 /* RegisterMeasurerNode.swift */; };
 		01BB0CA4211238A900830A09 /* DeleteMeasurerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BB0CA3211238A900830A09 /* DeleteMeasurerResponse.swift */; };
 		01BB0CA6211238D300830A09 /* DeleteMeasurerRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BB0CA5211238D300830A09 /* DeleteMeasurerRequestParameters.swift */; };
@@ -79,6 +117,44 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010E9F29211A22C7006E0D7E /* RTActivelMeasurerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTActivelMeasurerNode.swift; sourceTree = "<group>"; };
+		010E9F2B211A289F006E0D7E /* ConfigurationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationMode.swift; sourceTree = "<group>"; };
+		010E9F2E211A379B006E0D7E /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		010E9F31211A37CE006E0D7E /* CalendarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataSource.swift; sourceTree = "<group>"; };
+		010E9F33211A37F8006E0D7E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		010E9F35211A3813006E0D7E /* CalendarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDelegate.swift; sourceTree = "<group>"; };
+		010E9F38211A3840006E0D7E /* ShowDayDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDayDetailDelegate.swift; sourceTree = "<group>"; };
+		010E9F3A211A3A74006E0D7E /* CCTCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTCalendarView.swift; sourceTree = "<group>"; };
+		010E9F3C211A3AD5006E0D7E /* CRERate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRERate.swift; sourceTree = "<group>"; };
+		010E9F40211A3B88006E0D7E /* CalendarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarNode.swift; sourceTree = "<group>"; };
+		010E9F43211A479A006E0D7E /* RegisterLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLocationViewController.swift; sourceTree = "<group>"; };
+		010E9F46211A47E0006E0D7E /* RegisterLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLocationDelegate.swift; sourceTree = "<group>"; };
+		010E9F49211A4880006E0D7E /* RegisterLocationNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLocationNode.swift; sourceTree = "<group>"; };
+		010E9F4B211A48D8006E0D7E /* RegisterLocationNodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLocationNodeDelegate.swift; sourceTree = "<group>"; };
+		010E9F4D211A4913006E0D7E /* RateForLocationRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateForLocationRequestParameters.swift; sourceTree = "<group>"; };
+		010E9F4F211A492C006E0D7E /* LocationNameNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNameNode.swift; sourceTree = "<group>"; };
+		010E9F51211A4969006E0D7E /* LocationInitialConNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInitialConNode.swift; sourceTree = "<group>"; };
+		010E9F53211A4980006E0D7E /* LocationPeriodNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPeriodNode.swift; sourceTree = "<group>"; };
+		010E9F55211A499C006E0D7E /* LocationRateNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRateNode.swift; sourceTree = "<group>"; };
+		010E9F57211A49D9006E0D7E /* RateSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateSelectionDelegate.swift; sourceTree = "<group>"; };
+		010E9F59211A4C19006E0D7E /* LocationMaximusDemandNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMaximusDemandNode.swift; sourceTree = "<group>"; };
+		010E9F5B211A4C57006E0D7E /* CTTIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTTIconButton.swift; sourceTree = "<group>"; };
+		010E9F5D211A4CF8006E0D7E /* LocationPeriodNodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPeriodNodeDelegate.swift; sourceTree = "<group>"; };
+		010E9F5F211A4D23006E0D7E /* DateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateType.swift; sourceTree = "<group>"; };
+		010E9F62211A4E01006E0D7E /* DateChooserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateChooserDelegate.swift; sourceTree = "<group>"; };
+		010E9F65211A4E34006E0D7E /* DateChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateChooserViewController.swift; sourceTree = "<group>"; };
+		010E9F67211A4F8E006E0D7E /* DateChooserNodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateChooserNodeDelegate.swift; sourceTree = "<group>"; };
+		010E9F6A211A4FED006E0D7E /* DateChooserNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateChooserNode.swift; sourceTree = "<group>"; };
+		010E9F6C211A5035006E0D7E /* NewDateNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDateNode.swift; sourceTree = "<group>"; };
+		010E9F6E211A5066006E0D7E /* PreviousDateNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousDateNode.swift; sourceTree = "<group>"; };
+		010E9F70211A59AB006E0D7E /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		010E9F72211A59EE006E0D7E /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
+		010E9F74211A5A53006E0D7E /* County.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = County.swift; sourceTree = "<group>"; };
+		010E9F76211A5A7B006E0D7E /* Counties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counties.swift; sourceTree = "<group>"; };
+		010E9F78211A5B04006E0D7E /* CountyRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyRequestParameters.swift; sourceTree = "<group>"; };
+		010E9F7A211A5B33006E0D7E /* ElectricalDivision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalDivision.swift; sourceTree = "<group>"; };
+		010E9F7C211A5B4E006E0D7E /* ElectricalDivisionRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalDivisionRequestParameters.swift; sourceTree = "<group>"; };
+		010E9F7E211A5B74006E0D7E /* ElectricalDivisions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalDivisions.swift; sourceTree = "<group>"; };
 		01B1A6DA211259A6002F0A28 /* NewMeasurerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMeasurerResponse.swift; sourceTree = "<group>"; };
 		01B1A6DC21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMeasurerNodeDelegate.swift; sourceTree = "<group>"; };
 		01B1A6DE211260CD002F0A28 /* RegisterMeasurerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMeasurerDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +178,7 @@
 		01B36200210FB75100019102 /* MeasurersDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurersDataManager.swift; sourceTree = "<group>"; };
 		01B36203210FB7DA00019102 /* MeasurerCellNodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurerCellNodeDelegate.swift; sourceTree = "<group>"; };
 		01B36205210FB8D600019102 /* MeasurerCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurerCellNode.swift; sourceTree = "<group>"; };
-		01B3620C210FC4D800019102 /* RegisterMeasurerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMeasurerViewController.swift; sourceTree = "<group>"; };
+		01B3620C210FC4D800019102 /* MeasurerConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurerConfigurationViewController.swift; sourceTree = "<group>"; };
 		01B3620F210FC54500019102 /* RegisterMeasurerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMeasurerNode.swift; sourceTree = "<group>"; };
 		01BB0CA3211238A900830A09 /* DeleteMeasurerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMeasurerResponse.swift; sourceTree = "<group>"; };
 		01BB0CA5211238D300830A09 /* DeleteMeasurerRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMeasurerRequestParameters.swift; sourceTree = "<group>"; };
@@ -166,6 +242,114 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010E9F2D211A3664006E0D7E /* CalendarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				010E9F3F211A3B7B006E0D7E /* Nodes */,
+				010E9F3E211A3B15006E0D7E /* Views */,
+				010E9F37211A3832006E0D7E /* Delegates */,
+				010E9F30211A37BB006E0D7E /* Helpers */,
+				010E9F2E211A379B006E0D7E /* CalendarViewController.swift */,
+			);
+			path = CalendarViewController;
+			sourceTree = "<group>";
+		};
+		010E9F30211A37BB006E0D7E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				010E9F31211A37CE006E0D7E /* CalendarDataSource.swift */,
+				010E9F35211A3813006E0D7E /* CalendarDelegate.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		010E9F37211A3832006E0D7E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				010E9F38211A3840006E0D7E /* ShowDayDetailDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		010E9F3E211A3B15006E0D7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				010E9F3A211A3A74006E0D7E /* CCTCalendarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		010E9F3F211A3B7B006E0D7E /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				010E9F40211A3B88006E0D7E /* CalendarNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		010E9F42211A4752006E0D7E /* RegisterLocationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				010E9F48211A4873006E0D7E /* Nodes */,
+				010E9F45211A47C4006E0D7E /* Delegates */,
+				010E9F43211A479A006E0D7E /* RegisterLocationViewController.swift */,
+			);
+			path = RegisterLocationViewController;
+			sourceTree = "<group>";
+		};
+		010E9F45211A47C4006E0D7E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				010E9F46211A47E0006E0D7E /* RegisterLocationDelegate.swift */,
+				010E9F4B211A48D8006E0D7E /* RegisterLocationNodeDelegate.swift */,
+				010E9F57211A49D9006E0D7E /* RateSelectionDelegate.swift */,
+				010E9F5D211A4CF8006E0D7E /* LocationPeriodNodeDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		010E9F48211A4873006E0D7E /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				010E9F49211A4880006E0D7E /* RegisterLocationNode.swift */,
+				010E9F4F211A492C006E0D7E /* LocationNameNode.swift */,
+				010E9F51211A4969006E0D7E /* LocationInitialConNode.swift */,
+				010E9F53211A4980006E0D7E /* LocationPeriodNode.swift */,
+				010E9F55211A499C006E0D7E /* LocationRateNode.swift */,
+				010E9F59211A4C19006E0D7E /* LocationMaximusDemandNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		010E9F61211A4DEB006E0D7E /* DateChooserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				010E9F69211A4FE5006E0D7E /* Nodes */,
+				010E9F64211A4E1A006E0D7E /* Delegate */,
+				010E9F65211A4E34006E0D7E /* DateChooserViewController.swift */,
+			);
+			path = DateChooserViewController;
+			sourceTree = "<group>";
+		};
+		010E9F64211A4E1A006E0D7E /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				010E9F62211A4E01006E0D7E /* DateChooserDelegate.swift */,
+				010E9F67211A4F8E006E0D7E /* DateChooserNodeDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		010E9F69211A4FE5006E0D7E /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				010E9F6A211A4FED006E0D7E /* DateChooserNode.swift */,
+				010E9F6C211A5035006E0D7E /* NewDateNode.swift */,
+				010E9F6E211A5066006E0D7E /* PreviousDateNode.swift */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
 		01B361CF210F9B1800019102 /* RealtimeActitivyController */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +368,7 @@
 				01B361E2210F9F0200019102 /* RTEnergyNode.swift */,
 				01B361E8210FA17F00019102 /* RTPowerFactorNode.swift */,
 				01B361EA210FA1F900019102 /* RTPowerNode.swift */,
+				010E9F29211A22C7006E0D7E /* RTActivelMeasurerNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -266,7 +451,7 @@
 			children = (
 				A040D5B3210FF3C40004599E /* Delegates */,
 				01B3620E210FC53100019102 /* Nodes */,
-				01B3620C210FC4D800019102 /* RegisterMeasurerViewController.swift */,
+				01B3620C210FC4D800019102 /* MeasurerConfigurationViewController.swift */,
 			);
 			path = RegisterMeasurerController;
 			sourceTree = "<group>";
@@ -330,6 +515,9 @@
 		A007C381210812E70011DB93 /* EFI */ = {
 			isa = PBXGroup;
 			children = (
+				010E9F61211A4DEB006E0D7E /* DateChooserViewController */,
+				010E9F42211A4752006E0D7E /* RegisterLocationViewController */,
+				010E9F2D211A3664006E0D7E /* CalendarViewController */,
 				A040D5BE211001170004599E /* MeasurerScannerController */,
 				A0D9A72E210818D800979F07 /* CCTBusinessTabController */,
 				01B3620B210FC4AE00019102 /* RegisterMeasurerController */,
@@ -393,6 +581,8 @@
 				01B361E6210FA02300019102 /* ElectricalVariables.swift */,
 				A0D9A7302108196300979F07 /* OfflineStorageNameFiles.swift */,
 				01B361DE210F9DC500019102 /* PhaseIdentifier.swift */,
+				010E9F2B211A289F006E0D7E /* ConfigurationMode.swift */,
+				010E9F5F211A4D23006E0D7E /* DateType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -413,6 +603,16 @@
 				01BB0CA3211238A900830A09 /* DeleteMeasurerResponse.swift */,
 				01BB0CA5211238D300830A09 /* DeleteMeasurerRequestParameters.swift */,
 				01B1A6DA211259A6002F0A28 /* NewMeasurerResponse.swift */,
+				010E9F3C211A3AD5006E0D7E /* CRERate.swift */,
+				010E9F4D211A4913006E0D7E /* RateForLocationRequestParameters.swift */,
+				010E9F70211A59AB006E0D7E /* State.swift */,
+				010E9F72211A59EE006E0D7E /* States.swift */,
+				010E9F74211A5A53006E0D7E /* County.swift */,
+				010E9F76211A5A7B006E0D7E /* Counties.swift */,
+				010E9F78211A5B04006E0D7E /* CountyRequestParameters.swift */,
+				010E9F7A211A5B33006E0D7E /* ElectricalDivision.swift */,
+				010E9F7C211A5B4E006E0D7E /* ElectricalDivisionRequestParameters.swift */,
+				010E9F7E211A5B74006E0D7E /* ElectricalDivisions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -448,6 +648,7 @@
 				A0D9A7D12108214000979F07 /* CCTNode.swift */,
 				A0D9A7D32108217900979F07 /* CTTTextNode.swift */,
 				A0D9A7D8210821F900979F07 /* CCTBorderButton.swift */,
+				010E9F5B211A4C57006E0D7E /* CTTIconButton.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -457,6 +658,7 @@
 			children = (
 				A0D9A7D6210821AC00979F07 /* UIColor.swift */,
 				A040D5AB210FF2C40004599E /* ASEditableTextNode.swift */,
+				010E9F33211A37F8006E0D7E /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -605,6 +807,7 @@
 				01BB0CA6211238D300830A09 /* DeleteMeasurerRequestParameters.swift in Sources */,
 				01B1A6DD21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift in Sources */,
 				A0D9A7D22108214000979F07 /* CCTNode.swift in Sources */,
+				010E9F3D211A3AD5006E0D7E /* CRERate.swift in Sources */,
 				01B1A6DF211260CD002F0A28 /* RegisterMeasurerDelegate.swift in Sources */,
 				01B361E9210FA17F00019102 /* RTPowerFactorNode.swift in Sources */,
 				01BBF82E210A46CC001EA9B9 /* LocationsResponse.swift in Sources */,
@@ -612,26 +815,39 @@
 				01B361E3210F9F0200019102 /* RTEnergyNode.swift in Sources */,
 				01BBF82A210A4677001EA9B9 /* Location.swift in Sources */,
 				A0D9A73D21081AA000979F07 /* Con100tNTService.swift in Sources */,
+				010E9F32211A37CE006E0D7E /* CalendarDataSource.swift in Sources */,
+				010E9F75211A5A53006E0D7E /* County.swift in Sources */,
 				A040D5BB210FFE8D0004599E /* MeasurerScannerDelegate.swift in Sources */,
 				A0D9A7CF210820FC00979F07 /* PaymentStatusNode.swift in Sources */,
 				01B361F2210FAEBA00019102 /* LocationsViewController.swift in Sources */,
 				01BBF830210A48BE001EA9B9 /* HomeLocationNodeDelegate.swift in Sources */,
 				A040D5B5210FF4130004599E /* MeasurerNodeDelegate.swift in Sources */,
+				010E9F41211A3B88006E0D7E /* CalendarNode.swift in Sources */,
 				A07DE61A21100391008D678A /* MeasurersResponse.swift in Sources */,
 				01B361FE210FB71C00019102 /* MeasurersViewController.swift in Sources */,
+				010E9F5A211A4C19006E0D7E /* LocationMaximusDemandNode.swift in Sources */,
 				01B361EB210FA1F900019102 /* RTPowerNode.swift in Sources */,
 				01B361E1210F9E6700019102 /* Phases.swift in Sources */,
 				01B361DA210F9D0600019102 /* CCTPhasesHorizontalStack.swift in Sources */,
+				010E9F7D211A5B4E006E0D7E /* ElectricalDivisionRequestParameters.swift in Sources */,
+				010E9F58211A49D9006E0D7E /* RateSelectionDelegate.swift in Sources */,
 				A07DE62021100416008D678A /* Measurer.swift in Sources */,
+				010E9F63211A4E01006E0D7E /* DateChooserDelegate.swift in Sources */,
+				010E9F44211A479A006E0D7E /* RegisterLocationViewController.swift in Sources */,
 				A0D9A7E42108235C00979F07 /* IntermediateConsumptionNode.swift in Sources */,
+				010E9F56211A499C006E0D7E /* LocationRateNode.swift in Sources */,
+				010E9F77211A5A7B006E0D7E /* Counties.swift in Sources */,
 				A07DE61C211003E2008D678A /* InstantActivity.swift in Sources */,
 				01B36206210FB8D600019102 /* MeasurerCellNode.swift in Sources */,
 				A0D9A7312108196300979F07 /* OfflineStorageNameFiles.swift in Sources */,
 				A0D9A7E8210823A900979F07 /* TotalConsumptionNode.swift in Sources */,
 				A0D9A7E0210822EF00979F07 /* BusinessEnergyConsumptionNode.swift in Sources */,
+				010E9F2F211A379B006E0D7E /* CalendarViewController.swift in Sources */,
 				A0D9A7E22108231700979F07 /* BasicConsumptionNode.swift in Sources */,
+				010E9F73211A59EE006E0D7E /* States.swift in Sources */,
+				010E9F4E211A4913006E0D7E /* RateForLocationRequestParameters.swift in Sources */,
 				A0D9A7D9210821F900979F07 /* CCTBorderButton.swift in Sources */,
-				01B3620D210FC4D800019102 /* RegisterMeasurerViewController.swift in Sources */,
+				01B3620D210FC4D800019102 /* MeasurerConfigurationViewController.swift in Sources */,
 				01B36210210FC54500019102 /* RegisterMeasurerNode.swift in Sources */,
 				01B361DF210F9DC500019102 /* PhaseIdentifier.swift in Sources */,
 				A0D9A7D42108217900979F07 /* CTTTextNode.swift in Sources */,
@@ -641,33 +857,57 @@
 				A040D5B2210FF38F0004599E /* MeasurerNode.swift in Sources */,
 				A07DE61E211003FB008D678A /* EnergyPower.swift in Sources */,
 				01B361F7210FAF4900019102 /* LocationCellDelegate.swift in Sources */,
+				010E9F50211A492C006E0D7E /* LocationNameNode.swift in Sources */,
+				010E9F6F211A5066006E0D7E /* PreviousDateNode.swift in Sources */,
+				010E9F60211A4D23006E0D7E /* DateType.swift in Sources */,
 				01B361E5210F9F1800019102 /* CCTNeutralPhasesHorizontalStack.swift in Sources */,
+				010E9F68211A4F8E006E0D7E /* DateChooserNodeDelegate.swift in Sources */,
+				010E9F34211A37F8006E0D7E /* Date.swift in Sources */,
 				A0D9A73B21081A6900979F07 /* BusinessHomeViewController.swift in Sources */,
 				01B361D6210F9C7400019102 /* RTActivityNode.swift in Sources */,
 				A0D9A7DE2108228700979F07 /* HomeLocationNode.swift in Sources */,
 				01BB0CA4211238A900830A09 /* DeleteMeasurerResponse.swift in Sources */,
+				010E9F2A211A22C7006E0D7E /* RTActivelMeasurerNode.swift in Sources */,
 				A040D5B9210FF5140004599E /* MeasurerAlarmNode.swift in Sources */,
 				01B361D8210F9CD100019102 /* RTVoltageNode.swift in Sources */,
 				A0D9A7E62108237C00979F07 /* TopConsumptionNode.swift in Sources */,
+				010E9F4A211A4880006E0D7E /* RegisterLocationNode.swift in Sources */,
+				010E9F3B211A3A74006E0D7E /* CCTCalendarView.swift in Sources */,
 				A040D5B7210FF4A30004599E /* RegisterMeasurerRequestParameters.swift in Sources */,
+				010E9F5C211A4C57006E0D7E /* CTTIconButton.swift in Sources */,
 				01B361E7210FA02300019102 /* ElectricalVariables.swift in Sources */,
 				A040D5AC210FF2C40004599E /* ASEditableTextNode.swift in Sources */,
 				01B361F4210FAF1800019102 /* LocationsDataManager.swift in Sources */,
 				01B1A6DB211259A6002F0A28 /* NewMeasurerResponse.swift in Sources */,
+				010E9F7B211A5B33006E0D7E /* ElectricalDivision.swift in Sources */,
 				A0D9A72D210818D400979F07 /* CCTBusinessTabController.swift in Sources */,
 				01BBF82C210A46AE001EA9B9 /* LocationsRequestParameters.swift in Sources */,
 				01B361FA210FAFC300019102 /* LocationCellNode.swift in Sources */,
 				01BBF828210A4567001EA9B9 /* CCTApiService.swift in Sources */,
+				010E9F39211A3840006E0D7E /* ShowDayDetailDelegate.swift in Sources */,
 				01B36204210FB7DA00019102 /* MeasurerCellNodeDelegate.swift in Sources */,
 				A0D9A7DC2108222F00979F07 /* CCTTitleValueHorizontalStack.swift in Sources */,
+				010E9F36211A3813006E0D7E /* CalendarDelegate.swift in Sources */,
+				010E9F5E211A4CF8006E0D7E /* LocationPeriodNodeDelegate.swift in Sources */,
 				A040D5B0210FF3490004599E /* VoltageMultiplierNode.swift in Sources */,
 				A040D5C02110012C0004599E /* MeasurerScannerViewController.swift in Sources */,
 				01B361DD210F9D3D00019102 /* CCTPhaseNode.swift in Sources */,
 				01B36201210FB75100019102 /* MeasurersDataManager.swift in Sources */,
+				010E9F47211A47E0006E0D7E /* RegisterLocationDelegate.swift in Sources */,
 				A040D5A9210FF25E0004599E /* MeasurerNickNameNode.swift in Sources */,
 				01B361D1210F9B4100019102 /* RealTimeActivityViewController.swift in Sources */,
+				010E9F7F211A5B74006E0D7E /* ElectricalDivisions.swift in Sources */,
+				010E9F79211A5B04006E0D7E /* CountyRequestParameters.swift in Sources */,
+				010E9F4C211A48D8006E0D7E /* RegisterLocationNodeDelegate.swift in Sources */,
 				A0D9A7D7210821AC00979F07 /* UIColor.swift in Sources */,
+				010E9F71211A59AB006E0D7E /* State.swift in Sources */,
 				A040D5AE210FF3160004599E /* EnergyMultiplierNode.swift in Sources */,
+				010E9F54211A4980006E0D7E /* LocationPeriodNode.swift in Sources */,
+				010E9F2C211A289F006E0D7E /* ConfigurationMode.swift in Sources */,
+				010E9F6D211A5035006E0D7E /* NewDateNode.swift in Sources */,
+				010E9F6B211A4FED006E0D7E /* DateChooserNode.swift in Sources */,
+				010E9F66211A4E34006E0D7E /* DateChooserViewController.swift in Sources */,
+				010E9F52211A4969006E0D7E /* LocationInitialConNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

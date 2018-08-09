@@ -61,7 +61,7 @@ class PaymentStatusNode:CCTNode {
         totalTextNode = CTTTextNode(withFontSize: 15, color: .lightGray, with: "343,371.416")
         
         createReportButton = CCTBorderButtonNode(fontSize: 13, textColor: .white, with: "Generar Reporte")
-        createReportButton.backgroundColor = UIColor.con100tGreenColor
+        createReportButton.backgroundColor = UIColor.con100tBlueColor
         
         segmentedControl = UISegmentedControl(items: ["Horaria","Ordinaria"])
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
@@ -74,7 +74,7 @@ class PaymentStatusNode:CCTNode {
         segmentedNode.style.preferredSize.height = 30
         
         segmentedNode.clipsToBounds = true
-        segmentedNode.tintColor = UIColor.con100tGreenColor
+        segmentedNode.tintColor = UIColor.con100tBlueColor
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

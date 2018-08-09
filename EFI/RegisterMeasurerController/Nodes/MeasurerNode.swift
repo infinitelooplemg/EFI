@@ -25,7 +25,7 @@ class MeasurerNode:CCTNode {
         
         scanButton = CCTBorderButtonNode(fontSize: 13, textColor: .white, with: "Escanear Medidor")
         scanButton.addTarget(self, action: #selector(checkCameraPermissions), forControlEvents: .touchUpInside)
-        scanButton.backgroundColor = UIColor.con100tGreenColor
+        scanButton.backgroundColor = UIColor.con100tBlueColor
         
     }
     

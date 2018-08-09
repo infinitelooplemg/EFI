@@ -14,6 +14,7 @@ class RTActivityNode:ASScrollNode {
     var energyNode:RTEnergyNode!
     var powerFactorNode:RTPowerFactorNode!
     var powerNode:RTPowerNode!
+    var activeNode:RTActivelMeasurerNode!
     
     
     override init() {
@@ -24,6 +25,7 @@ class RTActivityNode:ASScrollNode {
         energyNode = RTEnergyNode()
         powerFactorNode = RTPowerFactorNode()
         powerNode =  RTPowerNode()
+        activeNode = RTActivelMeasurerNode()
     }
     
     
@@ -32,13 +34,13 @@ class RTActivityNode:ASScrollNode {
         
         
         let instantActivitiesStack = ASStackLayoutSpec.vertical()
-        instantActivitiesStack.alignContent = .center
+     
         instantActivitiesStack.spacing = 8
         
-        instantActivitiesStack.children = [voltageNode,energyNode,powerFactorNode,powerNode]
+        instantActivitiesStack.children = [activeNode,voltageNode,energyNode,powerFactorNode,powerNode]
         
         
-        let inset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        let inset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         let insetLayoutSpec = ASInsetLayoutSpec(insets: inset, child: instantActivitiesStack)
         
         return insetLayoutSpec

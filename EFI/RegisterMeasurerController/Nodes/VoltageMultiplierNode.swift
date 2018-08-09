@@ -26,7 +26,7 @@ class MeasurerVoltageMultiplierNode:CCTNode ,ASEditableTextNodeDelegate{
         super.init()
         automaticallyManagesSubnodes = true
        
-        multiplierTitleNode = CTTTextNode(withFontSize: 13, color: .black, with: "Multiplicador de voltaje por uso de Transformador")
+        multiplierTitleNode = CTTTextNode(withFontSize: 15, color: .black, with: "Multiplicador de voltaje por uso de Transformador")
         multiplierTitleNode.style.flexGrow = 0
         primaryTextNode = ASEditableTextNode(placeHolder: "Voltaje Primario")
         secondaryTextNode = ASEditableTextNode(placeHolder: "Voltaje Secundario")
@@ -40,7 +40,7 @@ class MeasurerVoltageMultiplierNode:CCTNode ,ASEditableTextNodeDelegate{
             
             return self!.switchView
         }
-        switchNode.style.preferredSize = CGSize(width: 44, height: 44)
+        switchNode.style.preferredSize = CGSize(width: 51, height: 31)
         switchNode.backgroundColor = .white
         
         primaryTextNode.isHidden = true

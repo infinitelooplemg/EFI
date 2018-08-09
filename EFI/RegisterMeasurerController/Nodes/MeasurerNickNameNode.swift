@@ -19,7 +19,7 @@ class MeasurerNickNameNode:CCTNode {
         measurerNickNameTextNode = ASEditableTextNode(placeHolder: "Introduce aqui el nombre")
         measurerNickNameTitleNode = CTTTextNode(withFontSize: 13, color: .black, with: "Nombre de tu medidor")
     }
-    
+
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let contentStack = ASStackLayoutSpec.vertical()

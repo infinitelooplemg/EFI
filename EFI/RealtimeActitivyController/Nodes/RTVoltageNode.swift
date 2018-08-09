@@ -50,7 +50,7 @@ class RTVoltageNode:CCTNode {
         verticalStack.children = [ subHorizontalStack,phaseStackLayout]
         
         
-        let insets = UIEdgeInsetsMake(8, 8, 8, 8)
+        let insets = UIEdgeInsetsMake(4, 8, 4, 8)
         let insetSpec = ASInsetLayoutSpec(insets: insets, child: verticalStack)
         
         

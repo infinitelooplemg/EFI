@@ -21,13 +21,19 @@ class LocationsViewController:ASViewController<ASTableNode> {
         super.init(node: tableNode)
         dataManager = LocationsDataManager(tableNode: tableNode, delegate: self, networkService: self.networkService!, viewController: self)
         
+        
+        
         self.dataManager.locations = locations
         self.tableNode.reloadData()
     }
     
+    @objc func addLocation(){
+        let vc = RegisterLocationViewController(delegate: self, networkService: networkService!)
+        present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableNode.backgroundColor = .white
+        tableNode.backgroundColor = UIColor.con100tGrayColor
         tableNode.view.separatorStyle = .none
         tableNode.allowsSelection = true
         tableNode.view.indicatorStyle = .default
@@ -36,6 +42,9 @@ class LocationsViewController:ASViewController<ASTableNode> {
         extendedLayoutIncludesOpaqueBars = true
         
         title = "Localizaciones"
+        
+        let newLocationBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addLocation))
+        navigationItem.rightBarButtonItem = newLocationBarButton
         
     }
     
@@ -60,10 +69,15 @@ extension LocationsViewController:LocationCellDelegate {
     
     
     func showConfigurationFor(location: Location, fromIndexPath: IndexPath) {
-//        let vc = BusinessLocationViewController()
-//        vc.location = location
-//        navigationController?.pushViewController(vc, animated: true)
-//
+
     }
+    
+}
+
+extension LocationsViewController:RegisterLocationDelegate{
+    func locationAdded(location: Location, rate: CRERate) {
+        print(location)
+    }
+    
     
 }

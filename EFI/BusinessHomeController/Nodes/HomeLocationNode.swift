@@ -32,8 +32,8 @@ class HomeLocationNode:CCTNode{
         locationTextNode = CTTTextNode(withFontSize: 20, color: .black, with: "Itver")
         rateTextNode = CTTTextNode(withFontSize: 20, color: .black, with:"GDMTH")
         
-        chooseRateButtonNode = CCTBorderButtonNode(fontSize: 11, textColor: .white, with: "Localizaciones")
-        chooseRateButtonNode.backgroundColor = UIColor.con100tGreenColor
+        chooseRateButtonNode = CCTBorderButtonNode(fontSize: 13, textColor: UIColor.con100tBlueColor, with: "Localizaciones")
+        chooseRateButtonNode.backgroundColor = UIColor.con100tGrayColor
         chooseRateButtonNode.addTarget(self, action: #selector(showLocations), forControlEvents: .touchUpInside)
        
         automaticallyManagesSubnodes = true

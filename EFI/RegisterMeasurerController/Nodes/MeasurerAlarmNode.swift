@@ -25,7 +25,7 @@ class MeasurerAlarmNode:CCTNode,ASEditableTextNodeDelegate {
         super.init()
         automaticallyManagesSubnodes = true
 
-        alarmTitleNode = CTTTextNode(withFontSize: 13, color: .black, with: "Alarma")
+        alarmTitleNode = CTTTextNode(withFontSize: 15, color: .black, with: "Alarma")
         alarmTitleNode.style.flexGrow = 0
         maximumDemandTextNode = ASEditableTextNode(placeHolder: "Demanda Maxima Esperada")
         percentageTextNode = ASEditableTextNode(placeHolder: "Porcentaje %")
@@ -40,7 +40,7 @@ class MeasurerAlarmNode:CCTNode,ASEditableTextNodeDelegate {
             
             return self!.switchView
         }
-        switchNode.style.preferredSize = CGSize(width: 44, height: 44)
+        switchNode.style.preferredSize = CGSize(width: 51, height: 31)
         switchNode.backgroundColor = .white
         
         maximumDemandTextNode.isHidden = true

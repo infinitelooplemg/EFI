@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Disk
 
 final class CCTApiService {
     
@@ -180,6 +181,155 @@ final class CCTApiService {
         
         task.resume()
     }
+    
+    func fetchStates(completion: @escaping (_ results: [State]?, _ error: Error?) -> ()){
+        if Disk.exists("estados.json", in: .documents){
+            do{
+                let states = try Disk.retrieve("estados.json", from: .documents, as: [State].self)
+                completion(states,nil)
+            } catch{
+                
+            }
+        } else {
+            
+            components.path = "/api/ios/v1/estados"
+            
+            guard let url = components.url else { fatalError("Could not create URL from components") }
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            
+            let config = URLSessionConfiguration.default
+            let session = URLSession(configuration: config)
+            let task = session.dataTask(with: request) { (responseData, response, responseError) in
+                
+                
+                guard let data = responseData else {
+                    completion(nil,responseError)
+                    return
+                }
+                
+                do {
+                    let Container = try JSONDecoder().decode(States.self, from: data)
+                    DispatchQueue.main.async {
+                        do {
+                            try Disk.save(Container.Estados, to: .documents, as: "estados.json")
+                        } catch {
+                            
+                        }
+                        completion(Container.Estados,nil)
+                    }
+                } catch let jsonErr {
+                    print(jsonErr)
+                }
+            }
+            task.resume()
+            
+        }
+    }
+    
+    
+    func fetchCounties(by state:State, completion: @escaping (_ results: [County]?, _ error: Error?) -> ()){
+        
+        let name = state.Nombre
+        if Disk.exists("\(name)counties.json", in: .documents){
+            do{
+                let counties = try Disk.retrieve("\(name)counties.json", from: .documents, as: [County].self)
+                completion(counties,nil)
+            } catch{
+                
+            }
+        } else {
+            components.path = "/api/ios/v1/municipios"
+            
+            guard let url = components.url else { fatalError("Could not create URL from components") }
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            var headers = request.allHTTPHeaderFields ?? [:]
+            headers["Content-Type"] = "application/json"
+            request.allHTTPHeaderFields = headers
+            
+            
+            let parameter = CountyRequestParameters(ClaveEstado: state.Clave)
+            request.httpBody = encodeToJson(parameters: parameter)
+            
+            let config = URLSessionConfiguration.default
+            let session = URLSession(configuration: config)
+            let task = session.dataTask(with: request) { (responseData, response, responseError) in
+                
+                
+                guard let data = responseData else {
+                    completion(nil,responseError)
+                    return
+                }
+                do {
+                    
+                    let Container = try JSONDecoder().decode(Counties.self, from: data)
+                    DispatchQueue.main.async {
+                        do {
+                            try Disk.save(Container.Municipios, to: .documents, as: "\(name)counties.json")
+                        } catch {
+                            
+                        }
+                        completion(Container.Municipios,nil)
+                    }
+                    
+                } catch let jsonErr {
+                    print(jsonErr)
+                }
+            }
+            
+            
+            task.resume()
+            
+        }
+    }
+    
+    
+    func fetchElectricalDivision(by state:State,county:County, completion: @escaping (_ results: [ElectricalDivision]?, _ error: Error?) -> ()){
+        components.path = "/api/ios/v1/divisionesElectricas"
+        
+        guard let url = components.url else { fatalError("Could not create URL from components") }
+        
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        request.allHTTPHeaderFields = headers
+        
+        
+        let parameter = ElectricalDivisionRequestParameters(ClaveEstado: state.Clave, ClaveMunicipio: county.Clave)
+        request.httpBody = encodeToJson(parameters: parameter)
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) { (responseData, response, responseError) in
+            
+            DispatchQueue.main.async {
+                guard let data = responseData else {
+                    
+                    completion(nil,responseError)
+                    return
+                }
+                
+                
+                do {
+                    
+                    let divisions = try JSONDecoder().decode(ElectricalDivisions.self, from: data)
+                    
+                    completion(divisions.DivisionesElectricas,nil)
+                    
+                } catch let jsonErr {
+                    print(jsonErr)
+                }
+            }
+        }
+        
+        task.resume()
+    }
+    
 }
 
 

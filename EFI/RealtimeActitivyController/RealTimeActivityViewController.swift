@@ -21,10 +21,11 @@ class RealTimeActivityViewController: UIViewController {
     override func viewDidLoad() {
  
         title = "Instantáneos"
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.con100tGrayColor
         node = RTActivityNode()
         view.addSubnode(node)
         view.layoutIfNeeded()
+        
     }
     
     override func viewDidLayoutSubviews() {

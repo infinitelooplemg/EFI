@@ -40,7 +40,7 @@ class RTPowerNode:CCTNode  {
         segmentedNode.style.preferredSize.height = 30
         
         segmentedNode.clipsToBounds = true
-        segmentedNode.tintColor = UIColor.con100tGreenColor
+        segmentedNode.tintColor = UIColor.con100tBlueColor
         
         
         
@@ -125,7 +125,7 @@ class RTPowerNode:CCTNode  {
         verticalStack.children = [ titleTextNode,segmentedNode,subHorizontalStack,phaseStackLayout]
         
         
-        let insets = UIEdgeInsetsMake(8, 8, 8, 8)
+        let insets = UIEdgeInsetsMake(4, 8, 4, 8)
         let insetSpec = ASInsetLayoutSpec(insets: insets, child: verticalStack)
         
         

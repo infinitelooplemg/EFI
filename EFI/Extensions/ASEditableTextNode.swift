@@ -11,10 +11,18 @@ import AsyncDisplayKit
 extension ASEditableTextNode{
     convenience init(placeHolder:String) {
         self.init()
-        self.attributedPlaceholderText = NSAttributedString(string: placeHolder, attributes: [NSAttributedStringKey.foregroundColor:UIColor.lightGray,NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize: 20)])
+        let centeredParagraphStyle = NSMutableParagraphStyle()
+        centeredParagraphStyle.alignment = .right
+
+        self.attributedPlaceholderText = NSAttributedString(string: placeHolder, attributes: [NSAttributedStringKey.foregroundColor:UIColor.lightGray,NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize: 15),NSAttributedStringKey.paragraphStyle:centeredParagraphStyle])
         self.textContainerInset = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
-        self.typingAttributes = [NSAttributedStringKey.foregroundColor.rawValue:UIColor.lightGray,NSAttributedStringKey.font.rawValue:UIFont.boldSystemFont(ofSize: 20)]
+        self.typingAttributes = [NSAttributedStringKey.foregroundColor.rawValue:UIColor.lightGray,NSAttributedStringKey.font.rawValue:UIFont.boldSystemFont(ofSize: 15),NSAttributedStringKey.paragraphStyle.rawValue:centeredParagraphStyle] 
         
+    }
+    
+    func set(text:String){
+        self.attributedText = NSAttributedString(string: text, attributes: [NSAttributedStringKey.foregroundColor:UIColor.lightGray,NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize: 15)])
+
     }
     
 }

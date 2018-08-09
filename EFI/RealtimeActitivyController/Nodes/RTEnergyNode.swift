@@ -20,13 +20,8 @@ class RTEnergyNode:CCTNode{
     override init(){
         
         super.init()
-        
-     
-        
         self.activity = ElectricalVariables.corriente
-        
         automaticallyManagesSubnodes = true
-        
         titleTextNode = CTTTextNode(withFontSize: 20, color: .black, with: activity.description)
         valueTextNode = CTTTextNode(withFontSize: 18, color: .lightGray, with: "120 \(activity.unitOfMeasurement)")
         phaseStackLayout = CCTNeutralPhasesHorizontalStack()
@@ -60,7 +55,7 @@ class RTEnergyNode:CCTNode{
         verticalStack.children = [ subHorizontalStack,phaseStackLayout]
         
         
-        let insets = UIEdgeInsetsMake(8, 8, 8, 8)
+        let insets = UIEdgeInsetsMake(4, 8, 4, 8)
         let insetSpec = ASInsetLayoutSpec(insets: insets, child: verticalStack)
         
         

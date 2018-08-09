@@ -25,7 +25,7 @@ class EnergyMultiplierNode:CCTNode ,ASEditableTextNodeDelegate{
         super.init()
         automaticallyManagesSubnodes = true
       
-        multiplierTitleNode = CTTTextNode(withFontSize: 13, color: .black, with: "Multiplicador de corriente por uso de Transformador")
+        multiplierTitleNode = CTTTextNode(withFontSize: 15, color: .black, with: "Multiplicador de corriente por uso de Transformador")
         multiplierTitleNode.style.flexGrow = 0
         primaryTextNode = ASEditableTextNode(placeHolder: "Corriente Primaria")
         secondaryTextNode = ASEditableTextNode(placeHolder: "Corriente Secundaria")
@@ -39,7 +39,7 @@ class EnergyMultiplierNode:CCTNode ,ASEditableTextNodeDelegate{
             
             return self!.switchView
         }
-        switchNode.style.preferredSize = CGSize(width: 44, height: 44)
+     switchNode.style.preferredSize = CGSize(width: 51, height: 31)
             switchNode.backgroundColor = .white
         primaryTextNode.isHidden = true
         secondaryTextNode.isHidden = true
