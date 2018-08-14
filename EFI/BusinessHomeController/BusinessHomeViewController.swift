@@ -16,6 +16,7 @@ class BusinessHomeViewController:UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+     
     }
     
     func setupViews(){
@@ -24,6 +25,7 @@ class BusinessHomeViewController:UIViewController {
         navigationController?.navigationBar.isTranslucent = false
         view.addSubnode(node)
         view.layoutIfNeeded()
+        
     }
     
     
@@ -48,13 +50,16 @@ class BusinessHomeViewController:UIViewController {
 
 extension BusinessHomeViewController:HomeLocationNodeDelegate {
     func showLocations() {
+       // let vc = LocationsMapViewController(locations: LocationsMap, nertworkService: )
+        //self.navigationController?.pushViewController(vc, animated: true    )
         networkService?.fetchLocations(completion: { [weak self]( locations , error) in
-            
+
             DispatchQueue.main.async {
                 let vc = LocationsViewController(networkService: (self?.networkService!)!, locations: locations!)
+               // let vc = LocationsMapViewController(locations: locations!, nertworkService: (self?.networkService!)!)
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
-            
+
         })
     }
 }

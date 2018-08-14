@@ -28,14 +28,14 @@ class LocationRateNode:CCTNode {
     }
     
     @objc func chooseRate(){
-//        networkService.fetchStates { [weak self](states, error) in
-//            if error != nil {
-//                return
-//            }
-//
-//            let vc = StatesViewController(delegate: self!, networkService: (self?.networkService)!, states: states!)
-//            self?.closestViewController?.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
-//        }
+        networkService.fetchStates { [weak self](states, error) in
+            if error != nil {
+                return
+            }
+
+            let vc = StatesViewController(delegate: self!, networkService: (self?.networkService)!, states: states!)
+            self?.closestViewController?.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+        }
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

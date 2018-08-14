@@ -21,7 +21,7 @@ class LocationsViewController:ASViewController<ASTableNode> {
         super.init(node: tableNode)
         dataManager = LocationsDataManager(tableNode: tableNode, delegate: self, networkService: self.networkService!, viewController: self)
         
-        
+       
         
         self.dataManager.locations = locations
         self.tableNode.reloadData()
@@ -31,6 +31,7 @@ class LocationsViewController:ASViewController<ASTableNode> {
         let vc = RegisterLocationViewController(delegate: self, networkService: networkService!)
         present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableNode.backgroundColor = UIColor.con100tGrayColor
@@ -38,11 +39,14 @@ class LocationsViewController:ASViewController<ASTableNode> {
         tableNode.allowsSelection = true
         tableNode.view.indicatorStyle = .default
         
-        
-        extendedLayoutIncludesOpaqueBars = true
-        
         title = "Localizaciones"
-        
+        if #available(iOS 11.0, *) {
+            print("holaaaa")
+            navigationController?.navigationBar.prefersLargeTitles = true
+        } else {
+            // Fallback on earlier versions
+        }
+        print("h0oa")
         let newLocationBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addLocation))
         navigationItem.rightBarButtonItem = newLocationBarButton
         

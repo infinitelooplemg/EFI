@@ -18,4 +18,6 @@ struct Location:Codable {
     var NombreTarifaCRE:String?
     var DemandaMaxima:Float?
     var TipoDeTarifa:Int?
+    var longitude:Double?
+    var latitude:Double?
 }

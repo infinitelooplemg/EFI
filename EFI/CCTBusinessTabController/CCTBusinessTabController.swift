@@ -20,26 +20,36 @@ class CCTBusinessTabController:ASTabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let vc = BusinessHomeViewController()
-        vc.networkService = networkService
-        vc.tabBarItem.image = #imageLiteral(resourceName: "home")
-        let nc = UINavigationController(rootViewController: vc)
+        var vc:LocationsViewController?
+        var nc:UINavigationController?
+        networkService.fetchLocations(completion: { [weak self]( locations , error) in
+            
+            DispatchQueue.main.async {
+                vc = LocationsViewController(networkService: (self?.networkService)!, locations: locations!)
+                vc?.tabBarItem.image = #imageLiteral(resourceName: "home")
+                nc = UINavigationController(rootViewController: vc!)
+                
+                let vc2 = RealTimeActivityViewController()
+                vc2.networkService = self?.networkService
+                vc2.tabBarItem.image = #imageLiteral(resourceName: "map-location")
+                vc2.tabBarItem.title = "Instantaneos"
+                let nc2 = UINavigationController(rootViewController: vc2)
+                
+                let vc3 = CalendarViewController()
+                vc3.networkService = self?.networkService
+                vc3.tabBarItem.title = "Historial"
+                vc3.tabBarItem.image = #imageLiteral(resourceName: "calendar")
+                let nc3 = UINavigationController(rootViewController: vc3)
+                
+                self?.viewControllers = [nc!,nc2,nc3]
+            }
+            
+        })
+       
         
-        let vc2 = RealTimeActivityViewController()
-        vc2.networkService = networkService
-        vc2.tabBarItem.image = #imageLiteral(resourceName: "map-location")
-        vc2.tabBarItem.title = "Instantaneos"
-        let nc2 = UINavigationController(rootViewController: vc2)
+       
         
-        let vc3 = CalendarViewController()
-        vc3.networkService = networkService
-        vc3.tabBarItem.title = "Historial"
-        vc3.tabBarItem.image = #imageLiteral(resourceName: "calendar")
-        let nc3 = UINavigationController(rootViewController: vc3)
-        
-        self.viewControllers = [nc,nc2,nc3]
-        
-        tabBar.isTranslucent = false
+        tabBar.isTranslucent = true
         
         delegate = self
         

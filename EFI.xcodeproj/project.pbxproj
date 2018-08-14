@@ -97,6 +97,32 @@
 		A07DE62021100416008D678A /* Measurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DE61F21100416008D678A /* Measurer.swift */; };
 		A07DE62221100453008D678A /* MeasurersRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DE62121100453008D678A /* MeasurersRequestParameters.swift */; };
 		A0A2233021153977003FA50C /* EmptyMeasurersCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2232F21153977003FA50C /* EmptyMeasurersCellNode.swift */; };
+		A0B32BB6211CFBB700AA5B41 /* StatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BB5211CFBB700AA5B41 /* StatesViewController.swift */; };
+		A0B32BB9211CFBD500AA5B41 /* StateCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BB8211CFBD500AA5B41 /* StateCellNode.swift */; };
+		A0B32BBC211CFC2B00AA5B41 /* NationalStatesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BBB211CFC2B00AA5B41 /* NationalStatesDelegate.swift */; };
+		A0B32BBF211CFC6B00AA5B41 /* StatesTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BBE211CFC6B00AA5B41 /* StatesTableManager.swift */; };
+		A0B32BC2211CFC9E00AA5B41 /* CountiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BC1211CFC9E00AA5B41 /* CountiesViewController.swift */; };
+		A0B32BC6211CFCDA00AA5B41 /* TownsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BC5211CFCDA00AA5B41 /* TownsDataManager.swift */; };
+		A0B32BC9211CFD0C00AA5B41 /* CountyCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BC8211CFD0C00AA5B41 /* CountyCellNode.swift */; };
+		A0B32BCB211CFD2A00AA5B41 /* StateTownsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BCA211CFD2A00AA5B41 /* StateTownsDelegate.swift */; };
+		A0B32BCE211CFD5600AA5B41 /* ElectricalDivisionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BCD211CFD5600AA5B41 /* ElectricalDivisionsViewController.swift */; };
+		A0B32BD1211CFD8A00AA5B41 /* ElectricalDivisionCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BD0211CFD8A00AA5B41 /* ElectricalDivisionCellNode.swift */; };
+		A0B32BD4211CFDB500AA5B41 /* ElectricalDivisionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BD3211CFDB500AA5B41 /* ElectricalDivisionDataManager.swift */; };
+		A0B32BD7211CFDCE00AA5B41 /* ElectricalDivisionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BD6211CFDCE00AA5B41 /* ElectricalDivisionDelegate.swift */; };
+		A0B32BD9211CFE6B00AA5B41 /* TarifasCRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BD8211CFE6B00AA5B41 /* TarifasCRE.swift */; };
+		A0B32BDC211CFEAC00AA5B41 /* CRERatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BDB211CFEAC00AA5B41 /* CRERatesViewController.swift */; };
+		A0B32BDF211CFEDB00AA5B41 /* CRERateCellNde.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BDE211CFEDB00AA5B41 /* CRERateCellNde.swift */; };
+		A0B32BE2211CFF1B00AA5B41 /* CRERatesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BE1211CFF1B00AA5B41 /* CRERatesDelegate.swift */; };
+		A0B32BE5211CFF5800AA5B41 /* CRERatesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BE4211CFF5800AA5B41 /* CRERatesDataManager.swift */; };
+		A0B32BE7211D036D00AA5B41 /* NewLocationRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BE6211D036D00AA5B41 /* NewLocationRequestParameters.swift */; };
+		A0B32BE9211D03F700AA5B41 /* NewLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BE8211D03F700AA5B41 /* NewLocationResponse.swift */; };
+		A0CD8ADF211D2A6400235048 /* LocationsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD8ADE211D2A6400235048 /* LocationsMapViewController.swift */; };
+		A0CD8AE3211D548100235048 /* LocationsMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD8AE2211D548100235048 /* LocationsMapCell.swift */; };
+		A0CD8AE6211D54A000235048 /* LocationMapCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD8AE5211D54A000235048 /* LocationMapCellDelegate.swift */; };
+		A0CD8AE9211D54BC00235048 /* MapLocationsCollectionNodeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD8AE8211D54BC00235048 /* MapLocationsCollectionNodeDataManager.swift */; };
+		A0CD8AEB211D54ED00235048 /* MapLocationsCollectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD8AEA211D54ED00235048 /* MapLocationsCollectionNode.swift */; };
+		A0CD8AED211D585400235048 /* LocationsMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD8AEC211D585400235048 /* LocationsMapDelegate.swift */; };
+		A0CD8AF1211D59EE00235048 /* LocationsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD8AF0211D59EE00235048 /* LocationsMap.swift */; };
 		A0D9A72D210818D400979F07 /* CCTBusinessTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A72C210818D400979F07 /* CCTBusinessTabController.swift */; };
 		A0D9A7312108196300979F07 /* OfflineStorageNameFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7302108196300979F07 /* OfflineStorageNameFiles.swift */; };
 		A0D9A73B21081A6900979F07 /* BusinessHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A73A21081A6900979F07 /* BusinessHomeViewController.swift */; };
@@ -210,6 +236,32 @@
 		A07DE61F21100416008D678A /* Measurer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurer.swift; sourceTree = "<group>"; };
 		A07DE62121100453008D678A /* MeasurersRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurersRequestParameters.swift; sourceTree = "<group>"; };
 		A0A2232F21153977003FA50C /* EmptyMeasurersCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyMeasurersCellNode.swift; sourceTree = "<group>"; };
+		A0B32BB5211CFBB700AA5B41 /* StatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesViewController.swift; sourceTree = "<group>"; };
+		A0B32BB8211CFBD500AA5B41 /* StateCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCellNode.swift; sourceTree = "<group>"; };
+		A0B32BBB211CFC2B00AA5B41 /* NationalStatesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalStatesDelegate.swift; sourceTree = "<group>"; };
+		A0B32BBE211CFC6B00AA5B41 /* StatesTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesTableManager.swift; sourceTree = "<group>"; };
+		A0B32BC1211CFC9E00AA5B41 /* CountiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountiesViewController.swift; sourceTree = "<group>"; };
+		A0B32BC5211CFCDA00AA5B41 /* TownsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsDataManager.swift; sourceTree = "<group>"; };
+		A0B32BC8211CFD0C00AA5B41 /* CountyCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyCellNode.swift; sourceTree = "<group>"; };
+		A0B32BCA211CFD2A00AA5B41 /* StateTownsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTownsDelegate.swift; sourceTree = "<group>"; };
+		A0B32BCD211CFD5600AA5B41 /* ElectricalDivisionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalDivisionsViewController.swift; sourceTree = "<group>"; };
+		A0B32BD0211CFD8A00AA5B41 /* ElectricalDivisionCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalDivisionCellNode.swift; sourceTree = "<group>"; };
+		A0B32BD3211CFDB500AA5B41 /* ElectricalDivisionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalDivisionDataManager.swift; sourceTree = "<group>"; };
+		A0B32BD6211CFDCE00AA5B41 /* ElectricalDivisionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalDivisionDelegate.swift; sourceTree = "<group>"; };
+		A0B32BD8211CFE6B00AA5B41 /* TarifasCRE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarifasCRE.swift; sourceTree = "<group>"; };
+		A0B32BDB211CFEAC00AA5B41 /* CRERatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRERatesViewController.swift; sourceTree = "<group>"; };
+		A0B32BDE211CFEDB00AA5B41 /* CRERateCellNde.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRERateCellNde.swift; sourceTree = "<group>"; };
+		A0B32BE1211CFF1B00AA5B41 /* CRERatesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRERatesDelegate.swift; sourceTree = "<group>"; };
+		A0B32BE4211CFF5800AA5B41 /* CRERatesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRERatesDataManager.swift; sourceTree = "<group>"; };
+		A0B32BE6211D036D00AA5B41 /* NewLocationRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocationRequestParameters.swift; sourceTree = "<group>"; };
+		A0B32BE8211D03F700AA5B41 /* NewLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocationResponse.swift; sourceTree = "<group>"; };
+		A0CD8ADE211D2A6400235048 /* LocationsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsMapViewController.swift; sourceTree = "<group>"; };
+		A0CD8AE2211D548100235048 /* LocationsMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsMapCell.swift; sourceTree = "<group>"; };
+		A0CD8AE5211D54A000235048 /* LocationMapCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapCellDelegate.swift; sourceTree = "<group>"; };
+		A0CD8AE8211D54BC00235048 /* MapLocationsCollectionNodeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocationsCollectionNodeDataManager.swift; sourceTree = "<group>"; };
+		A0CD8AEA211D54ED00235048 /* MapLocationsCollectionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocationsCollectionNode.swift; sourceTree = "<group>"; };
+		A0CD8AEC211D585400235048 /* LocationsMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsMapDelegate.swift; sourceTree = "<group>"; };
+		A0CD8AF0211D59EE00235048 /* LocationsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsMap.swift; sourceTree = "<group>"; };
 		A0D9A72C210818D400979F07 /* CCTBusinessTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTBusinessTabController.swift; sourceTree = "<group>"; };
 		A0D9A7302108196300979F07 /* OfflineStorageNameFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineStorageNameFiles.swift; sourceTree = "<group>"; };
 		A0D9A73A21081A6900979F07 /* BusinessHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessHomeViewController.swift; sourceTree = "<group>"; };
@@ -515,6 +567,8 @@
 		A007C381210812E70011DB93 /* EFI */ = {
 			isa = PBXGroup;
 			children = (
+				A0CD8ADD211D2A3B00235048 /* LocationsMapViewController */,
+				A0CD8ADC211D2A2200235048 /* RateSelectionViewControllers */,
 				010E9F61211A4DEB006E0D7E /* DateChooserViewController */,
 				010E9F42211A4752006E0D7E /* RegisterLocationViewController */,
 				010E9F2D211A3664006E0D7E /* CalendarViewController */,
@@ -567,6 +621,219 @@
 			path = Nodes;
 			sourceTree = "<group>";
 		};
+		A0B32BB4211CFB9B00AA5B41 /* StatesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BBD211CFC5C00AA5B41 /* DataManager */,
+				A0B32BBA211CFC1500AA5B41 /* Delegates */,
+				A0B32BB7211CFBC300AA5B41 /* CellNode */,
+				A0B32BB5211CFBB700AA5B41 /* StatesViewController.swift */,
+			);
+			path = StatesViewController;
+			sourceTree = "<group>";
+		};
+		A0B32BB7211CFBC300AA5B41 /* CellNode */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BB8211CFBD500AA5B41 /* StateCellNode.swift */,
+			);
+			path = CellNode;
+			sourceTree = "<group>";
+		};
+		A0B32BBA211CFC1500AA5B41 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BBB211CFC2B00AA5B41 /* NationalStatesDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		A0B32BBD211CFC5C00AA5B41 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BBE211CFC6B00AA5B41 /* StatesTableManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		A0B32BC0211CFC9600AA5B41 /* CountiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BC7211CFCF900AA5B41 /* CellNode */,
+				A0B32BC4211CFCD200AA5B41 /* Delegates */,
+				A0B32BC3211CFCC900AA5B41 /* DataManager */,
+				A0B32BC1211CFC9E00AA5B41 /* CountiesViewController.swift */,
+			);
+			path = CountiesViewController;
+			sourceTree = "<group>";
+		};
+		A0B32BC3211CFCC900AA5B41 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BC5211CFCDA00AA5B41 /* TownsDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		A0B32BC4211CFCD200AA5B41 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BCA211CFD2A00AA5B41 /* StateTownsDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		A0B32BC7211CFCF900AA5B41 /* CellNode */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BC8211CFD0C00AA5B41 /* CountyCellNode.swift */,
+			);
+			path = CellNode;
+			sourceTree = "<group>";
+		};
+		A0B32BCC211CFD4D00AA5B41 /* ElectricalDivisionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BD5211CFDC300AA5B41 /* Delegate */,
+				A0B32BD2211CFDA700AA5B41 /* DataManager */,
+				A0B32BCF211CFD6B00AA5B41 /* CellNode */,
+				A0B32BCD211CFD5600AA5B41 /* ElectricalDivisionsViewController.swift */,
+			);
+			path = ElectricalDivisionsViewController;
+			sourceTree = "<group>";
+		};
+		A0B32BCF211CFD6B00AA5B41 /* CellNode */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BD0211CFD8A00AA5B41 /* ElectricalDivisionCellNode.swift */,
+			);
+			path = CellNode;
+			sourceTree = "<group>";
+		};
+		A0B32BD2211CFDA700AA5B41 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BD3211CFDB500AA5B41 /* ElectricalDivisionDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		A0B32BD5211CFDC300AA5B41 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BD6211CFDCE00AA5B41 /* ElectricalDivisionDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		A0B32BDA211CFEA200AA5B41 /* CRERatesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BE3211CFF4900AA5B41 /* DataManager */,
+				A0B32BE0211CFF0700AA5B41 /* Delegates */,
+				A0B32BDD211CFECE00AA5B41 /* Cellnode */,
+				A0B32BDB211CFEAC00AA5B41 /* CRERatesViewController.swift */,
+			);
+			path = CRERatesViewController;
+			sourceTree = "<group>";
+		};
+		A0B32BDD211CFECE00AA5B41 /* Cellnode */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BDE211CFEDB00AA5B41 /* CRERateCellNde.swift */,
+			);
+			path = Cellnode;
+			sourceTree = "<group>";
+		};
+		A0B32BE0211CFF0700AA5B41 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BE1211CFF1B00AA5B41 /* CRERatesDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		A0B32BE3211CFF4900AA5B41 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BE4211CFF5800AA5B41 /* CRERatesDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		A0CD8ADC211D2A2200235048 /* RateSelectionViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A0B32BDA211CFEA200AA5B41 /* CRERatesViewController */,
+				A0B32BCC211CFD4D00AA5B41 /* ElectricalDivisionsViewController */,
+				A0B32BC0211CFC9600AA5B41 /* CountiesViewController */,
+				A0B32BB4211CFB9B00AA5B41 /* StatesViewController */,
+			);
+			path = RateSelectionViewControllers;
+			sourceTree = "<group>";
+		};
+		A0CD8ADD211D2A3B00235048 /* LocationsMapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0CD8AEF211D59D900235048 /* Nodes */,
+				A0CD8AEE211D585A00235048 /* Delegates */,
+				A0CD8AE0211D546E00235048 /* CollectionNode */,
+				A0CD8ADE211D2A6400235048 /* LocationsMapViewController.swift */,
+			);
+			path = LocationsMapViewController;
+			sourceTree = "<group>";
+		};
+		A0CD8AE0211D546E00235048 /* CollectionNode */ = {
+			isa = PBXGroup;
+			children = (
+				A0CD8AEA211D54ED00235048 /* MapLocationsCollectionNode.swift */,
+				A0CD8AE4211D549600235048 /* Delegate */,
+				A0CD8AE7211D54AD00235048 /* DataManager */,
+				A0CD8AE1211D547300235048 /* CellNode */,
+			);
+			path = CollectionNode;
+			sourceTree = "<group>";
+		};
+		A0CD8AE1211D547300235048 /* CellNode */ = {
+			isa = PBXGroup;
+			children = (
+				A0CD8AE2211D548100235048 /* LocationsMapCell.swift */,
+			);
+			path = CellNode;
+			sourceTree = "<group>";
+		};
+		A0CD8AE4211D549600235048 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A0CD8AE5211D54A000235048 /* LocationMapCellDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		A0CD8AE7211D54AD00235048 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A0CD8AE8211D54BC00235048 /* MapLocationsCollectionNodeDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		A0CD8AEE211D585A00235048 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				A0CD8AEC211D585400235048 /* LocationsMapDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		A0CD8AEF211D59D900235048 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				A0CD8AF0211D59EE00235048 /* LocationsMap.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
 		A0D9A72E210818D800979F07 /* CCTBusinessTabController */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,6 +880,9 @@
 				010E9F7A211A5B33006E0D7E /* ElectricalDivision.swift */,
 				010E9F7C211A5B4E006E0D7E /* ElectricalDivisionRequestParameters.swift */,
 				010E9F7E211A5B74006E0D7E /* ElectricalDivisions.swift */,
+				A0B32BD8211CFE6B00AA5B41 /* TarifasCRE.swift */,
+				A0B32BE6211D036D00AA5B41 /* NewLocationRequestParameters.swift */,
+				A0B32BE8211D03F700AA5B41 /* NewLocationResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -809,8 +1079,10 @@
 				A0D9A7D22108214000979F07 /* CCTNode.swift in Sources */,
 				010E9F3D211A3AD5006E0D7E /* CRERate.swift in Sources */,
 				01B1A6DF211260CD002F0A28 /* RegisterMeasurerDelegate.swift in Sources */,
+				A0CD8AE3211D548100235048 /* LocationsMapCell.swift in Sources */,
 				01B361E9210FA17F00019102 /* RTPowerFactorNode.swift in Sources */,
 				01BBF82E210A46CC001EA9B9 /* LocationsResponse.swift in Sources */,
+				A0B32BD4211CFDB500AA5B41 /* ElectricalDivisionDataManager.swift in Sources */,
 				A0D9A7CD2108209700979F07 /* BusinessHomeNode.swift in Sources */,
 				01B361E3210F9F0200019102 /* RTEnergyNode.swift in Sources */,
 				01BBF82A210A4677001EA9B9 /* Location.swift in Sources */,
@@ -832,53 +1104,72 @@
 				010E9F7D211A5B4E006E0D7E /* ElectricalDivisionRequestParameters.swift in Sources */,
 				010E9F58211A49D9006E0D7E /* RateSelectionDelegate.swift in Sources */,
 				A07DE62021100416008D678A /* Measurer.swift in Sources */,
+				A0B32BDC211CFEAC00AA5B41 /* CRERatesViewController.swift in Sources */,
 				010E9F63211A4E01006E0D7E /* DateChooserDelegate.swift in Sources */,
 				010E9F44211A479A006E0D7E /* RegisterLocationViewController.swift in Sources */,
+				A0CD8ADF211D2A6400235048 /* LocationsMapViewController.swift in Sources */,
 				A0D9A7E42108235C00979F07 /* IntermediateConsumptionNode.swift in Sources */,
 				010E9F56211A499C006E0D7E /* LocationRateNode.swift in Sources */,
 				010E9F77211A5A7B006E0D7E /* Counties.swift in Sources */,
+				A0B32BC6211CFCDA00AA5B41 /* TownsDataManager.swift in Sources */,
 				A07DE61C211003E2008D678A /* InstantActivity.swift in Sources */,
+				A0B32BBF211CFC6B00AA5B41 /* StatesTableManager.swift in Sources */,
 				01B36206210FB8D600019102 /* MeasurerCellNode.swift in Sources */,
 				A0D9A7312108196300979F07 /* OfflineStorageNameFiles.swift in Sources */,
 				A0D9A7E8210823A900979F07 /* TotalConsumptionNode.swift in Sources */,
 				A0D9A7E0210822EF00979F07 /* BusinessEnergyConsumptionNode.swift in Sources */,
 				010E9F2F211A379B006E0D7E /* CalendarViewController.swift in Sources */,
 				A0D9A7E22108231700979F07 /* BasicConsumptionNode.swift in Sources */,
+				A0CD8AEB211D54ED00235048 /* MapLocationsCollectionNode.swift in Sources */,
 				010E9F73211A59EE006E0D7E /* States.swift in Sources */,
 				010E9F4E211A4913006E0D7E /* RateForLocationRequestParameters.swift in Sources */,
+				A0B32BD1211CFD8A00AA5B41 /* ElectricalDivisionCellNode.swift in Sources */,
 				A0D9A7D9210821F900979F07 /* CCTBorderButton.swift in Sources */,
 				01B3620D210FC4D800019102 /* MeasurerConfigurationViewController.swift in Sources */,
 				01B36210210FC54500019102 /* RegisterMeasurerNode.swift in Sources */,
 				01B361DF210F9DC500019102 /* PhaseIdentifier.swift in Sources */,
+				A0B32BDF211CFEDB00AA5B41 /* CRERateCellNde.swift in Sources */,
 				A0D9A7D42108217900979F07 /* CTTTextNode.swift in Sources */,
 				A07DE62221100453008D678A /* MeasurersRequestParameters.swift in Sources */,
 				A007C383210812E70011DB93 /* AppDelegate.swift in Sources */,
 				A0A2233021153977003FA50C /* EmptyMeasurersCellNode.swift in Sources */,
 				A040D5B2210FF38F0004599E /* MeasurerNode.swift in Sources */,
+				A0B32BD9211CFE6B00AA5B41 /* TarifasCRE.swift in Sources */,
 				A07DE61E211003FB008D678A /* EnergyPower.swift in Sources */,
 				01B361F7210FAF4900019102 /* LocationCellDelegate.swift in Sources */,
+				A0B32BCE211CFD5600AA5B41 /* ElectricalDivisionsViewController.swift in Sources */,
+				A0B32BE7211D036D00AA5B41 /* NewLocationRequestParameters.swift in Sources */,
+				A0CD8AED211D585400235048 /* LocationsMapDelegate.swift in Sources */,
 				010E9F50211A492C006E0D7E /* LocationNameNode.swift in Sources */,
 				010E9F6F211A5066006E0D7E /* PreviousDateNode.swift in Sources */,
 				010E9F60211A4D23006E0D7E /* DateType.swift in Sources */,
 				01B361E5210F9F1800019102 /* CCTNeutralPhasesHorizontalStack.swift in Sources */,
 				010E9F68211A4F8E006E0D7E /* DateChooserNodeDelegate.swift in Sources */,
+				A0B32BC9211CFD0C00AA5B41 /* CountyCellNode.swift in Sources */,
 				010E9F34211A37F8006E0D7E /* Date.swift in Sources */,
 				A0D9A73B21081A6900979F07 /* BusinessHomeViewController.swift in Sources */,
 				01B361D6210F9C7400019102 /* RTActivityNode.swift in Sources */,
 				A0D9A7DE2108228700979F07 /* HomeLocationNode.swift in Sources */,
+				A0CD8AE6211D54A000235048 /* LocationMapCellDelegate.swift in Sources */,
 				01BB0CA4211238A900830A09 /* DeleteMeasurerResponse.swift in Sources */,
 				010E9F2A211A22C7006E0D7E /* RTActivelMeasurerNode.swift in Sources */,
 				A040D5B9210FF5140004599E /* MeasurerAlarmNode.swift in Sources */,
 				01B361D8210F9CD100019102 /* RTVoltageNode.swift in Sources */,
+				A0CD8AE9211D54BC00235048 /* MapLocationsCollectionNodeDataManager.swift in Sources */,
 				A0D9A7E62108237C00979F07 /* TopConsumptionNode.swift in Sources */,
+				A0B32BE5211CFF5800AA5B41 /* CRERatesDataManager.swift in Sources */,
 				010E9F4A211A4880006E0D7E /* RegisterLocationNode.swift in Sources */,
 				010E9F3B211A3A74006E0D7E /* CCTCalendarView.swift in Sources */,
 				A040D5B7210FF4A30004599E /* RegisterMeasurerRequestParameters.swift in Sources */,
+				A0B32BB6211CFBB700AA5B41 /* StatesViewController.swift in Sources */,
 				010E9F5C211A4C57006E0D7E /* CTTIconButton.swift in Sources */,
 				01B361E7210FA02300019102 /* ElectricalVariables.swift in Sources */,
+				A0B32BE9211D03F700AA5B41 /* NewLocationResponse.swift in Sources */,
 				A040D5AC210FF2C40004599E /* ASEditableTextNode.swift in Sources */,
 				01B361F4210FAF1800019102 /* LocationsDataManager.swift in Sources */,
 				01B1A6DB211259A6002F0A28 /* NewMeasurerResponse.swift in Sources */,
+				A0B32BE2211CFF1B00AA5B41 /* CRERatesDelegate.swift in Sources */,
+				A0CD8AF1211D59EE00235048 /* LocationsMap.swift in Sources */,
 				010E9F7B211A5B33006E0D7E /* ElectricalDivision.swift in Sources */,
 				A0D9A72D210818D400979F07 /* CCTBusinessTabController.swift in Sources */,
 				01BBF82C210A46AE001EA9B9 /* LocationsRequestParameters.swift in Sources */,
@@ -890,6 +1181,7 @@
 				010E9F36211A3813006E0D7E /* CalendarDelegate.swift in Sources */,
 				010E9F5E211A4CF8006E0D7E /* LocationPeriodNodeDelegate.swift in Sources */,
 				A040D5B0210FF3490004599E /* VoltageMultiplierNode.swift in Sources */,
+				A0B32BCB211CFD2A00AA5B41 /* StateTownsDelegate.swift in Sources */,
 				A040D5C02110012C0004599E /* MeasurerScannerViewController.swift in Sources */,
 				01B361DD210F9D3D00019102 /* CCTPhaseNode.swift in Sources */,
 				01B36201210FB75100019102 /* MeasurersDataManager.swift in Sources */,
@@ -903,9 +1195,13 @@
 				010E9F71211A59AB006E0D7E /* State.swift in Sources */,
 				A040D5AE210FF3160004599E /* EnergyMultiplierNode.swift in Sources */,
 				010E9F54211A4980006E0D7E /* LocationPeriodNode.swift in Sources */,
+				A0B32BC2211CFC9E00AA5B41 /* CountiesViewController.swift in Sources */,
 				010E9F2C211A289F006E0D7E /* ConfigurationMode.swift in Sources */,
 				010E9F6D211A5035006E0D7E /* NewDateNode.swift in Sources */,
+				A0B32BD7211CFDCE00AA5B41 /* ElectricalDivisionDelegate.swift in Sources */,
 				010E9F6B211A4FED006E0D7E /* DateChooserNode.swift in Sources */,
+				A0B32BBC211CFC2B00AA5B41 /* NationalStatesDelegate.swift in Sources */,
+				A0B32BB9211CFBD500AA5B41 /* StateCellNode.swift in Sources */,
 				010E9F66211A4E34006E0D7E /* DateChooserViewController.swift in Sources */,
 				010E9F52211A4969006E0D7E /* LocationInitialConNode.swift in Sources */,
 			);
@@ -1047,6 +1343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQQ3NDG4CP;
 				INFOPLIST_FILE = EFI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1066,6 +1363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQQ3NDG4CP;
 				INFOPLIST_FILE = EFI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

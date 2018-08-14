@@ -7,6 +7,7 @@
 //
 import AsyncDisplayKit
 
+@available(iOS 10.0, *)
 class RTPowerNode:CCTNode  {
     var titleTextNode:CTTTextNode!
     var valueTextNode:CTTTextNode!

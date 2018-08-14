@@ -10,6 +10,7 @@ import Foundation
 import AsyncDisplayKit
 import FSCalendar
 
+@available(iOS 10.0, *)
 class CalendarViewController:UIViewController {
     var segmentedController: UISegmentedControl!
     var scrollNode:ASScrollNode!

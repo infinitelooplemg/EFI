@@ -90,8 +90,6 @@ final class CCTApiService {
             }
             DispatchQueue.main.async {
                 do {
-                    let dat = String(data: data, encoding: .utf8)
-                    
                     let Container = try JSONDecoder().decode(MeasurersResponse.self, from: data)
                     completion(Container.Medidores,nil)
                     
@@ -161,21 +159,21 @@ final class CCTApiService {
         let session = URLSession(configuration: config)
         let task = session.dataTask(with: request) { (responseData, response, responseError) in
             
-    
-                guard let data = responseData else {
-                    
-                    completion(nil,responseError)
-                    return
-                }
-                do {
-                    
-                    let response = try JSONDecoder().decode(NewMeasurerResponse.self, from: data)
-                    
-                    completion(response,nil)
-                    
-                } catch let jsonErr {
-                    print(jsonErr)
-                }
+            
+            guard let data = responseData else {
+                
+                completion(nil,responseError)
+                return
+            }
+            do {
+                
+                let response = try JSONDecoder().decode(NewMeasurerResponse.self, from: data)
+                
+                completion(response,nil)
+                
+            } catch let jsonErr {
+                print(jsonErr)
+            }
             
         }
         
@@ -320,6 +318,83 @@ final class CCTApiService {
                     let divisions = try JSONDecoder().decode(ElectricalDivisions.self, from: data)
                     
                     completion(divisions.DivisionesElectricas,nil)
+                    
+                } catch let jsonErr {
+                    print(jsonErr)
+                }
+            }
+        }
+        
+        task.resume()
+    }
+    
+    func fetchCRERates( completion: @escaping (_ results: [CRERate]?, _ error: Error?) -> ()){
+        components.path = "/api/ios/v1/tarifasCRE"
+        
+        guard let url = components.url else { fatalError("Could not create URL from components") }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) { (responseData, response, responseError) in
+            
+            DispatchQueue.main.async {
+                guard let data = responseData else {
+                    
+                    completion(nil,responseError)
+                    return
+                }
+                
+                
+                
+                do {
+                    
+                    let divisions = try JSONDecoder().decode(TarifasCRE.self, from: data)
+                    print(divisions.TarifasCRE)
+                    completion(divisions.TarifasCRE,nil)
+                    
+                } catch let jsonErr {
+                    print(jsonErr)
+                }
+            }
+        }
+        
+        task.resume()
+    }
+    
+    func newUserLocation(parameter:NewLocationRequestParameters, completion: @escaping (_ results: NewLocationResponse?, _ error: Error?) -> ()){
+        components.path = "/api/ios/v1/localizacion"
+        
+        guard let url = components.url else { fatalError("Could not create URL from components") }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        request.allHTTPHeaderFields = headers
+        
+        request.httpBody = encodeToJson(parameters: parameter)
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) { (responseData, response, responseError) in
+            
+            DispatchQueue.main.async {
+                guard let data = responseData else {
+                    
+                    completion(nil,responseError)
+                    return
+                }
+                
+                let cadena = String(data: data, encoding: .utf8)
+                print(cadena)
+                do {
+                    
+                    let response = try JSONDecoder().decode(NewLocationResponse.self, from: data)
+                    print(response)
+                    completion(response,nil)
                     
                 } catch let jsonErr {
                     print(jsonErr)

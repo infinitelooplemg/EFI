@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Necesitamos acceso a tu ubicacion para el manejo de tus localizaciones </string>
 	<key>NSCameraUsageDescription</key>
 	<string>Necesitamos el Acceso a tu camara para registrar tu medidor</string>
 	<key>NSAppTransportSecurity</key>

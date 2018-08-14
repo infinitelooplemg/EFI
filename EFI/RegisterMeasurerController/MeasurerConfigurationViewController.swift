@@ -10,6 +10,7 @@
 import AsyncDisplayKit
 import  StatusAlert
 
+
 class MeasurerConfigurationViewController:UIViewController {
     var node:RegisterMeasurerNode!
     var notification = UINotificationFeedbackGenerator()

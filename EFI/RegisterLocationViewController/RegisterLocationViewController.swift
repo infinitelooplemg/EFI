@@ -67,8 +67,34 @@ class RegisterLocationViewController: UIViewController {
 
 extension RegisterLocationViewController:RegisterLocationNodeDelegate{
     func save(location: Location, rate: CRERate, with rateParameters: RateForLocationRequestParameters) {
-        print(location)
-        print(rate)
+        var requestParametersForNewLocation = NewLocationRequestParameters()
+        requestParametersForNewLocation.ClaveDivisionElectrica = rateParameters.ClaveDivisionElectrica
+        requestParametersForNewLocation.ClaveEstado = rateParameters.ClaveEstado
+        requestParametersForNewLocation.ClaveEmpresa = rateParameters.ClaveEmpresa
+        requestParametersForNewLocation.ClaveTarifaCRE = rateParameters.ClaveTarifaCre
+        requestParametersForNewLocation.ClaveMunicipio = rateParameters.ClaveMunicipio
+        requestParametersForNewLocation.FinPeriodo = location.FinPeriodo
+        requestParametersForNewLocation.InicioPeriodo = location.InicioPeriodo
+        requestParametersForNewLocation.ConsumoInicial = location.ConsumoInicial
+        requestParametersForNewLocation.Nombre = location.Nombre
+        
+        
+        networkService?.newUserLocation(parameter: requestParametersForNewLocation, completion: { [weak self] (response, error) in
+            if error != nil {
+//self?.showAlert(with: "Error", message: "Error al conectarse al servidor,verifique su conexión a internet y vuelta a intentarlo", image: nil, for: .success)
+                return
+            }
+            
+            if response?.Codigo == 200 {
+                let locationToSAVE = response?.Respuesta
+                
+//                self?.showAlert(with: "Felicidades", message: "Localización agregada correctamente", image: nil, for: .success)
+                
+                self?.dismiss(animated: true, completion: {
+                    self?.delegate?.locationAdded(location: locationToSAVE!,rate: rate)
+                })
+            }
+        })
     }
     
    
