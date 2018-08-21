@@ -14,7 +14,7 @@ class CCTNode:ASDisplayNode{
         super.init()
         // gradientBackground(gradient: gradient)
 //        backgroundColor = UIColor.con100tLightGrayColor
-//       cornerRadius = 5
+       cornerRadius = 5
     backgroundColor = .white
 //        borderWidth = 0.5
 //        borderColor = UIColor.lightGray.cgColor

@@ -16,6 +16,7 @@ extension UIColor {
     static let con100tPurpleColor = UIColor(red: 153/255, green: 46/255, blue: 248/255, alpha: 1)
     static let con100tOrangeColor = UIColor(red: 226/255, green: 121/255, blue: 0, alpha: 1)
     static let systemBlueColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
+    static let con100tBackGroundColor = UIColor(red: 249/255, green: 248/255, blue: 252/255, alpha: 1)
     
     
 }

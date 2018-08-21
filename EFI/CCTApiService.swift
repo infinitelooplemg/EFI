@@ -405,6 +405,54 @@ final class CCTApiService {
         task.resume()
     }
     
+    func fetchHistoricalActivityBy(_ day:Date,measurer:Measurer,and electricalVariable:ElectricalVariables, completion: @escaping (_ results: [MeasurerRecord]?, _ error: Error?) -> ()){
+        components.path =  "/api/ios/v1/historico"
+        guard let url = components.url else { fatalError("Could not create URL from components") }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        request.allHTTPHeaderFields = headers
+        
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-dd-MM"
+        let dateString = dateFormatter.string(from: day)
+        var parameters = RecordsByDayRequestParameters()
+        parameters.ClaveMedidor = measurer.Clave
+        parameters.FechaGrafica = dateString
+        parameters.TipoGrafica = electricalVariable.rawValue
+        
+        request.httpBody = encodeToJson(parameters: parameters)
+        
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) { (responseData, response, responseError) in
+            
+            DispatchQueue.main.async {
+                
+                guard let data = responseData else {
+                    completion(nil,responseError)
+                    return
+                }
+                
+                
+                do {
+                    let response = try JSONDecoder().decode(RecordsByDayResponse.self, from: data)
+                    let records = response.Respuesta?.Registros
+                    
+                    completion(records,nil)
+                } catch let jsonErr {
+                }
+            }
+            
+        }
+        
+        task.resume()
+    }
 }
 
 

@@ -10,4 +10,5 @@ import Foundation
 protocol LocationCellDelegate: class {
     func showConfigurationFor(location:Location,fromIndexPath: IndexPath)
     func showMeasurersFor(location:Location)
+    func showPaymentStatusFor(location:Location)
 }

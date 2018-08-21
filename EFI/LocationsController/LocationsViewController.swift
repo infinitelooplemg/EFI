@@ -15,16 +15,23 @@ class LocationsViewController:ASViewController<ASTableNode> {
     var dataManager:LocationsDataManager!
     weak var networkService:CCTApiService?
     
-    init(networkService:CCTApiService,locations:[Location]) {
+    init(networkService:CCTApiService) {
         tableNode = ASTableNode()
         self.networkService = networkService
         super.init(node: tableNode)
         dataManager = LocationsDataManager(tableNode: tableNode, delegate: self, networkService: self.networkService!, viewController: self)
         
-       
-        
-        self.dataManager.locations = locations
-        self.tableNode.reloadData()
+        self.loadLocations()
+    }
+    
+    func loadLocations(){
+        networkService?.fetchLocations(completion: { ( locations, error) in
+            DispatchQueue.main.async {
+                self.dataManager.locations = locations!
+                self.tableNode.reloadData()
+            }
+            
+        })
     }
     
     @objc func addLocation(){
@@ -34,9 +41,10 @@ class LocationsViewController:ASViewController<ASTableNode> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableNode.backgroundColor = UIColor.con100tGrayColor
+        tableNode.backgroundColor = UIColor.con100tBackGroundColor
         tableNode.view.separatorStyle = .none
         tableNode.allowsSelection = true
+        tableNode.allowsSelectionDuringEditing = true
         tableNode.view.indicatorStyle = .default
         
         title = "Localizaciones"
@@ -46,12 +54,19 @@ class LocationsViewController:ASViewController<ASTableNode> {
         } else {
             // Fallback on earlier versions
         }
-        print("h0oa")
-        let newLocationBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addLocation))
-        navigationItem.rightBarButtonItem = newLocationBarButton
+     
+        setupNavigationButton()
         
     }
     
+    func setupNavigationButton(){
+        let newLocationBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addLocation))
+        navigationItem.rightBarButtonItem = newLocationBarButton
+        
+        
+     
+        
+    }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -60,28 +75,32 @@ class LocationsViewController:ASViewController<ASTableNode> {
 
 
 extension LocationsViewController:LocationCellDelegate {
+    func showPaymentStatusFor(location: Location) {
+        let vc = PaymentStatusViewController()
+        let nc = UINavigationController(rootViewController: vc)
+        present(nc, animated: true, completion: nil)
+    }
+    
     
     
     func showMeasurersFor(location: Location) {
         networkService?.fetchMeasurers(for: location, completion: { [weak self] (measurers, error) in
             let vc = MeasurersViewController(measurers: measurers!, location: location, networkService: self!.networkService!)
             vc.networkService = self?.networkService
-           self?.navigationController?.pushViewController(vc, animated: true)
+            self?.navigationController?.pushViewController(vc, animated: true)
         })
     }
     
     
     
     func showConfigurationFor(location: Location, fromIndexPath: IndexPath) {
-
+        
     }
     
 }
 
 extension LocationsViewController:RegisterLocationDelegate{
     func locationAdded(location: Location, rate: CRERate) {
-        print(location)
+    
     }
-    
-    
 }

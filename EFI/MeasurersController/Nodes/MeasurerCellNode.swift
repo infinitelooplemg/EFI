@@ -13,9 +13,10 @@ class MeasurerCellNode:ASCellNode {
     
     var measurerTextNode:CTTTextNode!
     var measurerModelTextNode:CTTTextNode!
-    var chooseButton:CCTBorderButtonNode!
+    var editButton:CCTBorderButtonNode!
     var measurer:Measurer!
     weak var delegate:MeasurerCellNodeDelegate!
+    var showHistorialButton:CCTBorderButtonNode!
     
     
     init(measurer:Measurer,delegate:MeasurerCellNodeDelegate) {
@@ -25,16 +26,20 @@ class MeasurerCellNode:ASCellNode {
         self.measurer = measurer
         measurerTextNode = CTTTextNode(withFontSize: 20, color: UIColor.black, with: measurer.Nombre!)
         measurerModelTextNode = CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: (measurer.Clave)!)
-        chooseButton = CCTBorderButtonNode(fontSize: 13, textColor: UIColor.con100tBlueColor, with: "Editar")
-        chooseButton.addTarget(self, action: #selector(monitor), forControlEvents: .touchUpInside)
-        chooseButton.backgroundColor = UIColor.con100tGrayColor
+        editButton = CCTBorderButtonNode(fontSize: 13, textColor: UIColor.con100tBlueColor, with: "Configurar")
+        editButton.addTarget(self, action: #selector(edit), forControlEvents: .touchUpInside)
         automaticallyManagesSubnodes  = true
         
-        
+        showHistorialButton = CCTBorderButtonNode(fontSize: 13, textColor: .con100tBlueColor, with: "Historial")
+        showHistorialButton.addTarget(self, action: #selector(showHistorial), forControlEvents: .touchUpInside)
     }
     
-    @objc func monitor(){
-        delegate.monitor(measurer: measurer)
+    @objc func edit(){
+        delegate.edit(measurer: measurer)
+    }
+    
+    @objc func showHistorial(){
+        delegate.showHistorialFor(measurer: measurer)
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -43,10 +48,18 @@ class MeasurerCellNode:ASCellNode {
         textNodesStack.children = [measurerTextNode,measurerModelTextNode]
         textNodesStack.style.flexShrink = 1
         
-        let contentStack = ASStackLayoutSpec.horizontal()
-        contentStack.children = [textNodesStack,chooseButton]
-        contentStack.alignItems = .center
-        contentStack.justifyContent = .spaceBetween
+        let buttonStack = ASStackLayoutSpec.horizontal()
+        buttonStack.children = [showHistorialButton,editButton]
+        buttonStack.alignItems = .center
+        buttonStack.justifyContent = .spaceAround
+        
+        let separator = ASDisplayNode()
+        separator.style.preferredSize.height = 0.5
+        separator.backgroundColor = UIColor.con100tLightGrayColor
+        
+        let contentStack = ASStackLayoutSpec.vertical()
+        contentStack.children = [textNodesStack,separator,buttonStack]
+        contentStack.spacing = 8
         
         let display = ASDisplayNode()
         display.backgroundColor = .white

@@ -38,13 +38,17 @@ class CalendarViewController:UIViewController {
         
         title = "Consumo kWh"
         
-        if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
-        }
-        
-        
+        setupNavigationItems()
     }
     
+    func setupNavigationItems(){
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+        navigationItem.leftBarButtonItem = doneItem
+    }
+    
+    @objc func done(){
+        dismiss(animated: true, completion: nil)
+    }
     func wireDelegation() {
         
         calendarDataSource = CalendarDataSource()
@@ -80,15 +84,23 @@ class CalendarViewController:UIViewController {
 
 extension CalendarViewController:ShowDayDetailDelegate{
     func showDetailfor(date: Date) {
-//        selection.selectionChanged()
-//        let vc = HistoricalChartOfActitivyViewController()
-//        vc.networkService = self.networkService
-//        vc.date = date
-//        vc.hidesBottomBarWhenPushed = true
-//        vc.currentRate = self.currentRate
-//        vc.currentMeasurer = self.currentMeasurer
-//        vc.currentLocation = self.currentLocation
-//        navigationController?.pushViewController(vc, animated: true)
+        print(date)
+        
+        let vc = HistoricalChartOfActitivyViewController()
+        vc.date = date
+        vc.networkService = networkService
+        vc.currentMeasurer = currentMeasurer
+        navigationController?.pushViewController(vc, animated: true)
+        
+        //        selection.selectionChanged()
+        //        let vc = HistoricalChartOfActitivyViewController()
+        //        vc.networkService = self.networkService
+        //        vc.date = date
+        //        vc.hidesBottomBarWhenPushed = true
+        //        vc.currentRate = self.currentRate
+        //        vc.currentMeasurer = self.currentMeasurer
+        //        vc.currentLocation = self.currentLocation
+        //        navigationController?.pushViewController(vc, animated: true)
         
     }
 }

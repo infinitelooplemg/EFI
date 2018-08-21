@@ -125,7 +125,7 @@
 		A0CD8AF1211D59EE00235048 /* LocationsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD8AF0211D59EE00235048 /* LocationsMap.swift */; };
 		A0D9A72D210818D400979F07 /* CCTBusinessTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A72C210818D400979F07 /* CCTBusinessTabController.swift */; };
 		A0D9A7312108196300979F07 /* OfflineStorageNameFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7302108196300979F07 /* OfflineStorageNameFiles.swift */; };
-		A0D9A73B21081A6900979F07 /* BusinessHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A73A21081A6900979F07 /* BusinessHomeViewController.swift */; };
+		A0D9A73B21081A6900979F07 /* PaymentStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A73A21081A6900979F07 /* PaymentStatusViewController.swift */; };
 		A0D9A73D21081AA000979F07 /* Con100tNTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A73C21081AA000979F07 /* Con100tNTService.swift */; };
 		A0D9A7CD2108209700979F07 /* BusinessHomeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7CC2108209700979F07 /* BusinessHomeNode.swift */; };
 		A0D9A7CF210820FC00979F07 /* PaymentStatusNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7CE210820FC00979F07 /* PaymentStatusNode.swift */; };
@@ -140,6 +140,12 @@
 		A0D9A7E42108235C00979F07 /* IntermediateConsumptionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7E32108235C00979F07 /* IntermediateConsumptionNode.swift */; };
 		A0D9A7E62108237C00979F07 /* TopConsumptionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7E52108237C00979F07 /* TopConsumptionNode.swift */; };
 		A0D9A7E8210823A900979F07 /* TotalConsumptionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9A7E7210823A900979F07 /* TotalConsumptionNode.swift */; };
+		A0EB67032123A64300D8086E /* RecordsByDayRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB67022123A64300D8086E /* RecordsByDayRequestParameters.swift */; };
+		A0EB67052123A66600D8086E /* RecordsByDayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB67042123A66600D8086E /* RecordsByDayResponse.swift */; };
+		A0EB67072123A67800D8086E /* MeasurerRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB67062123A67800D8086E /* MeasurerRecords.swift */; };
+		A0EB67092123A69100D8086E /* MeasurerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB67082123A69100D8086E /* MeasurerRecord.swift */; };
+		A0EB670D2123A83B00D8086E /* HistoricalChartOfActitivyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB670C2123A83B00D8086E /* HistoricalChartOfActitivyViewController.swift */; };
+		A0EB67102123A86700D8086E /* HistoricalChartOfActitivyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB670F2123A86700D8086E /* HistoricalChartOfActitivyDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -264,7 +270,7 @@
 		A0CD8AF0211D59EE00235048 /* LocationsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsMap.swift; sourceTree = "<group>"; };
 		A0D9A72C210818D400979F07 /* CCTBusinessTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTBusinessTabController.swift; sourceTree = "<group>"; };
 		A0D9A7302108196300979F07 /* OfflineStorageNameFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineStorageNameFiles.swift; sourceTree = "<group>"; };
-		A0D9A73A21081A6900979F07 /* BusinessHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessHomeViewController.swift; sourceTree = "<group>"; };
+		A0D9A73A21081A6900979F07 /* PaymentStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatusViewController.swift; sourceTree = "<group>"; };
 		A0D9A73C21081AA000979F07 /* Con100tNTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Con100tNTService.swift; sourceTree = "<group>"; };
 		A0D9A7CC2108209700979F07 /* BusinessHomeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessHomeNode.swift; sourceTree = "<group>"; };
 		A0D9A7CE210820FC00979F07 /* PaymentStatusNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatusNode.swift; sourceTree = "<group>"; };
@@ -279,6 +285,12 @@
 		A0D9A7E32108235C00979F07 /* IntermediateConsumptionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediateConsumptionNode.swift; sourceTree = "<group>"; };
 		A0D9A7E52108237C00979F07 /* TopConsumptionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopConsumptionNode.swift; sourceTree = "<group>"; };
 		A0D9A7E7210823A900979F07 /* TotalConsumptionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalConsumptionNode.swift; sourceTree = "<group>"; };
+		A0EB67022123A64300D8086E /* RecordsByDayRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsByDayRequestParameters.swift; sourceTree = "<group>"; };
+		A0EB67042123A66600D8086E /* RecordsByDayResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsByDayResponse.swift; sourceTree = "<group>"; };
+		A0EB67062123A67800D8086E /* MeasurerRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurerRecords.swift; sourceTree = "<group>"; };
+		A0EB67082123A69100D8086E /* MeasurerRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurerRecord.swift; sourceTree = "<group>"; };
+		A0EB670C2123A83B00D8086E /* HistoricalChartOfActitivyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalChartOfActitivyViewController.swift; sourceTree = "<group>"; };
+		A0EB670F2123A86700D8086E /* HistoricalChartOfActitivyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalChartOfActitivyDataManager.swift; sourceTree = "<group>"; };
 		D3D6FCD2882FAFCA6EB8FBDA /* Pods_EFI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -567,6 +579,7 @@
 		A007C381210812E70011DB93 /* EFI */ = {
 			isa = PBXGroup;
 			children = (
+				A0EB670A2123A80100D8086E /* HistoricalChartOfActitivyViewController */,
 				A0CD8ADD211D2A3B00235048 /* LocationsMapViewController */,
 				A0CD8ADC211D2A2200235048 /* RateSelectionViewControllers */,
 				010E9F61211A4DEB006E0D7E /* DateChooserViewController */,
@@ -883,6 +896,10 @@
 				A0B32BD8211CFE6B00AA5B41 /* TarifasCRE.swift */,
 				A0B32BE6211D036D00AA5B41 /* NewLocationRequestParameters.swift */,
 				A0B32BE8211D03F700AA5B41 /* NewLocationResponse.swift */,
+				A0EB67022123A64300D8086E /* RecordsByDayRequestParameters.swift */,
+				A0EB67042123A66600D8086E /* RecordsByDayResponse.swift */,
+				A0EB67062123A67800D8086E /* MeasurerRecords.swift */,
+				A0EB67082123A69100D8086E /* MeasurerRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -892,7 +909,7 @@
 			children = (
 				01BBF831210A48C8001EA9B9 /* Delegates */,
 				A0D9A7CB2108205500979F07 /* Nodes */,
-				A0D9A73A21081A6900979F07 /* BusinessHomeViewController.swift */,
+				A0D9A73A21081A6900979F07 /* PaymentStatusViewController.swift */,
 			);
 			path = BusinessHomeController;
 			sourceTree = "<group>";
@@ -939,6 +956,23 @@
 				A0D9A7DB2108222F00979F07 /* CCTTitleValueHorizontalStack.swift */,
 			);
 			path = LayoutSpecs;
+			sourceTree = "<group>";
+		};
+		A0EB670A2123A80100D8086E /* HistoricalChartOfActitivyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0EB670E2123A85C00D8086E /* DataManager */,
+				A0EB670C2123A83B00D8086E /* HistoricalChartOfActitivyViewController.swift */,
+			);
+			path = HistoricalChartOfActitivyViewController;
+			sourceTree = "<group>";
+		};
+		A0EB670E2123A85C00D8086E /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A0EB670F2123A86700D8086E /* HistoricalChartOfActitivyDataManager.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1133,6 +1167,7 @@
 				A07DE62221100453008D678A /* MeasurersRequestParameters.swift in Sources */,
 				A007C383210812E70011DB93 /* AppDelegate.swift in Sources */,
 				A0A2233021153977003FA50C /* EmptyMeasurersCellNode.swift in Sources */,
+				A0EB67052123A66600D8086E /* RecordsByDayResponse.swift in Sources */,
 				A040D5B2210FF38F0004599E /* MeasurerNode.swift in Sources */,
 				A0B32BD9211CFE6B00AA5B41 /* TarifasCRE.swift in Sources */,
 				A07DE61E211003FB008D678A /* EnergyPower.swift in Sources */,
@@ -1147,17 +1182,20 @@
 				010E9F68211A4F8E006E0D7E /* DateChooserNodeDelegate.swift in Sources */,
 				A0B32BC9211CFD0C00AA5B41 /* CountyCellNode.swift in Sources */,
 				010E9F34211A37F8006E0D7E /* Date.swift in Sources */,
-				A0D9A73B21081A6900979F07 /* BusinessHomeViewController.swift in Sources */,
+				A0D9A73B21081A6900979F07 /* PaymentStatusViewController.swift in Sources */,
 				01B361D6210F9C7400019102 /* RTActivityNode.swift in Sources */,
 				A0D9A7DE2108228700979F07 /* HomeLocationNode.swift in Sources */,
 				A0CD8AE6211D54A000235048 /* LocationMapCellDelegate.swift in Sources */,
 				01BB0CA4211238A900830A09 /* DeleteMeasurerResponse.swift in Sources */,
+				A0EB67072123A67800D8086E /* MeasurerRecords.swift in Sources */,
+				A0EB670D2123A83B00D8086E /* HistoricalChartOfActitivyViewController.swift in Sources */,
 				010E9F2A211A22C7006E0D7E /* RTActivelMeasurerNode.swift in Sources */,
 				A040D5B9210FF5140004599E /* MeasurerAlarmNode.swift in Sources */,
 				01B361D8210F9CD100019102 /* RTVoltageNode.swift in Sources */,
 				A0CD8AE9211D54BC00235048 /* MapLocationsCollectionNodeDataManager.swift in Sources */,
 				A0D9A7E62108237C00979F07 /* TopConsumptionNode.swift in Sources */,
 				A0B32BE5211CFF5800AA5B41 /* CRERatesDataManager.swift in Sources */,
+				A0EB67092123A69100D8086E /* MeasurerRecord.swift in Sources */,
 				010E9F4A211A4880006E0D7E /* RegisterLocationNode.swift in Sources */,
 				010E9F3B211A3A74006E0D7E /* CCTCalendarView.swift in Sources */,
 				A040D5B7210FF4A30004599E /* RegisterMeasurerRequestParameters.swift in Sources */,
@@ -1181,6 +1219,7 @@
 				010E9F36211A3813006E0D7E /* CalendarDelegate.swift in Sources */,
 				010E9F5E211A4CF8006E0D7E /* LocationPeriodNodeDelegate.swift in Sources */,
 				A040D5B0210FF3490004599E /* VoltageMultiplierNode.swift in Sources */,
+				A0EB67032123A64300D8086E /* RecordsByDayRequestParameters.swift in Sources */,
 				A0B32BCB211CFD2A00AA5B41 /* StateTownsDelegate.swift in Sources */,
 				A040D5C02110012C0004599E /* MeasurerScannerViewController.swift in Sources */,
 				01B361DD210F9D3D00019102 /* CCTPhaseNode.swift in Sources */,
@@ -1197,6 +1236,7 @@
 				010E9F54211A4980006E0D7E /* LocationPeriodNode.swift in Sources */,
 				A0B32BC2211CFC9E00AA5B41 /* CountiesViewController.swift in Sources */,
 				010E9F2C211A289F006E0D7E /* ConfigurationMode.swift in Sources */,
+				A0EB67102123A86700D8086E /* HistoricalChartOfActitivyDataManager.swift in Sources */,
 				010E9F6D211A5035006E0D7E /* NewDateNode.swift in Sources */,
 				A0B32BD7211CFDCE00AA5B41 /* ElectricalDivisionDelegate.swift in Sources */,
 				010E9F6B211A4FED006E0D7E /* DateChooserNode.swift in Sources */,

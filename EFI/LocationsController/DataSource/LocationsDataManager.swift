@@ -51,6 +51,10 @@ class LocationsDataManager:NSObject,ASTableDataSource ,ASTableDelegate {
 //        }
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
     func numberOfSections(in tableNode: ASTableNode) -> Int {
         return 1
     }

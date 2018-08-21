@@ -8,7 +8,7 @@
 
 import AsyncDisplayKit
 
-class BusinessHomeViewController:UIViewController {
+class PaymentStatusViewController:UIViewController {
     
     var node:BusinessHomeNode!
     weak var networkService:CCTApiService?
@@ -20,14 +20,27 @@ class BusinessHomeViewController:UIViewController {
     }
     
     func setupViews(){
-        title = "Consumo"
+        title = "Estado de Cuenta"
         node = BusinessHomeNode(locationNodeDelegate: self)
         navigationController?.navigationBar.isTranslucent = false
+        
+        view.backgroundColor = UIColor.con100tBackGroundColor
+
+        setNavigationItems()
+        
         view.addSubnode(node)
         view.layoutIfNeeded()
         
     }
     
+    func setNavigationItems(){
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+        navigationItem.setLeftBarButtonItems([doneItem], animated: true)
+    }
+    
+    @objc func done(){
+        dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -48,17 +61,17 @@ class BusinessHomeViewController:UIViewController {
     }
 }
 
-extension BusinessHomeViewController:HomeLocationNodeDelegate {
+extension PaymentStatusViewController:HomeLocationNodeDelegate {
     func showLocations() {
        // let vc = LocationsMapViewController(locations: LocationsMap, nertworkService: )
         //self.navigationController?.pushViewController(vc, animated: true    )
         networkService?.fetchLocations(completion: { [weak self]( locations , error) in
 
-            DispatchQueue.main.async {
-                let vc = LocationsViewController(networkService: (self?.networkService!)!, locations: locations!)
-               // let vc = LocationsMapViewController(locations: locations!, nertworkService: (self?.networkService!)!)
-                self?.navigationController?.pushViewController(vc, animated: true)
-            }
+//            DispatchQueue.main.async {
+//                let vc = LocationsViewController(networkService: (self?.networkService!)!, locations: locations!)
+//               // let vc = LocationsMapViewController(locations: locations!, nertworkService: (self?.networkService!)!)
+//                self?.navigationController?.pushViewController(vc, animated: true)
+//            }
 
         })
     }

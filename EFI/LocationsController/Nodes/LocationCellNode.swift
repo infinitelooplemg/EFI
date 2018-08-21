@@ -16,12 +16,11 @@ class LocationCellNode:ASCellNode {
     var stateTextNode:CTTTextNode!
     var measurersButton:CCTBorderButtonNode!
     var rateTextNode:CTTTextNode!
-    var showMeasurersButton:CCTBorderButtonNode!
     var location:Location!
     var mapNode:ASMapNode!
     
     var dummyButton:CCTBorderButtonNode!
-        var dummyButton2:CCTBorderButtonNode!
+    var dummyButton2:CCTBorderButtonNode!
     
     weak var delegate:LocationCellDelegate!
     
@@ -31,36 +30,24 @@ class LocationCellNode:ASCellNode {
         super.init()
         self.location = location
         
-      
         
+        cornerRadius = 5
         selectionStyle = .none
         
         stateTextNode = CTTTextNode(withFontSize: 20, color: UIColor.black, with: location.Nombre!)
         stateTextNode.style.flexShrink = 1
         
         measurersButton = CCTBorderButtonNode(fontSize: 13, textColor: UIColor.con100tBlueColor, with: "Medidores")
-        measurersButton.backgroundColor = UIColor.con100tLightGrayColor
         measurersButton.addTarget(self, action: #selector(edit), forControlEvents: .touchUpInside)
-        measurersButton.style.height = ASDimension(unit: .auto, value: 52)
-        measurersButton.cornerRadius = 5
         measurersButton.addTarget(self, action: #selector(asign), forControlEvents: .touchUpInside)
-        measurersButton.style.flexGrow = 0.5
         
-        dummyButton = CCTBorderButtonNode(fontSize: 11, textColor: .con100tBlueColor, with: "Editar")
-        dummyButton.backgroundColor = UIColor.con100tLightGrayColor
+        
+        dummyButton = CCTBorderButtonNode(fontSize: 13, textColor: .con100tBlueColor, with: "Configurar")
         dummyButton.addTarget(self, action: #selector(edit), forControlEvents: .touchUpInside)
-        dummyButton.style.height = ASDimension(unit: .auto, value: 52)
-        dummyButton.cornerRadius = 5
         
-        dummyButton2 = CCTBorderButtonNode(fontSize: 13, textColor: .white, with: "Estado de Cuenta")
-        dummyButton2.backgroundColor = UIColor.con100tBlueColor
-        dummyButton2.addTarget(self, action: #selector(edit), forControlEvents: .touchUpInside)
-        dummyButton2.style.height = ASDimension(unit: .auto, value: 52)
-        dummyButton2.cornerRadius = 5
-        dummyButton2.style.flexGrow = 0.5
-    
-        showMeasurersButton = CCTBorderButtonNode(fontSize: 13, textColor: UIColor.con100tBlueColor, with: "Medidores")
-        showMeasurersButton.backgroundColor = UIColor.con100tLightGrayColor
+        
+        dummyButton2 = CCTBorderButtonNode(fontSize: 13, textColor: .con100tBlueColor, with: "Estado de Cuenta")
+        dummyButton2.addTarget(self, action: #selector(showPaymentStatus), forControlEvents: .touchUpInside)
         
         rateTextNode =  CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: location.NombreTarifaCRE!)
         
@@ -68,28 +55,28 @@ class LocationCellNode:ASCellNode {
         mapNode.isLiveMap = true
         mapNode.style.preferredSize.height = 150
         mapNode.mapDelegate = self
-     
-     
+        
+        
         
         let coord = CLLocationCoordinate2DMake(19.127646044853897, -96.12060140320244)
         mapNode.region = MKCoordinateRegionMakeWithDistance(coord, 700, 700)
-
-   
-    
+        
+        
+        
         mapNode.onDidLoad { ( _ ) in
-            print(self.mapNode.mapView)
             self.mapNode.mapView?.delegate = self
             let circle = MKCircle(center: coord, radius: 75)
             self.mapNode.mapView?.add(circle)
             self.mapNode.isUserInteractionEnabled = false
-        
         }
-    
-    
+        
+        
         automaticallyManagesSubnodes  = true
     }
     
-  
+    @objc func showPaymentStatus(){
+        delegate.showPaymentStatusFor(location: location)
+    }
     @objc func asign(){
         delegate.showMeasurersFor(location: location)
     }
@@ -103,8 +90,12 @@ class LocationCellNode:ASCellNode {
         titleStack.children = [stateTextNode,rateTextNode]
         titleStack.spacing = 2
         titleStack.style.flexShrink = 1
-  
-    
+        
+        let separator = ASDisplayNode()
+        separator.style.preferredSize.height = 0.5
+        separator.backgroundColor = UIColor.con100tLightGrayColor
+        
+        
         let headerStack = ASStackLayoutSpec.horizontal()
         headerStack.children = [titleStack]
         headerStack.alignItems = .center
@@ -114,8 +105,8 @@ class LocationCellNode:ASCellNode {
         let headerInsetSpecs = ASInsetLayoutSpec(insets: headerInsets, child: headerStack)
         
         let footerStack = ASStackLayoutSpec.horizontal()
-        footerStack.children = [measurersButton,dummyButton2]
-        footerStack.spacing = 8
+        footerStack.children = [measurersButton,dummyButton2,dummyButton]
+        footerStack.justifyContent = .spaceAround
         
         
         
@@ -124,18 +115,20 @@ class LocationCellNode:ASCellNode {
         
         
         let contentStack = ASStackLayoutSpec.vertical()
-        contentStack.children = [headerInsetSpecs,mapNode,footerInsetsSpecs]
-        contentStack.spacing = 4
+        contentStack.children = [headerInsetSpecs,mapNode,separator,footerInsetsSpecs]
+        contentStack.spacing = 8
         
         let display = ASDisplayNode()
         display.backgroundColor = UIColor.white
-     
+        display.cornerRadius = 5
+        
         let internalInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         let internalInsetSpecs = ASInsetLayoutSpec(insets: internalInsets, child: contentStack)
         
         let back = ASBackgroundLayoutSpec(child: internalInsetSpecs, background: display)
         
-        let insets = UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 0)
+        
+        let insets = UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8)
         let insetSpecs = ASInsetLayoutSpec(insets: insets, child: back)
         
         return insetSpecs
@@ -145,7 +138,6 @@ class LocationCellNode:ASCellNode {
 extension LocationCellNode:MKMapViewDelegate{
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        print("holaaa")
         if overlay is MKCircle {
             let circle = MKCircleRenderer(overlay: overlay)
             circle.strokeColor = UIColor.con100tBlueColor
@@ -155,6 +147,6 @@ extension LocationCellNode:MKMapViewDelegate{
         } else {
             return MKPolylineRenderer()
         }
-
+        
     }
 }

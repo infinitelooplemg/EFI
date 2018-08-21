@@ -8,5 +8,6 @@
 
 import Foundation
 protocol MeasurerCellNodeDelegate:class {
-    func monitor(measurer:Measurer)
+    func edit(measurer:Measurer)
+    func showHistorialFor(measurer:Measurer)
 }

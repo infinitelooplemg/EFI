@@ -37,28 +37,28 @@ class PaymentStatusNode:CCTNode {
     
     func  setupView() {
         
-        headerTextNode = CTTTextNode(withFontSize: 25, color: .black, with: "Estado de Cuenta")
+        headerTextNode = CTTTextNode(withFontSize: 30, color: .black, with: "Estado de Cuenta")
         
-        fixedChargeTitleTextNode = CTTTextNode(withFontSize: 15, color: UIColor.black, with: "Cargo Fijo:")
-        fixedChargeTextNode = CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: "468.10")
+        fixedChargeTitleTextNode = CTTTextNode(withFontSize: 18, color: UIColor.black, with: "Cargo Fijo:")
+        fixedChargeTextNode = CTTTextNode(withFontSize: 18, color: UIColor.lightGray, with: "468.10")
         
-        energyTextNode = CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: "208,555.09")
-        energyTitleTextNode = CTTTextNode(withFontSize: 15, color: .black, with: "Energía:")
+        energyTextNode = CTTTextNode(withFontSize: 18, color: UIColor.lightGray, with: "208,555.09")
+        energyTitleTextNode = CTTTextNode(withFontSize: 18, color: .black, with: "Energía:")
         
-        billableTitleTextNode = CTTTextNode(withFontSize: 15, color: .black, with: "Demanda Facturable:")
-        billableTextNode = CTTTextNode(withFontSize: 15, color: .lightGray, with: "97,712.56")
+        billableTitleTextNode = CTTTextNode(withFontSize: 18, color: .black, with: "Demanda Facturable:")
+        billableTextNode = CTTTextNode(withFontSize: 18, color: .lightGray, with: "97,712.56")
         
-        bonusForPowerFactorTitleTextNode = CTTTextNode(withFontSize: 15, color: .black, with: "Bonificación F.P.")
-        bonusForPowerFactorTextNode = CTTTextNode(withFontSize: 15, color: .lightGray, with: "8,151.91")
+        bonusForPowerFactorTitleTextNode = CTTTextNode(withFontSize: 18, color: .black, with: "Bonificación F.P.")
+        bonusForPowerFactorTextNode = CTTTextNode(withFontSize: 18, color: .lightGray, with: "8,151.91")
         
-        subtotalTitleTextNode = CTTTextNode(withFontSize: 15, color: .black, with: "Subtotal")
-        subtotalTextNode = CTTTextNode(withFontSize: 15, color: .lightGray, with: "298,583.84")
+        subtotalTitleTextNode = CTTTextNode(withFontSize: 18, color: .black, with: "Subtotal")
+        subtotalTextNode = CTTTextNode(withFontSize: 18, color: .lightGray, with: "298,583.84")
         
-        IVATitleTextNode = CTTTextNode(withFontSize: 15, color: .black, with: "IVA 16%")
-        IVATextNode = CTTTextNode(withFontSize: 15, color: .lightGray, with: "44,787.57")
+        IVATitleTextNode = CTTTextNode(withFontSize: 18, color: .black, with: "IVA 16%")
+        IVATextNode = CTTTextNode(withFontSize: 18, color: .lightGray, with: "44,787.57")
         
-        totalTitleTextNode = CTTTextNode(withFontSize: 15, color: .black, with: "Total")
-        totalTextNode = CTTTextNode(withFontSize: 15, color: .lightGray, with: "343,371.416")
+        totalTitleTextNode = CTTTextNode(withFontSize: 18, color: .black, with: "Total")
+        totalTextNode = CTTTextNode(withFontSize: 18, color: .lightGray, with: "343,371.416")
         
         createReportButton = CCTBorderButtonNode(fontSize: 13, textColor: .white, with: "Generar Reporte")
         createReportButton.backgroundColor = UIColor.con100tBlueColor

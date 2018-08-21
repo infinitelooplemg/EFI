@@ -33,7 +33,7 @@ class MeasurersViewController: ASViewController<ASTableNode> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableNode.backgroundColor = UIColor.con100tGrayColor
+        tableNode.backgroundColor = UIColor.con100tBackGroundColor
         tableNode.view.separatorStyle = .none
         tableNode.allowsSelection = true
         
@@ -86,12 +86,27 @@ class MeasurersViewController: ASViewController<ASTableNode> {
 }
 
 extension MeasurersViewController:MeasurerCellNodeDelegate {
-    func monitor(measurer: Measurer) {
+    func showHistorialFor(measurer: Measurer) {
+        let vc = CalendarViewController()
+        vc.currentLocation = location
+        vc.currentMeasurer = measurer
+        vc.networkService = self.networkService
+        let nc = UINavigationController(rootViewController: vc)
+        
+        present(nc, animated: true, completion: nil)
+    }
+    
+    func edit(measurer: Measurer) {
         let vc = MeasurerConfigurationViewController(location: self.location, measurer: measurer)
         vc.delegate = self
         vc.networkService = self.networkService
         self.present(ASNavigationController( rootViewController: vc), animated: true, completion: nil)
     }
+    
+    
+   
+  
+     
 }
 
 extension MeasurersViewController:RegisterMeasurerDelegate {

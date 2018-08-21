@@ -24,20 +24,20 @@ class BusinessHomeNode: ASScrollNode {
         localizationNode = HomeLocationNode(delegate: locationNodeDelegate)
         energyConsumptionNode = BusinessEnergyConsumptionNode()
         
-        estadoDeCuentaHeader = CTTTextNode(withFontSize: 30, color: .black, with: "Estado de Cuenta")
+        estadoDeCuentaHeader = CTTTextNode(withFontSize: 30, color: .black, with: "Detalle")
         
         automaticallyManagesSubnodes = true
         automaticallyManagesContentSize = true
-        backgroundColor = UIColor.con100tGrayColor
+        backgroundColor = UIColor.con100tBackGroundColor
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         
         let stack = ASStackLayoutSpec.vertical()
         stack.spacing = 8
-        stack.children = [energyConsumptionNode,paymentStatusNode,localizationNode]
+        stack.children = [energyConsumptionNode,paymentStatusNode]
         
-        let insets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+        let insets = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
         let insetSpecs = ASInsetLayoutSpec(insets: insets, child: stack)
         
         return insetSpecs

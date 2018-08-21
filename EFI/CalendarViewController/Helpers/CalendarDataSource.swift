@@ -25,14 +25,14 @@ class CalendarDataSource:NSObject,FSCalendarDataSource {
         
     }
     
-    //the date format "yyyy-MM-dd"
-    func maximumDate(for calendar: FSCalendar) -> Date {
-        return Date(dateString: "2018-05-30")
-    }
-    
-    func minimumDate(for calendar: FSCalendar) -> Date {
-        return Date(dateString: "2018-04-20")
-    }
+//    //the date format "yyyy-MM-dd"
+//    func maximumDate(for calendar: FSCalendar) -> Date {
+//        return Date(dateString: "2018-05-30")
+//    }
+//    
+//    func minimumDate(for calendar: FSCalendar) -> Date {
+//        return Date(dateString: "2018-04-20")
+//    }
     
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {

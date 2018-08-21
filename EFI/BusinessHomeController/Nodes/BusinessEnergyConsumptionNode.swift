@@ -25,7 +25,7 @@ class BusinessEnergyConsumptionNode:ASDisplayNode {
   
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        let w = (UIScreen.main.bounds.width - 16) / 2
+        let w = (UIScreen.main.bounds.width - 32) / 2
         
         baseCell.style.preferredSize.width = w
         intermediaCell.style.preferredSize.width = w
