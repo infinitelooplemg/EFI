@@ -32,23 +32,28 @@ class LocationsDataManager:NSObject,ASTableDataSource ,ASTableDelegate {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            let locationToDelete = locations[indexPath.row]
-//            networkService.delete(location: locationToDelete) { [weak self] (response, error) in
-//
-//                if error != nil {
-//                    return
-//                }
-//                if response?.Codigo == ResponseCode.Error.rawValue {
-//                    self?.viewController.showAlert(with: "ERROR", message: "Esta localización contiene medidores,no puede ser borrada", image: nil, for: .error)
-//                } else  {
-//                    self?.viewController.showAlert(with:"Eliminacion Completa", message: "La localización se elimino con exito", image: nil, for: .success)
-//                    self?.locations.remove(at: indexPath.row)
-//                    tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.left)
-//                }
-//            }
-//
-//        }
+
+        if editingStyle == .delete {
+                    print("borrado")
+            let locationToDelete = locations[indexPath.row]
+            print(networkService)
+            networkService.delete(location: locationToDelete) { [weak self] (response, error) in
+          
+
+                if error != nil {
+                    self?.viewController.showAlert(with: "No se pudo borrar la localización", message: "Verifica tu conexión a internet y vuelve a intentarlo", image: nil, for: .error)
+                    return
+                }
+                if response?.Codigo == 405 {
+                    self?.viewController.showAlert(with: nil, message: response?.Status, image: nil, for: .error)
+                } else  {
+                    self?.viewController.showAlert(with:"Eliminación Completa", message: "La localización se elimino con exito", image: nil, for: .success)
+                    self?.locations.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.left)
+                }
+            }
+
+        }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

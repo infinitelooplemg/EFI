@@ -42,26 +42,42 @@ class RegisterLocationNode:ASScrollNode {
     
     @objc func saveLocation()  {
         
-        guard let initialConsumption = initialConsumptionTextNode.initialConsumptionTextNode.attributedText?.string, let locationName = nameInputNode.locationNmeTextNode.attributedText?.string,let maximumDemand = locationMaxumumNode.maximumDemandTextNode.attributedText?.string,    let startDate = locationPeriodNode.startDateTextNode.attributedText?.string,  let finisDate = locationPeriodNode.finishDateTextNode.attributedText?.string else {
-           // showAlert(with: "Ooops!", message: "Al parecer olvidaste llenar algunos campos", image: nil, for: .error)
+        guard let locationName = nameInputNode.locationNmeTextNode.attributedText?.string else {
+            showAlert(with: nil, message: "Introduce un nombre para tu medidor", image: nil, for: .error, dismissable: false)
             return
         }
         
         
-        guard let rateParameters = locationRateNode.rateParameters, let rate = locationRateNode.rate else {
-           // showAlert(with: "Ooops!", message: "Al parecer olvidaste seleccionar una tarifa", image: nil, for: .error)
+        guard let rateParameters = locationRateNode.rateParameters,let rate = locationRateNode.rate else {
+            showAlert(with: nil, message: "Al parecer olvidaste seleccionar una tarifa", image: nil, for: .error, dismissable: false)
             
             return
         }
         
-        if startDate.isEmpty || finisDate.isEmpty {
-          //  showAlert(with: "Ooops!", message: "Verifica que las fechas de tu periodo se encuentren seleccionadas", image: nil, for: .error)
+        let startDate = locationPeriodNode.startDateTextNode.attributedText?.string
+        let finisDate = locationPeriodNode.finishDateTextNode.attributedText?.string
+        
+        if (startDate?.isEmpty)! || (finisDate?.isEmpty)! {
+            showAlert(with: nil, message: "Verifica que las fechas de tu periodo se encuentren seleccionadas", image: nil, for: .error, dismissable: false)
             return
         }
         
+        let initialConsumption = initialConsumptionTextNode.initialConsumptionTextNode.attributedText?.string
+        let maximumDemand = locationMaxumumNode.maximumDemandTextNode.attributedText?.string
         
-        let initialConsumptionFloatValue = (initialConsumption as NSString).floatValue
-        let maximumDemandFloatValue = (maximumDemand as NSString).floatValue
+        var initialConsumptionFloatValue:Float
+        if (initialConsumption != nil) {
+            initialConsumptionFloatValue = (initialConsumption! as NSString).floatValue
+        } else {
+            initialConsumptionFloatValue = 0
+        }
+        
+        var maximumDemandFloatValue:Float
+        if (maximumDemand != nil) {
+            maximumDemandFloatValue = (maximumDemand! as NSString).floatValue
+        } else {
+            maximumDemandFloatValue = 0
+        }
         
         
         
@@ -80,10 +96,13 @@ class RegisterLocationNode:ASScrollNode {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let inputStack = ASStackLayoutSpec.vertical()
         inputStack.children = [nameInputNode,initialConsumptionTextNode,locationMaxumumNode,locationRateNode,locationPeriodNode]
-        inputStack.spacing = 8
+        inputStack.spacing = 16
+        
+        let buttonInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        let buttonInsetSpecs = ASInsetLayoutSpec(insets: buttonInsets, child: saveButton)
         
         let contentStack = ASStackLayoutSpec.vertical()
-        contentStack.children = [inputStack,saveButton]
+        contentStack.children = [inputStack,buttonInsetSpecs]
         contentStack.justifyContent = .spaceBetween
         
         let insets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)

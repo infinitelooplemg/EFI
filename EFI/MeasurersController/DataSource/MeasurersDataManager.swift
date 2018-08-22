@@ -38,11 +38,12 @@ class MeasurersDataManager:NSObject,ASTableDataSource,ASTableDelegate {
                 
                 
                 if error != nil {
-                    
+                    self?.viewController.showAlert(with: "No se pudo borrar el medidor", message: "Verifica tu conexión a internet y vuelve a intentarlo", image: nil, for: .error)
                     return
                 }
                 if response?.Codigo == 200 {
                     DispatchQueue.main.async {
+                        self?.viewController.showAlert(with:"Eliminación Completa", message: "El medidor se elimino con exito", image: nil, for: .success)
                         self?.measurers.remove(at: indexPath.row)
                         tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.right)
                     }
@@ -66,17 +67,17 @@ class MeasurersDataManager:NSObject,ASTableDataSource,ASTableDelegate {
     
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
         
-      
-            let measurer = measurers[indexPath.row]
-            
-            
-            let cellNodeBlock = { [weak self] () -> ASCellNode in
-                let cellNode = MeasurerCellNode(measurer: measurer,delegate:(self?.cellDelegate)!)
-                return cellNode
-            }
-            
-            return cellNodeBlock
-     
+        
+        let measurer = measurers[indexPath.row]
+        
+        
+        let cellNodeBlock = { [weak self] () -> ASCellNode in
+            let cellNode = MeasurerCellNode(measurer: measurer,delegate:(self?.cellDelegate)!)
+            return cellNode
+        }
+        
+        return cellNodeBlock
+        
         
     }
 }

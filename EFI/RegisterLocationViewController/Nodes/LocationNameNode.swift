@@ -21,7 +21,7 @@ class LocationNameNode:CCTNode {
         locationNmeTextNode.delegate = self
         locationNmeTextNode.textView.textAlignment = .right
         locationNmeTextNode.style.flexGrow = 1
-        locationNameTitleNode = CTTTextNode(withFontSize: 15, color: .black, with: "Medidor")
+        locationNameTitleNode = CTTTextNode(withFontSize: 15, color: .black, with: "Localización")
         
     }
     

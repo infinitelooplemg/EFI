@@ -16,7 +16,7 @@ class LocationInitialConNode:CCTNode,ASEditableTextNodeDelegate {
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
-        initialConsumptionTextNode = ASEditableTextNode(placeHolder: "kWh")
+        initialConsumptionTextNode = ASEditableTextNode(placeHolder: "0")
         initialConsumptionTextNode.keyboardType = .decimalPad
         initialConsumptionTextNode.delegate = self
         initialConsumptionTextNode.style.flexGrow = 1

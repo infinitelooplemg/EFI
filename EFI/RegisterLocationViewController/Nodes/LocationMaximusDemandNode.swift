@@ -17,7 +17,7 @@ class LocationMaximusDemandNode:CCTNode,ASEditableTextNodeDelegate {
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
-        maximumDemandTextNode = ASEditableTextNode(placeHolder: "kW")
+        maximumDemandTextNode = ASEditableTextNode(placeHolder: "0")
         maximumDemandTextNode.keyboardType = .decimalPad
         maximumDemandTextNode.delegate = self
         maximumDemandTextNode.style.flexGrow = 1

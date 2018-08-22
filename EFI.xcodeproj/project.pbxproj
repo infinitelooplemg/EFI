@@ -116,6 +116,10 @@
 		A0B32BE5211CFF5800AA5B41 /* CRERatesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BE4211CFF5800AA5B41 /* CRERatesDataManager.swift */; };
 		A0B32BE7211D036D00AA5B41 /* NewLocationRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BE6211D036D00AA5B41 /* NewLocationRequestParameters.swift */; };
 		A0B32BE9211D03F700AA5B41 /* NewLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B32BE8211D03F700AA5B41 /* NewLocationResponse.swift */; };
+		A0BFB7EF212CF7B400E9CC44 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BFB7EE212CF7B400E9CC44 /* UIViewController.swift */; };
+		A0BFB7F1212D079A00E9CC44 /* ASDisplayNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BFB7F0212D079A00E9CC44 /* ASDisplayNode.swift */; };
+		A0BFB7F3212D178D00E9CC44 /* DeleteLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BFB7F2212D178D00E9CC44 /* DeleteLocationResponse.swift */; };
+		A0BFB7F5212D17F700E9CC44 /* DeleteLocationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BFB7F4212D17F700E9CC44 /* DeleteLocationParameters.swift */; };
 		A0CD8ADF211D2A6400235048 /* LocationsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD8ADE211D2A6400235048 /* LocationsMapViewController.swift */; };
 		A0CD8AE3211D548100235048 /* LocationsMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD8AE2211D548100235048 /* LocationsMapCell.swift */; };
 		A0CD8AE6211D54A000235048 /* LocationMapCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD8AE5211D54A000235048 /* LocationMapCellDelegate.swift */; };
@@ -261,6 +265,10 @@
 		A0B32BE4211CFF5800AA5B41 /* CRERatesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRERatesDataManager.swift; sourceTree = "<group>"; };
 		A0B32BE6211D036D00AA5B41 /* NewLocationRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocationRequestParameters.swift; sourceTree = "<group>"; };
 		A0B32BE8211D03F700AA5B41 /* NewLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocationResponse.swift; sourceTree = "<group>"; };
+		A0BFB7EE212CF7B400E9CC44 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		A0BFB7F0212D079A00E9CC44 /* ASDisplayNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASDisplayNode.swift; sourceTree = "<group>"; };
+		A0BFB7F2212D178D00E9CC44 /* DeleteLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLocationResponse.swift; sourceTree = "<group>"; };
+		A0BFB7F4212D17F700E9CC44 /* DeleteLocationParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLocationParameters.swift; sourceTree = "<group>"; };
 		A0CD8ADE211D2A6400235048 /* LocationsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsMapViewController.swift; sourceTree = "<group>"; };
 		A0CD8AE2211D548100235048 /* LocationsMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsMapCell.swift; sourceTree = "<group>"; };
 		A0CD8AE5211D54A000235048 /* LocationMapCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapCellDelegate.swift; sourceTree = "<group>"; };
@@ -900,6 +908,8 @@
 				A0EB67042123A66600D8086E /* RecordsByDayResponse.swift */,
 				A0EB67062123A67800D8086E /* MeasurerRecords.swift */,
 				A0EB67082123A69100D8086E /* MeasurerRecord.swift */,
+				A0BFB7F2212D178D00E9CC44 /* DeleteLocationResponse.swift */,
+				A0BFB7F4212D17F700E9CC44 /* DeleteLocationParameters.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -946,6 +956,8 @@
 				A0D9A7D6210821AC00979F07 /* UIColor.swift */,
 				A040D5AB210FF2C40004599E /* ASEditableTextNode.swift */,
 				010E9F33211A37F8006E0D7E /* Date.swift */,
+				A0BFB7EE212CF7B400E9CC44 /* UIViewController.swift */,
+				A0BFB7F0212D079A00E9CC44 /* ASDisplayNode.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1136,11 +1148,13 @@
 				01B361E1210F9E6700019102 /* Phases.swift in Sources */,
 				01B361DA210F9D0600019102 /* CCTPhasesHorizontalStack.swift in Sources */,
 				010E9F7D211A5B4E006E0D7E /* ElectricalDivisionRequestParameters.swift in Sources */,
+				A0BFB7F1212D079A00E9CC44 /* ASDisplayNode.swift in Sources */,
 				010E9F58211A49D9006E0D7E /* RateSelectionDelegate.swift in Sources */,
 				A07DE62021100416008D678A /* Measurer.swift in Sources */,
 				A0B32BDC211CFEAC00AA5B41 /* CRERatesViewController.swift in Sources */,
 				010E9F63211A4E01006E0D7E /* DateChooserDelegate.swift in Sources */,
 				010E9F44211A479A006E0D7E /* RegisterLocationViewController.swift in Sources */,
+				A0BFB7EF212CF7B400E9CC44 /* UIViewController.swift in Sources */,
 				A0CD8ADF211D2A6400235048 /* LocationsMapViewController.swift in Sources */,
 				A0D9A7E42108235C00979F07 /* IntermediateConsumptionNode.swift in Sources */,
 				010E9F56211A499C006E0D7E /* LocationRateNode.swift in Sources */,
@@ -1203,6 +1217,7 @@
 				010E9F5C211A4C57006E0D7E /* CTTIconButton.swift in Sources */,
 				01B361E7210FA02300019102 /* ElectricalVariables.swift in Sources */,
 				A0B32BE9211D03F700AA5B41 /* NewLocationResponse.swift in Sources */,
+				A0BFB7F5212D17F700E9CC44 /* DeleteLocationParameters.swift in Sources */,
 				A040D5AC210FF2C40004599E /* ASEditableTextNode.swift in Sources */,
 				01B361F4210FAF1800019102 /* LocationsDataManager.swift in Sources */,
 				01B1A6DB211259A6002F0A28 /* NewMeasurerResponse.swift in Sources */,
@@ -1210,6 +1225,7 @@
 				A0CD8AF1211D59EE00235048 /* LocationsMap.swift in Sources */,
 				010E9F7B211A5B33006E0D7E /* ElectricalDivision.swift in Sources */,
 				A0D9A72D210818D400979F07 /* CCTBusinessTabController.swift in Sources */,
+				A0BFB7F3212D178D00E9CC44 /* DeleteLocationResponse.swift in Sources */,
 				01BBF82C210A46AE001EA9B9 /* LocationsRequestParameters.swift in Sources */,
 				01B361FA210FAFC300019102 /* LocationCellNode.swift in Sources */,
 				01BBF828210A4567001EA9B9 /* CCTApiService.swift in Sources */,

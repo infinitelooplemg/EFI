@@ -91,10 +91,50 @@ class MeasurerConfigurationViewController:UIViewController {
 extension MeasurerConfigurationViewController:RegisterMeasurerNodeDelegate {
     func passParametersFor(measurer: RegisterMeasurerRequestParameters) {
         
+        
+        let loadingView = UIView(frame: UIScreen.main.bounds)
+        let windows = UIApplication.shared.keyWindow
+        loadingView.alpha = 0
+        loadingView.backgroundColor = .black
+        
+        windows?.addSubview(loadingView)
+        
+        UIWindow.animate(withDuration: 0.5) {
+            loadingView.alpha = 0.7
+        }
+        
         networkService?.newMeasurer(parameter: measurer, completion: { [weak self] (response, error) in
-            self?.dismiss(animated: true, completion: {
-                self?.delegate?.receiveRegistered(measurer: (response?.Respuesta)!)
-            })
+            if error != nil {
+                UIWindow.animate(withDuration: 0.5) {
+                    loadingView.alpha = 0
+                }
+                self?.showAlert(with: "No se pudo registrar el medidor", message: "Verifica tu conexión a internet y vuelve a intentarlo", image: nil, for: .error)
+                self?.dismiss(animated: true, completion: nil)
+                return
+            }
+            
+            if response?.Codigo == 200 {
+                // let locationToSAVE = response?.Respuesta
+                UIWindow.animate(withDuration: 0.5) {
+                    loadingView.alpha = 0
+                }
+                self?.showAlert(with: nil, message: "Medidor registrado correctamente", image: nil, for: .success)
+                
+                self?.dismiss(animated: true, completion: {
+                    self?.delegate?.receiveRegistered(measurer: (response?.Respuesta)!)
+                })
+            }
+            
+            if response?.Codigo == 405 {
+                UIWindow.animate(withDuration: 0.5) {
+                    loadingView.alpha = 0
+                }
+                self?.showAlert(with: nil, message: response?.Status, image: nil, for: .error)
+                self?.dismiss(animated: true, completion: nil)
+             
+            }
+            
+      
         })
         
     }

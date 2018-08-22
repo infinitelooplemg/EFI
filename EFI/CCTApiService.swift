@@ -125,14 +125,17 @@ final class CCTApiService {
         let task = session.dataTask(with: request) { (responseData, response, responseError) in
             
             guard let data = responseData else {
-                completion(nil,responseError)
+                DispatchQueue.main.async {
+                    completion(nil,responseError)
+                }
                 return
             }
             do {
                 
                 let response = try JSONDecoder().decode(DeleteMeasurerResponse.self, from: data)
-                print(response)
-                completion(response,nil)
+                DispatchQueue.main.async {
+                    completion(response,nil)
+                }
                 
             } catch let jsonErr {
                 print(jsonErr)
@@ -161,16 +164,18 @@ final class CCTApiService {
             
             
             guard let data = responseData else {
-                
-                completion(nil,responseError)
+                DispatchQueue.main.async {
+                    completion(nil,responseError)
+                }
                 return
             }
             do {
                 
                 let response = try JSONDecoder().decode(NewMeasurerResponse.self, from: data)
-                
-                completion(response,nil)
-                
+                print(response)
+                DispatchQueue.main.async {
+                    completion(response,nil)
+                }
             } catch let jsonErr {
                 print(jsonErr)
             }
@@ -352,7 +357,6 @@ final class CCTApiService {
                 do {
                     
                     let divisions = try JSONDecoder().decode(TarifasCRE.self, from: data)
-                    print(divisions.TarifasCRE)
                     completion(divisions.TarifasCRE,nil)
                     
                 } catch let jsonErr {
@@ -389,11 +393,9 @@ final class CCTApiService {
                 }
                 
                 let cadena = String(data: data, encoding: .utf8)
-                print(cadena)
                 do {
                     
                     let response = try JSONDecoder().decode(NewLocationResponse.self, from: data)
-                    print(response)
                     completion(response,nil)
                     
                 } catch let jsonErr {
@@ -449,6 +451,46 @@ final class CCTApiService {
                 }
             }
             
+        }
+        
+        task.resume()
+    }
+    
+    
+    func delete(location:Location, completion: @escaping(_ results: DeleteLocationResponse?, _ error: Error?)->()) {
+        components.path =  "/api/ios/v1/localizacion"
+        guard let url = components.url else { fatalError("Could not create URL from components") }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "DELETE"
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        request.allHTTPHeaderFields = headers
+        
+        let parameters = DeleteLocationParameters()
+        parameters.ClaveLocalizacion = location.Clave!
+        request.httpBody = encodeToJson(parameters: parameters)
+        
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) { (responseData, response, responseError) in
+            guard let data = responseData else {
+                DispatchQueue.main.async {
+                    
+                    completion(nil,responseError)
+                }
+                return
+            }
+            do {
+                let response = try JSONDecoder().decode(DeleteLocationResponse.self, from: data)
+                
+                DispatchQueue.main.async {
+                    completion(response,nil)
+                }
+                
+            } catch let jsonErr {
+            }
         }
         
         task.resume()

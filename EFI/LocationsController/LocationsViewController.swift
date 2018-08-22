@@ -62,10 +62,6 @@ class LocationsViewController:ASViewController<ASTableNode> {
     func setupNavigationButton(){
         let newLocationBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addLocation))
         navigationItem.rightBarButtonItem = newLocationBarButton
-        
-        
-     
-        
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

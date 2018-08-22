@@ -78,25 +78,42 @@ extension RegisterLocationViewController:RegisterLocationNodeDelegate{
         requestParametersForNewLocation.ConsumoInicial = location.ConsumoInicial
         requestParametersForNewLocation.Nombre = location.Nombre
         
+        let loadingView = UIView(frame: UIScreen.main.bounds)
+        let windows = UIApplication.shared.keyWindow
+        loadingView.alpha = 0
+        loadingView.backgroundColor = .black
+        
+        windows?.addSubview(loadingView)
+        
+        UIWindow.animate(withDuration: 0.5) {
+            loadingView.alpha = 0.7
+        }
         
         networkService?.newUserLocation(parameter: requestParametersForNewLocation, completion: { [weak self] (response, error) in
             if error != nil {
-//self?.showAlert(with: "Error", message: "Error al conectarse al servidor,verifique su conexión a internet y vuelta a intentarlo", image: nil, for: .success)
+                UIWindow.animate(withDuration: 0.5) {
+                    loadingView.alpha = 0
+                }
+                self?.showAlert(with: "No se pudo agregar la Localización", message: "Verifica tu conexión a internet y vuelve a intentarlo", image: nil, for: .error)
+                self?.dismiss(animated: true, completion: nil)
                 return
             }
             
+   
             if response?.Codigo == 200 {
-                let locationToSAVE = response?.Respuesta
-                
-//                self?.showAlert(with: "Felicidades", message: "Localización agregada correctamente", image: nil, for: .success)
+               // let locationToSAVE = response?.Respuesta
+                UIWindow.animate(withDuration: 0.5) {
+                    loadingView.alpha = 0
+                }
+                self?.showAlert(with: nil, message: "Localización agregada correctamente", image: nil, for: .success)
                 
                 self?.dismiss(animated: true, completion: {
-                    self?.delegate?.locationAdded(location: locationToSAVE!,rate: rate)
+                //    self?.delegate?.locationAdded(location: locationToSAVE!,rate: rate)
                 })
             }
         })
     }
     
-   
+    
 }
 
