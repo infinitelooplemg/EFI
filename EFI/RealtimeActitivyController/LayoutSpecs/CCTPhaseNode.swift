@@ -26,7 +26,7 @@ class CCTPhaseNode:ASDisplayNode {
         
         style.flexShrink = 1.0
         
-        value = CTTTextNode(withFontSize: 18, color: .lightGray, with: "3.00")
+        value = CTTTextNode(withFontSize: 13, color: .lightGray, with: "3.00")
         
         
         style.preferredSize.width = 70

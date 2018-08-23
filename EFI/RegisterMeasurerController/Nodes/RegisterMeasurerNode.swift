@@ -21,12 +21,16 @@ class RegisterMeasurerNode:ASScrollNode {
     var alarmNode:MeasurerAlarmNode!
     var location:Location!
     var measureID:String?
+    
+    
+    var configurationMode:ConfigurationMode!
     var measurer:Measurer?
     
     init(location:Location) {
         measurerParameters = RegisterMeasurerRequestParameters()
         self.location = location
         super.init()
+        configurationMode = .add
         
         automaticallyManagesSubnodes = true
         automaticallyManagesContentSize = true
@@ -37,6 +41,7 @@ class RegisterMeasurerNode:ASScrollNode {
         super.init()
         self.measurer = measurer
         self.location = location
+        configurationMode = .edit
         measurerParameters = RegisterMeasurerRequestParameters()
         automaticallyManagesSubnodes = true
         automaticallyManagesContentSize = true
@@ -62,6 +67,13 @@ class RegisterMeasurerNode:ASScrollNode {
     func fillData(){
         nickNameNode.measurerNickNameTextNode.set(text: (measurer?.Nombre!)!)
         measurerNode.measurerIDNode.set(text: (measurer?.Clave!)!)
+        
+      //energyMultiplierNode.switchView.isOn = true
+        energyMultiplierNode.primaryTextNode.set(text: "500")
+        energyMultiplierNode.secondaryTextNode.set(text: "20")
+        
+        //voltageMultiplierNode.switchView.isOn = false
+        
     }
     
     @objc func save() {
@@ -127,12 +139,23 @@ class RegisterMeasurerNode:ASScrollNode {
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let inputStack = ASStackLayoutSpec.vertical()
+        
         inputStack.children = [nickNameNode,energyMultiplierNode,voltageMultiplierNode,measurerNode,alarmNode]
         inputStack.spacing = 8
         
         let contentStack = ASStackLayoutSpec.vertical()
         contentStack.children = [inputStack,saveButton]
         contentStack.justifyContent = .spaceBetween
+        
+        
+        switch configurationMode {
+        case .edit:
+            contentStack.children = [inputStack]
+            measurerNode.isUserInteractionEnabled = false
+        case .add:
+            contentStack.children = [inputStack,saveButton]
+        default: break
+        }
         
         let insets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         let insetSpecs = ASInsetLayoutSpec(insets: insets , child: contentStack)

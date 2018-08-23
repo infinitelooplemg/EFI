@@ -105,7 +105,7 @@ class LocationCellNode:ASCellNode {
         let headerInsetSpecs = ASInsetLayoutSpec(insets: headerInsets, child: headerStack)
         
         let footerStack = ASStackLayoutSpec.horizontal()
-        footerStack.children = [measurersButton,dummyButton2,dummyButton]
+        footerStack.children = [measurersButton,dummyButton2]
         footerStack.justifyContent = .spaceAround
         
         

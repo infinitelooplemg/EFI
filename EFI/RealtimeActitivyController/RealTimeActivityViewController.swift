@@ -18,14 +18,22 @@ class RealTimeActivityViewController: UIViewController {
     var currentMeasurer:Measurer?
     
     
+    var requestTimer:Timer?
+    
     override func viewDidLoad() {
  
         title = "Instantáneos"
         view.backgroundColor = UIColor.con100tGrayColor
-        node = RTActivityNode()
+        node = RTActivityNode(activeMeasurerDelegate: self)
         view.addSubnode(node)
         view.layoutIfNeeded()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+          self.requestTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.requestData), userInfo: nil, repeats: true)
+        requestTimer?.fire()
     }
     
     override func viewDidLayoutSubviews() {
@@ -47,4 +55,31 @@ class RealTimeActivityViewController: UIViewController {
             node.view.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         }
     }
+    
+    
+    @objc func requestData(){
+        networkService?.fetchInstantDataFor(measurer: nil, completion: { [weak self]( responseData, error) in
+            
+            guard let instanActitivy = responseData else {
+                
+                return
+            }
+           
+            self!.node.updateValues(RTActivity: instanActitivy)
+        })
+    }
+}
+
+extension RealTimeActivityViewController:ActiveMeasurerNodeDelegate {
+    func showMeasurers() {
+        networkService?.fetchLocationsList(completion: { (response, error) in
+            let vc = UserMeasurersViewController(measurers: (response?.Respuesta)!)
+            let nc = UINavigationController(rootViewController: vc)
+            
+            self.present(nc, animated: true, completion: nil)
+            
+        })
+    }
+    
+    
 }

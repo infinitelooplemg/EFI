@@ -45,6 +45,11 @@
 		010E9F7B211A5B33006E0D7E /* ElectricalDivision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F7A211A5B33006E0D7E /* ElectricalDivision.swift */; };
 		010E9F7D211A5B4E006E0D7E /* ElectricalDivisionRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F7C211A5B4E006E0D7E /* ElectricalDivisionRequestParameters.swift */; };
 		010E9F7F211A5B74006E0D7E /* ElectricalDivisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E9F7E211A5B74006E0D7E /* ElectricalDivisions.swift */; };
+		01B13134212DAA1000C2D72F /* LocationsListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B13133212DAA1000C2D72F /* LocationsListResponse.swift */; };
+		01B13136212DABAF00C2D72F /* ActiveMeasurerNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B13135212DABAF00C2D72F /* ActiveMeasurerNodeDelegate.swift */; };
+		01B13139212DB10200C2D72F /* UserMeasurersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B13138212DB10200C2D72F /* UserMeasurersViewController.swift */; };
+		01B1313B212DB9A100C2D72F /* InstantActivityRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1313A212DB9A100C2D72F /* InstantActivityRequestParameters.swift */; };
+		01B1313D212DB9DA00C2D72F /* InstantActivityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1313C212DB9DA00C2D72F /* InstantActivityResponse.swift */; };
 		01B1A6DB211259A6002F0A28 /* NewMeasurerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1A6DA211259A6002F0A28 /* NewMeasurerResponse.swift */; };
 		01B1A6DD21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1A6DC21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift */; };
 		01B1A6DF211260CD002F0A28 /* RegisterMeasurerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1A6DE211260CD002F0A28 /* RegisterMeasurerDelegate.swift */; };
@@ -191,6 +196,11 @@
 		010E9F7A211A5B33006E0D7E /* ElectricalDivision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalDivision.swift; sourceTree = "<group>"; };
 		010E9F7C211A5B4E006E0D7E /* ElectricalDivisionRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalDivisionRequestParameters.swift; sourceTree = "<group>"; };
 		010E9F7E211A5B74006E0D7E /* ElectricalDivisions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalDivisions.swift; sourceTree = "<group>"; };
+		01B13133212DAA1000C2D72F /* LocationsListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListResponse.swift; sourceTree = "<group>"; };
+		01B13135212DABAF00C2D72F /* ActiveMeasurerNodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMeasurerNodeDelegate.swift; sourceTree = "<group>"; };
+		01B13138212DB10200C2D72F /* UserMeasurersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMeasurersViewController.swift; sourceTree = "<group>"; };
+		01B1313A212DB9A100C2D72F /* InstantActivityRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantActivityRequestParameters.swift; sourceTree = "<group>"; };
+		01B1313C212DB9DA00C2D72F /* InstantActivityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantActivityResponse.swift; sourceTree = "<group>"; };
 		01B1A6DA211259A6002F0A28 /* NewMeasurerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMeasurerResponse.swift; sourceTree = "<group>"; };
 		01B1A6DC21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMeasurerNodeDelegate.swift; sourceTree = "<group>"; };
 		01B1A6DE211260CD002F0A28 /* RegisterMeasurerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMeasurerDelegate.swift; sourceTree = "<group>"; };
@@ -422,12 +432,21 @@
 			name = Nodes;
 			sourceTree = "<group>";
 		};
+		01B13137212DB0E300C2D72F /* UserMeasurersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				01B13138212DB10200C2D72F /* UserMeasurersViewController.swift */,
+			);
+			path = UserMeasurersViewController;
+			sourceTree = "<group>";
+		};
 		01B361CF210F9B1800019102 /* RealtimeActitivyController */ = {
 			isa = PBXGroup;
 			children = (
 				01B361DB210F9D2200019102 /* LayoutSpecs */,
 				01B361D4210F9C6800019102 /* Nodes */,
 				01B361D0210F9B4100019102 /* RealTimeActivityViewController.swift */,
+				01B13135212DABAF00C2D72F /* ActiveMeasurerNodeDelegate.swift */,
 			);
 			path = RealtimeActitivyController;
 			sourceTree = "<group>";
@@ -587,6 +606,7 @@
 		A007C381210812E70011DB93 /* EFI */ = {
 			isa = PBXGroup;
 			children = (
+				01B13137212DB0E300C2D72F /* UserMeasurersViewController */,
 				A0EB670A2123A80100D8086E /* HistoricalChartOfActitivyViewController */,
 				A0CD8ADD211D2A3B00235048 /* LocationsMapViewController */,
 				A0CD8ADC211D2A2200235048 /* RateSelectionViewControllers */,
@@ -910,6 +930,9 @@
 				A0EB67082123A69100D8086E /* MeasurerRecord.swift */,
 				A0BFB7F2212D178D00E9CC44 /* DeleteLocationResponse.swift */,
 				A0BFB7F4212D17F700E9CC44 /* DeleteLocationParameters.swift */,
+				01B13133212DAA1000C2D72F /* LocationsListResponse.swift */,
+				01B1313A212DB9A100C2D72F /* InstantActivityRequestParameters.swift */,
+				01B1313C212DB9DA00C2D72F /* InstantActivityResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1122,6 +1145,7 @@
 			files = (
 				01BB0CA6211238D300830A09 /* DeleteMeasurerRequestParameters.swift in Sources */,
 				01B1A6DD21125A55002F0A28 /* RegisterMeasurerNodeDelegate.swift in Sources */,
+				01B13136212DABAF00C2D72F /* ActiveMeasurerNodeDelegate.swift in Sources */,
 				A0D9A7D22108214000979F07 /* CCTNode.swift in Sources */,
 				010E9F3D211A3AD5006E0D7E /* CRERate.swift in Sources */,
 				01B1A6DF211260CD002F0A28 /* RegisterMeasurerDelegate.swift in Sources */,
@@ -1153,6 +1177,7 @@
 				A07DE62021100416008D678A /* Measurer.swift in Sources */,
 				A0B32BDC211CFEAC00AA5B41 /* CRERatesViewController.swift in Sources */,
 				010E9F63211A4E01006E0D7E /* DateChooserDelegate.swift in Sources */,
+				01B1313D212DB9DA00C2D72F /* InstantActivityResponse.swift in Sources */,
 				010E9F44211A479A006E0D7E /* RegisterLocationViewController.swift in Sources */,
 				A0BFB7EF212CF7B400E9CC44 /* UIViewController.swift in Sources */,
 				A0CD8ADF211D2A6400235048 /* LocationsMapViewController.swift in Sources */,
@@ -1227,10 +1252,12 @@
 				A0D9A72D210818D400979F07 /* CCTBusinessTabController.swift in Sources */,
 				A0BFB7F3212D178D00E9CC44 /* DeleteLocationResponse.swift in Sources */,
 				01BBF82C210A46AE001EA9B9 /* LocationsRequestParameters.swift in Sources */,
+				01B1313B212DB9A100C2D72F /* InstantActivityRequestParameters.swift in Sources */,
 				01B361FA210FAFC300019102 /* LocationCellNode.swift in Sources */,
 				01BBF828210A4567001EA9B9 /* CCTApiService.swift in Sources */,
 				010E9F39211A3840006E0D7E /* ShowDayDetailDelegate.swift in Sources */,
 				01B36204210FB7DA00019102 /* MeasurerCellNodeDelegate.swift in Sources */,
+				01B13139212DB10200C2D72F /* UserMeasurersViewController.swift in Sources */,
 				A0D9A7DC2108222F00979F07 /* CCTTitleValueHorizontalStack.swift in Sources */,
 				010E9F36211A3813006E0D7E /* CalendarDelegate.swift in Sources */,
 				010E9F5E211A4CF8006E0D7E /* LocationPeriodNodeDelegate.swift in Sources */,
@@ -1248,6 +1275,7 @@
 				010E9F4C211A48D8006E0D7E /* RegisterLocationNodeDelegate.swift in Sources */,
 				A0D9A7D7210821AC00979F07 /* UIColor.swift in Sources */,
 				010E9F71211A59AB006E0D7E /* State.swift in Sources */,
+				01B13134212DAA1000C2D72F /* LocationsListResponse.swift in Sources */,
 				A040D5AE210FF3160004599E /* EnergyMultiplierNode.swift in Sources */,
 				010E9F54211A4980006E0D7E /* LocationPeriodNode.swift in Sources */,
 				A0B32BC2211CFC9E00AA5B41 /* CountiesViewController.swift in Sources */,

@@ -456,6 +456,48 @@ final class CCTApiService {
         task.resume()
     }
     
+    func fetchLocationsList(completion: @escaping (_ results:LocationsListResponse?,_ error: Error?)->()) {
+        components.path =  "/api/ios/v1/listamedidores"
+        guard let url = components.url else { fatalError("Could not create URL from components") }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        request.allHTTPHeaderFields = headers
+        
+        
+        
+        let parameters = LocationsListRequestParameters()
+       
+        request.httpBody = encodeToJson(parameters: parameters)
+        
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) { (responseData, response, responseError) in
+            
+            DispatchQueue.main.async {
+                
+                guard let data = responseData else {
+                    completion(nil,responseError)
+                    return
+                }
+                
+                
+                do {
+                    let response = try JSONDecoder().decode(LocationsListResponse.self, from: data)
+                    completion(response,nil)
+                } catch let jsonErr {
+                }
+            }
+            
+        }
+        
+        task.resume()
+
+    }
+    
     
     func delete(location:Location, completion: @escaping(_ results: DeleteLocationResponse?, _ error: Error?)->()) {
         components.path =  "/api/ios/v1/localizacion"
@@ -490,6 +532,52 @@ final class CCTApiService {
                 }
                 
             } catch let jsonErr {
+            }
+        }
+        
+        task.resume()
+    }
+    
+    
+    func fetchInstantDataFor(measurer:Measurer? ,completion: @escaping (_ results: InstantActivity?, _ error: Error?) -> ()){
+        
+        components.path = "/api/ios/v1/ins"
+        
+        guard let url = components.url else { fatalError("Could not create URL from components") }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        request.allHTTPHeaderFields = headers
+        
+        var parameters = InstantActivityRequestParameters()
+        parameters.NS = "ABC-0004"
+        
+        request.httpBody = encodeToJson(parameters: parameters)
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) { (responseData, response, responseError) in
+            
+            DispatchQueue.main.async {
+                guard let data = responseData else {
+                    completion(nil,responseError)
+                    return
+                }
+                
+                do {
+                    
+                    let instantActivityResponse = try JSONDecoder().decode(InstantActivityResponse.self, from: data)
+                    
+                    if let instantActivity = instantActivityResponse.Respuesta {
+                        completion(instantActivity,nil)
+                    }
+                    
+                    
+                } catch let jsonErr {
+                    print(jsonErr)
+                }
             }
         }
         

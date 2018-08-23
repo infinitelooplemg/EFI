@@ -115,7 +115,8 @@ class HistoricalChartOfActitivyViewController:UIViewController{
                 return
             }
             self?.electricalVariablesSegment.isEnabled = true
-            self!.dataManager.show(records: results)
+           
+            self?.dataManager.show(records: results)
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         })
         

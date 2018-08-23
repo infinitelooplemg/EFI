@@ -26,7 +26,7 @@ class MeasurerCellNode:ASCellNode {
         self.measurer = measurer
         measurerTextNode = CTTTextNode(withFontSize: 20, color: UIColor.black, with: measurer.Nombre!)
         measurerModelTextNode = CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: (measurer.Clave)!)
-        editButton = CCTBorderButtonNode(fontSize: 13, textColor: UIColor.con100tBlueColor, with: "Configurar")
+        editButton = CCTBorderButtonNode(fontSize: 13, textColor: UIColor.con100tBlueColor, with: "Detalles")
         editButton.addTarget(self, action: #selector(edit), forControlEvents: .touchUpInside)
         automaticallyManagesSubnodes  = true
         

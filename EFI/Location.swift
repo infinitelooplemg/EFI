@@ -21,6 +21,5 @@ struct Location:Codable {
     var longitude:Double?
     var latitude:Double?
     
-    var CodigoLocalizacion:String?
-    var NombreLocalizacion:String?
+ 
 }

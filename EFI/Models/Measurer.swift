@@ -15,4 +15,7 @@ struct Measurer:Codable{
     var NombreGrupo:String?
     var CodigoModeloMedidor:String
     var NombreModeloMedidor:String
+    
+    var CodigoLocalizacion:String?
+    var NombreLocalizacion:String?
 }

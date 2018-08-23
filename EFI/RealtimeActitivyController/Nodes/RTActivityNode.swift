@@ -17,7 +17,7 @@ class RTActivityNode:ASScrollNode {
     var activeNode:RTActivelMeasurerNode!
     
     
-    override init() {
+    init(activeMeasurerDelegate:ActiveMeasurerNodeDelegate) {
         super.init()
         automaticallyManagesSubnodes = true
         automaticallyManagesContentSize = true
@@ -25,7 +25,7 @@ class RTActivityNode:ASScrollNode {
         energyNode = RTEnergyNode()
         powerFactorNode = RTPowerFactorNode()
         powerNode =  RTPowerNode()
-        activeNode = RTActivelMeasurerNode()
+        activeNode = RTActivelMeasurerNode(delegate: activeMeasurerDelegate)
     }
     
     
