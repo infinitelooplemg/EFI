@@ -11,5 +11,5 @@ import Foundation
 struct LocationsResponse:Codable {
     var Codigo:Int
     var Status:String
-    var Localizaciones:[Location]
+    var Localizaciones:[Location]?
 }

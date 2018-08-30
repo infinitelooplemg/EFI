@@ -38,11 +38,10 @@ class LocationCellNode:ASCellNode {
         stateTextNode.style.flexShrink = 1
         
         measurersButton = CCTBorderButtonNode(fontSize: 13, textColor: UIColor.con100tBlueColor, with: "Medidores")
-        measurersButton.addTarget(self, action: #selector(edit), forControlEvents: .touchUpInside)
         measurersButton.addTarget(self, action: #selector(asign), forControlEvents: .touchUpInside)
         
         
-        dummyButton = CCTBorderButtonNode(fontSize: 13, textColor: .con100tBlueColor, with: "Configurar")
+        dummyButton = CCTBorderButtonNode(fontSize: 13, textColor: .con100tBlueColor, with: "Detalles")
         dummyButton.addTarget(self, action: #selector(edit), forControlEvents: .touchUpInside)
         
         
@@ -81,7 +80,7 @@ class LocationCellNode:ASCellNode {
         delegate.showMeasurersFor(location: location)
     }
     @objc func edit() {
-        delegate.showConfigurationFor(location: location, fromIndexPath: indexPath!)
+        delegate.showDetailsFor(location: location, fromIndexPath: indexPath!)
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -105,7 +104,7 @@ class LocationCellNode:ASCellNode {
         let headerInsetSpecs = ASInsetLayoutSpec(insets: headerInsets, child: headerStack)
         
         let footerStack = ASStackLayoutSpec.horizontal()
-        footerStack.children = [measurersButton,dummyButton2]
+        footerStack.children = [measurersButton,dummyButton2,dummyButton]
         footerStack.justifyContent = .spaceAround
         
         

@@ -69,7 +69,7 @@
 		01B361F4210FAF1800019102 /* LocationsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361F3210FAF1800019102 /* LocationsDataManager.swift */; };
 		01B361F7210FAF4900019102 /* LocationCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361F6210FAF4900019102 /* LocationCellDelegate.swift */; };
 		01B361FA210FAFC300019102 /* LocationCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361F9210FAFC300019102 /* LocationCellNode.swift */; };
-		01B361FE210FB71C00019102 /* MeasurersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361FD210FB71C00019102 /* MeasurersViewController.swift */; };
+		01B361FE210FB71C00019102 /* LocationMeasurersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B361FD210FB71C00019102 /* LocationMeasurersViewController.swift */; };
 		01B36201210FB75100019102 /* MeasurersDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B36200210FB75100019102 /* MeasurersDataManager.swift */; };
 		01B36204210FB7DA00019102 /* MeasurerCellNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B36203210FB7DA00019102 /* MeasurerCellNodeDelegate.swift */; };
 		01B36206210FB8D600019102 /* MeasurerCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B36205210FB8D600019102 /* MeasurerCellNode.swift */; };
@@ -86,6 +86,7 @@
 		A007C383210812E70011DB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007C382210812E70011DB93 /* AppDelegate.swift */; };
 		A007C38A210812E90011DB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A007C389210812E90011DB93 /* Assets.xcassets */; };
 		A007C38D210812E90011DB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A007C38B210812E90011DB93 /* LaunchScreen.storyboard */; };
+		A0175E9521364833003E8A73 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0175E9421364833003E8A73 /* LocationDetailViewController.swift */; };
 		A040D5A9210FF25E0004599E /* MeasurerNickNameNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A040D5A8210FF25E0004599E /* MeasurerNickNameNode.swift */; };
 		A040D5AC210FF2C40004599E /* ASEditableTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A040D5AB210FF2C40004599E /* ASEditableTextNode.swift */; };
 		A040D5AE210FF3160004599E /* EnergyMultiplierNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A040D5AD210FF3160004599E /* EnergyMultiplierNode.swift */; };
@@ -220,7 +221,7 @@
 		01B361F3210FAF1800019102 /* LocationsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDataManager.swift; sourceTree = "<group>"; };
 		01B361F6210FAF4900019102 /* LocationCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellDelegate.swift; sourceTree = "<group>"; };
 		01B361F9210FAFC300019102 /* LocationCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellNode.swift; sourceTree = "<group>"; };
-		01B361FD210FB71C00019102 /* MeasurersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurersViewController.swift; sourceTree = "<group>"; };
+		01B361FD210FB71C00019102 /* LocationMeasurersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMeasurersViewController.swift; sourceTree = "<group>"; };
 		01B36200210FB75100019102 /* MeasurersDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurersDataManager.swift; sourceTree = "<group>"; };
 		01B36203210FB7DA00019102 /* MeasurerCellNodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurerCellNodeDelegate.swift; sourceTree = "<group>"; };
 		01B36205210FB8D600019102 /* MeasurerCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurerCellNode.swift; sourceTree = "<group>"; };
@@ -240,6 +241,7 @@
 		A007C389210812E90011DB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A007C38C210812E90011DB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A007C38E210812E90011DB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0175E9421364833003E8A73 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		A040D5A8210FF25E0004599E /* MeasurerNickNameNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurerNickNameNode.swift; sourceTree = "<group>"; };
 		A040D5AB210FF2C40004599E /* ASEditableTextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASEditableTextNode.swift; sourceTree = "<group>"; };
 		A040D5AD210FF3160004599E /* EnergyMultiplierNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyMultiplierNode.swift; sourceTree = "<group>"; };
@@ -515,7 +517,7 @@
 				A0A223312115397B003FA50C /* Nodes */,
 				01B36202210FB7CD00019102 /* Delegate */,
 				01B361FF210FB74200019102 /* DataSource */,
-				01B361FD210FB71C00019102 /* MeasurersViewController.swift */,
+				01B361FD210FB71C00019102 /* LocationMeasurersViewController.swift */,
 			);
 			path = MeasurersController;
 			sourceTree = "<group>";
@@ -606,6 +608,7 @@
 		A007C381210812E70011DB93 /* EFI */ = {
 			isa = PBXGroup;
 			children = (
+				A0175E9321364819003E8A73 /* LocationDetailViewController */,
 				01B13137212DB0E300C2D72F /* UserMeasurersViewController */,
 				A0EB670A2123A80100D8086E /* HistoricalChartOfActitivyViewController */,
 				A0CD8ADD211D2A3B00235048 /* LocationsMapViewController */,
@@ -633,6 +636,14 @@
 				01BBF827210A4567001EA9B9 /* CCTApiService.swift */,
 			);
 			path = EFI;
+			sourceTree = "<group>";
+		};
+		A0175E9321364819003E8A73 /* LocationDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0175E9421364833003E8A73 /* LocationDetailViewController.swift */,
+			);
+			path = LocationDetailViewController;
 			sourceTree = "<group>";
 		};
 		A040D5B3210FF3C40004599E /* Delegates */ = {
@@ -1166,7 +1177,7 @@
 				A040D5B5210FF4130004599E /* MeasurerNodeDelegate.swift in Sources */,
 				010E9F41211A3B88006E0D7E /* CalendarNode.swift in Sources */,
 				A07DE61A21100391008D678A /* MeasurersResponse.swift in Sources */,
-				01B361FE210FB71C00019102 /* MeasurersViewController.swift in Sources */,
+				01B361FE210FB71C00019102 /* LocationMeasurersViewController.swift in Sources */,
 				010E9F5A211A4C19006E0D7E /* LocationMaximusDemandNode.swift in Sources */,
 				01B361EB210FA1F900019102 /* RTPowerNode.swift in Sources */,
 				01B361E1210F9E6700019102 /* Phases.swift in Sources */,
@@ -1195,6 +1206,7 @@
 				A0D9A7E22108231700979F07 /* BasicConsumptionNode.swift in Sources */,
 				A0CD8AEB211D54ED00235048 /* MapLocationsCollectionNode.swift in Sources */,
 				010E9F73211A59EE006E0D7E /* States.swift in Sources */,
+				A0175E9521364833003E8A73 /* LocationDetailViewController.swift in Sources */,
 				010E9F4E211A4913006E0D7E /* RateForLocationRequestParameters.swift in Sources */,
 				A0B32BD1211CFD8A00AA5B41 /* ElectricalDivisionCellNode.swift in Sources */,
 				A0D9A7D9210821F900979F07 /* CCTBorderButton.swift in Sources */,

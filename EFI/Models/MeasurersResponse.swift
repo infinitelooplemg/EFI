@@ -10,5 +10,5 @@ import Foundation
 struct MeasurersResponse:Codable {
     var Codigo:Int
     var Status:String
-    var Medidores:[Measurer]
+    var Medidores:[Measurer]?
 }

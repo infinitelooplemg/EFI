@@ -36,8 +36,6 @@ class MeasurerNode:CCTNode {
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        
-        
         let contentStack = ASStackLayoutSpec.vertical()
         contentStack.children = [measurerTitleNode,measurerIDNode,scanButton]
         contentStack.spacing = 4

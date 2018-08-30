@@ -14,10 +14,10 @@ class MeasurersDataManager:NSObject,ASTableDataSource,ASTableDelegate {
     var location:Location!
     weak var tableNode:ASTableNode!
     weak var networkService:CCTApiService!
-    weak var viewController:MeasurersViewController!
+    weak var viewController:LocationMeasurersViewController!
     weak var cellDelegate:MeasurerCellNodeDelegate!
     
-    init(tableNode:ASTableNode,location:Location,networkService:CCTApiService,viewController:MeasurersViewController,cellDelegate:MeasurerCellNodeDelegate) {
+    init(tableNode:ASTableNode,location:Location,networkService:CCTApiService,viewController:LocationMeasurersViewController,cellDelegate:MeasurerCellNodeDelegate) {
         super.init()
         self.networkService = networkService
         self.cellDelegate = cellDelegate

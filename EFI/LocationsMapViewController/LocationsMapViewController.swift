@@ -153,7 +153,7 @@ extension LocationsMapNode:LocationMapCellDelegate{
     
     func showMeasurersfor(location: Location) {
         networkService?.fetchMeasurers(for: location, completion: { [weak self] (measurers, error) in
-            let vc = MeasurersViewController(measurers: measurers!, location: location, networkService: self!.networkService!)
+            let vc = LocationMeasurersViewController(measurers: measurers!, location: location, networkService: self!.networkService!)
             vc.networkService = self?.networkService
             self?.closestViewController?.navigationController?.pushViewController(vc, animated: true)
         })

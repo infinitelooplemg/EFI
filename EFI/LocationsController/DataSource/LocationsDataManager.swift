@@ -84,4 +84,22 @@ class LocationsDataManager:NSObject,ASTableDataSource ,ASTableDelegate {
         return cellNodeBlock
     }
     
+    
+    func insertNewLocations(_ locations:[Location]) {
+        
+        let section = 0
+        var indexPaths = [IndexPath]()
+        
+        let totalOfNewLocations = self.locations.count + locations.count
+        
+        for index in self.locations.count ..< totalOfNewLocations {
+            let indexPath = IndexPath(row: index, section: section)
+            indexPaths.append(indexPath)
+        }
+        
+        self.locations = self.locations + locations
+        
+        tableNode.insertRows(at: indexPaths, with: .automatic)
+    }
+    
 }

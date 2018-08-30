@@ -25,10 +25,19 @@ class LocationsViewController:ASViewController<ASTableNode> {
     }
     
     func loadLocations(){
-        networkService?.fetchLocations(completion: { ( locations, error) in
+        networkService?.fetchLocations(completion: { [weak self]( locations, error) in
+            
+            if error != nil {
+                self?.showAlert(with: "No fue posible recibir los datos", message: "Verifica tu conexión a internet y vuelve a intentarlo", image: nil, for: .error)
+                return
+            }
+            
+            guard let locations = locations else {
+                return
+            }
             DispatchQueue.main.async {
-                self.dataManager.locations = locations!
-                self.tableNode.reloadData()
+                self?.dataManager.insertNewLocations(locations)
+                self?.tableNode.reloadData()
             }
             
         })
@@ -54,7 +63,7 @@ class LocationsViewController:ASViewController<ASTableNode> {
         } else {
             // Fallback on earlier versions
         }
-     
+        
         setupNavigationButton()
         
     }
@@ -81,7 +90,17 @@ extension LocationsViewController:LocationCellDelegate {
     
     func showMeasurersFor(location: Location) {
         networkService?.fetchMeasurers(for: location, completion: { [weak self] (measurers, error) in
-            let vc = MeasurersViewController(measurers: measurers!, location: location, networkService: self!.networkService!)
+            
+            if error != nil {
+                self?.showAlert(with: "No fue posible recibir los datos", message: "Verifica tu conexión a internet y vuelve a intentarlo", image: nil, for: .error)
+                return
+            }
+            
+            guard let measurers = measurers else {
+                return
+            }
+            
+            let vc = LocationMeasurersViewController(measurers: measurers, location: location, networkService: self!.networkService!)
             vc.networkService = self?.networkService
             self?.navigationController?.pushViewController(vc, animated: true)
         })
@@ -89,14 +108,18 @@ extension LocationsViewController:LocationCellDelegate {
     
     
     
-    func showConfigurationFor(location: Location, fromIndexPath: IndexPath) {
+    func showDetailsFor(location: Location, fromIndexPath: IndexPath) {
+
+        let vc = LocationDetailViewController(location: location)
+        let nc = UINavigationController(rootViewController: vc)
         
+        self.present(nc, animated: true, completion: nil)
     }
     
 }
 
 extension LocationsViewController:RegisterLocationDelegate{
     func locationAdded(location: Location, rate: CRERate) {
-    
+        
     }
 }

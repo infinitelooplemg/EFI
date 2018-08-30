@@ -9,7 +9,7 @@
 import AsyncDisplayKit
 import Reachability
 
-class MeasurersViewController: ASViewController<ASTableNode> {
+class LocationMeasurersViewController: ASViewController<ASTableNode> {
     var tableNode:ASTableNode!
     var dataManager:MeasurersDataManager!
     weak var networkService:CCTApiService?
@@ -27,9 +27,6 @@ class MeasurersViewController: ASViewController<ASTableNode> {
         dataManager = MeasurersDataManager(tableNode: tableNode,location:location, networkService: self.networkService!, viewController: self, cellDelegate: self)
         dataManager.measurers = measurers
     }
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +82,7 @@ class MeasurersViewController: ASViewController<ASTableNode> {
     
 }
 
-extension MeasurersViewController:MeasurerCellNodeDelegate {
+extension LocationMeasurersViewController:MeasurerCellNodeDelegate {
     func showHistorialFor(measurer: Measurer) {
         let vc = CalendarViewController()
         vc.currentLocation = location
@@ -102,14 +99,10 @@ extension MeasurersViewController:MeasurerCellNodeDelegate {
         vc.networkService = self.networkService
         self.present(ASNavigationController( rootViewController: vc), animated: true, completion: nil)
     }
-    
-    
-   
-  
      
 }
 
-extension MeasurersViewController:RegisterMeasurerDelegate {
+extension LocationMeasurersViewController:RegisterMeasurerDelegate {
     func receiveRegistered(measurer: Measurer) {
         dataManager.measurers.append(measurer)
         DispatchQueue.main.async { [weak self] in
