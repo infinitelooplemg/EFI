@@ -26,7 +26,7 @@ class CCTNeutralPhasesHorizontalStack: ASStackLayoutSpec {
         style.flexGrow = 1.0
         
         
-        children = [rPhaseCELL, sPhaseCELL, tPhaseCELL,nPhaceCell]
+        children = [rPhaseCELL, sPhaseCELL, tPhaseCELL]
         
     }
     

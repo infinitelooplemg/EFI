@@ -12,9 +12,11 @@ import AsyncDisplayKit
 class UserMeasurersViewController: ASViewController<ASTableNode> ,ASTableDataSource{
     var tableNode:ASTableNode!
     var measurers:[Measurer]!
+    weak var delegate:UserMeasurersDelegate!
     
-    init(measurers:[Measurer]) {
+    init(measurers:[Measurer],delegate:UserMeasurersDelegate) {
         tableNode = ASTableNode()
+        self.delegate = delegate
         self.measurers = measurers
         super.init(node: tableNode)
         extendedLayoutIncludesOpaqueBars = false
@@ -54,7 +56,7 @@ class UserMeasurersViewController: ASViewController<ASTableNode> ,ASTableDataSou
         
         
         let cellNodeBlock = { [weak self] () -> ASCellNode in
-            let cellNode = UserMeasurerCellNode(measurer: measurer)
+            let cellNode = UserMeasurerCellNode(measurer: measurer, delegate: (self?.delegate)!)
             return cellNode
         }
         
@@ -74,27 +76,30 @@ class UserMeasurerCellNode:ASCellNode {
     var activateButton:CCTBorderButtonNode!
     var measurer:Measurer!
     var showHistorialButton:CCTBorderButtonNode!
+    weak var delegate:UserMeasurersDelegate!
     
     
     
-    init(measurer:Measurer) {
+    init(measurer:Measurer,delegate:UserMeasurersDelegate) {
         super.init()
+        self.delegate = delegate
         selectionStyle = .none
         self.measurer = measurer
         locationTextNode = CTTTextNode(withFontSize: 20, color: .black, with: measurer.NombreLocalizacion!)
         measurerTextNode = CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: measurer.Nombre!)
         measurerModelTextNode = CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: (measurer.Clave)!)
         activateButton = CCTBorderButtonNode(fontSize: 13, textColor: UIColor.con100tBlueColor, with: "Monitorear")
-        activateButton.addTarget(self, action: #selector(edit), forControlEvents: .touchUpInside)
+        activateButton.addTarget(self, action: #selector(monitorear), forControlEvents: .touchUpInside)
         activateButton.backgroundColor = UIColor.con100tLightGrayColor
         activateButton.style.flexGrow = 0
         automaticallyManagesSubnodes  = true
         
-     
     }
     
-    @objc func edit(){
-      closestViewController?.dismiss(animated: true, completion: nil)
+    @objc func monitorear(){
+        closestViewController?.dismiss(animated: true, completion: {
+            self.delegate.monitorSelected(self.measurer)
+        })
     }
     
     @objc func showHistorial(){

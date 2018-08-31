@@ -94,9 +94,7 @@ extension LocationMeasurersViewController:MeasurerCellNodeDelegate {
     }
     
     func edit(measurer: Measurer) {
-        let vc = MeasurerConfigurationViewController(location: self.location, measurer: measurer)
-        vc.delegate = self
-        vc.networkService = self.networkService
+        let vc = MeasurerDetailViewController(measurer: measurer)
         self.present(ASNavigationController( rootViewController: vc), animated: true, completion: nil)
     }
      

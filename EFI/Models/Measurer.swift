@@ -18,4 +18,11 @@ struct Measurer:Codable{
     
     var CodigoLocalizacion:String?
     var NombreLocalizacion:String?
+    
+    var VoltajePrimario:Int?
+    var VoltajeSecundario:Int?
+    var CorrientePrimaria:Int?
+    var CorrienteSecundaria:Int?
+    var PotenciaMaximaEsperada:Float?
+    var PorcentajePotenciaMaxima:Float?
 }

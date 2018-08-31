@@ -13,30 +13,46 @@ class RTActivelMeasurerNode:CCTNode  {
     var descriptionNode:CTTTextNode!
     var measurerNameNode:CTTTextNode!
     var locationNameNode:CTTTextNode!
-
-    var measurer:Measurer?
+    
+    var currentMeasurer:Measurer?
     var location:Location?
     var changeMeasurerButton:CCTBorderButtonNode!
+    
     weak var delegate:ActiveMeasurerNodeDelegate?
     
     
-    init(delegate:ActiveMeasurerNodeDelegate) {
+    init(delegate:ActiveMeasurerNodeDelegate,currentMeasurer:Measurer?) {
         super.init()
+        self.currentMeasurer = currentMeasurer
         automaticallyManagesSubnodes = true
         self.delegate = delegate
+        
+        if (self.currentMeasurer != nil) {
+            locationNameNode = CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: (currentMeasurer?.NombreLocalizacion!)!)
+            measurerNameNode = CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: (currentMeasurer?.Nombre!)!)
+            changeMeasurerButton = CCTBorderButtonNode(fontSize: 13, textColor: .con100tBlueColor, with: "Cambiar")
+        } else {
+            locationNameNode = CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: "Sin seleccionar")
+            measurerNameNode = CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: " ")
+            changeMeasurerButton = CCTBorderButtonNode(fontSize: 13, textColor: .con100tBlueColor, with: "Seleccionar")
+        }
+        
         descriptionNode = CTTTextNode(withFontSize: 15, color: UIColor.black, with: "Medidor")
-        locationNameNode = CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: "Departamento de Electrónica")
-        measurerNameNode = CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: "ABC-0004")
         
         
-        changeMeasurerButton = CCTBorderButtonNode(fontSize: 13, textColor: .con100tBlueColor, with: "Cambiar")
+        
         changeMeasurerButton.backgroundColor = UIColor.con100tGrayColor
         changeMeasurerButton.addTarget(self, action: #selector(showMeasurers), forControlEvents: .touchUpInside)
         
     }
     
+    func updateLabels(measurer:Measurer){
+        locationNameNode.changeText(text: measurer.NombreLocalizacion!)
+        measurerNameNode.changeText(text: measurer.Nombre!)
+    }
+    
     @objc func showMeasurers(){
-    delegate?.showMeasurers()
+        delegate?.showMeasurers()
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

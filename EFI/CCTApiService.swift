@@ -552,7 +552,7 @@ final class CCTApiService {
         request.allHTTPHeaderFields = headers
         
         var parameters = InstantActivityRequestParameters()
-        parameters.NS = "ABC-0004"
+        parameters.NS = measurer?.Clave
         
         request.httpBody = encodeToJson(parameters: parameters)
         

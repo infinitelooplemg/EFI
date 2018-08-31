@@ -11,8 +11,9 @@ import Foundation
 import  AsyncDisplayKit
 import Reachability
 import Disk
-class RealTimeActivityViewController: UIViewController {
 
+class RealTimeActivityViewController: UIViewController {
+    
     var node:RTActivityNode!
     weak var networkService:CCTApiService?
     var currentMeasurer:Measurer?
@@ -21,19 +22,44 @@ class RealTimeActivityViewController: UIViewController {
     var requestTimer:Timer?
     
     override func viewDidLoad() {
- 
+        
         title = "Instantáneos"
         view.backgroundColor = UIColor.con100tGrayColor
-        node = RTActivityNode(activeMeasurerDelegate: self)
+        isMeasurerAlreadySaved()
+        node = RTActivityNode(activeMeasurerDelegate: self, measurer: currentMeasurer)
         view.addSubnode(node)
         view.layoutIfNeeded()
         
     }
     
+    
+    
+    func isMeasurerAlreadySaved(){
+        
+        if Disk.exists("currentMeasurer.json", in: .documents) {
+            readCurrentMeasurer()
+        } else {
+        }
+        
+    }
+    
+    func readCurrentMeasurer(){
+        
+        do {
+            self.currentMeasurer = try Disk.retrieve("currentMeasurer.json", from: .documents, as: Measurer.self)
+            startTimer()
+        } catch  {
+            
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-          self.requestTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.requestData), userInfo: nil, repeats: true)
-        requestTimer?.fire()
+        
+        
+        if currentMeasurer != nil {
+            node.activeNode.updateLabels(measurer: currentMeasurer!)
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -56,15 +82,21 @@ class RealTimeActivityViewController: UIViewController {
         }
     }
     
+    func startTimer(){
+        
+        self.requestTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.requestData), userInfo: nil, repeats: true)
+        requestTimer?.fire()
+    }
+    
     
     @objc func requestData(){
-        networkService?.fetchInstantDataFor(measurer: nil, completion: { [weak self]( responseData, error) in
+        networkService?.fetchInstantDataFor(measurer: currentMeasurer, completion: { [weak self]( responseData, error) in
             
             guard let instanActitivy = responseData else {
                 
                 return
             }
-           
+            
             self!.node.updateValues(RTActivity: instanActitivy)
         })
     }
@@ -73,13 +105,29 @@ class RealTimeActivityViewController: UIViewController {
 extension RealTimeActivityViewController:ActiveMeasurerNodeDelegate {
     func showMeasurers() {
         networkService?.fetchLocationsList(completion: { (response, error) in
-            let vc = UserMeasurersViewController(measurers: (response?.Respuesta)!)
-            let nc = UINavigationController(rootViewController: vc)
-            
+            let vc = UserMeasurersViewController(measurers: (response?.Respuesta)!, delegate: self);            let nc = UINavigationController(rootViewController: vc)
             self.present(nc, animated: true, completion: nil)
             
         })
     }
-    
-    
+}
+
+extension RealTimeActivityViewController:UserMeasurersDelegate{
+    func monitorSelected(_ measurer: Measurer) {
+        
+        do {
+            try Disk.save(measurer, to: .documents, as: "currentMeasurer.json")
+            currentMeasurer = measurer
+            node.activeNode.updateLabels(measurer: measurer)
+            
+            if requestTimer == nil {
+                startTimer()
+            }
+            
+            
+        } catch  {
+            
+        }
+        
+    }
 }

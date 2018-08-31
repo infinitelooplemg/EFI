@@ -15,9 +15,10 @@ class RTActivityNode:ASScrollNode {
     var powerFactorNode:RTPowerFactorNode!
     var powerNode:RTPowerNode!
     var activeNode:RTActivelMeasurerNode!
+  
     
     
-    init(activeMeasurerDelegate:ActiveMeasurerNodeDelegate) {
+    init(activeMeasurerDelegate:ActiveMeasurerNodeDelegate,measurer:Measurer?) {
         super.init()
         automaticallyManagesSubnodes = true
         automaticallyManagesContentSize = true
@@ -25,7 +26,7 @@ class RTActivityNode:ASScrollNode {
         energyNode = RTEnergyNode()
         powerFactorNode = RTPowerFactorNode()
         powerNode =  RTPowerNode()
-        activeNode = RTActivelMeasurerNode(delegate: activeMeasurerDelegate)
+        activeNode = RTActivelMeasurerNode(delegate: activeMeasurerDelegate, currentMeasurer: measurer)
     }
     
     
