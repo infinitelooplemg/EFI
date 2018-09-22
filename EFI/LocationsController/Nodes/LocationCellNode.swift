@@ -45,7 +45,7 @@ class LocationCellNode:ASCellNode {
         dummyButton.addTarget(self, action: #selector(edit), forControlEvents: .touchUpInside)
         
         
-        dummyButton2 = CCTBorderButtonNode(fontSize: 13, textColor: .con100tBlueColor, with: "Estado de Cuenta")
+        dummyButton2 = CCTBorderButtonNode(fontSize: 13, textColor: .con100tBlueColor, with: "Energía")
         dummyButton2.addTarget(self, action: #selector(showPaymentStatus), forControlEvents: .touchUpInside)
         
         rateTextNode =  CTTTextNode(withFontSize: 15, color: UIColor.lightGray, with: location.NombreTarifaCRE!)

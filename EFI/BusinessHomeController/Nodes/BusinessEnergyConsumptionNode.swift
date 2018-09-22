@@ -8,6 +8,45 @@
 
 import AsyncDisplayKit
 
+
+class BusinessEnergyConsumptionNode2:ASDisplayNode {
+    let baseCell = BasicConsumptionNode()
+    let intermediaCell = IntermediateConsumptionNode()
+   
+    
+    var consumoHeaderNode:CTTTextNode!
+    
+    init(dmax:Double,Qmensual:Double) {
+        super.init()
+        baseCell.kwTextNode.changeText(text: String(format: "%.2f", dmax))
+        intermediaCell.kwTextNode.changeText(text: String(format: "%.2f", Qmensual))
+        baseCell.titleTextNode.changeText(text: "DmaxP")
+        intermediaCell.titleTextNode.changeText(text: "QMensual")
+       
+    
+        automaticallyManagesSubnodes = true
+    }
+    
+    
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        let w = (UIScreen.main.bounds.width - 32) / 2
+        
+        baseCell.style.preferredSize.width = w
+        
+        intermediaCell.style.preferredSize.width = w
+      
+        
+        
+        let vertical = ASStackLayoutSpec.horizontal()
+        vertical.justifyContent = .spaceBetween
+        vertical.children = [baseCell,intermediaCell]
+    
+        let horizontal = ASStackLayoutSpec.vertical()
+        horizontal.spacing = 8
+        horizontal.children = [vertical]
+        return horizontal
+    }
+}
 class BusinessEnergyConsumptionNode:ASDisplayNode {
     
     let baseCell = BasicConsumptionNode()
@@ -17,9 +56,12 @@ class BusinessEnergyConsumptionNode:ASDisplayNode {
     
     var consumoHeaderNode:CTTTextNode!
     
-    override init() {
+    init(base:Double,mid:Double,top:Double,total:Double) {
         super.init()
-       
+        baseCell.kwTextNode.changeText(text: String(format: "%.2f", base))
+        intermediaCell.kwTextNode.changeText(text: String(format: "%.2f", mid))
+        puntaCell.kwTextNode.changeText(text: String(format: "%.2f", top))
+        totalCell.kwTextNode.changeText(text: String(format: "%.2f",total))
         automaticallyManagesSubnodes = true
     }
   
@@ -28,6 +70,7 @@ class BusinessEnergyConsumptionNode:ASDisplayNode {
         let w = (UIScreen.main.bounds.width - 32) / 2
         
         baseCell.style.preferredSize.width = w
+        
         intermediaCell.style.preferredSize.width = w
         puntaCell.style.preferredSize.width = w
         totalCell.style.preferredSize.width = w

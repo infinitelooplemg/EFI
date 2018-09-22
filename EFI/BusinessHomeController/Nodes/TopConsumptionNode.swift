@@ -14,7 +14,7 @@ class TopConsumptionNode:CCTNode {
     let titleTextNode:CTTTextNode!
     
     override init() {
-        kwTextNode = CTTTextNode(withFontSize: 40, color: UIColor.lightGray, with: "17,150")
+        kwTextNode = CTTTextNode(withFontSize: 30, color: UIColor.lightGray, with: "17,150")
         titleTextNode = CTTTextNode(withFontSize: 15, color: UIColor.black, with: "Punta")
         
         super.init()

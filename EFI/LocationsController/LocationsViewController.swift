@@ -81,9 +81,17 @@ class LocationsViewController:ASViewController<ASTableNode> {
 
 extension LocationsViewController:LocationCellDelegate {
     func showPaymentStatusFor(location: Location) {
-        let vc = PaymentStatusViewController()
-        let nc = UINavigationController(rootViewController: vc)
-        present(nc, animated: true, completion: nil)
+        networkService?.energyConsumptionfor(location: location, completion: { [weak self](energyConsumption, error) in
+            if error != nil {
+                print(error)
+                return
+            }
+            
+            let vc = PaymentStatusViewController(energyConsumption: energyConsumption!)
+            let nc = UINavigationController(rootViewController: vc)
+            self?.present(nc, animated: true, completion: nil)
+        })
+       
     }
     
     

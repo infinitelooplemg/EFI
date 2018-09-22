@@ -34,7 +34,7 @@ class LocationsMapViewController:ASViewController<ASDisplayNode> {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         contentNode.checkMapPermissions()
-      
+        
         
     }
     
@@ -119,8 +119,8 @@ class LocationsMapNode:ASDisplayNode {
     }
     
     func updateLocation(){
-          mapNode.mapView?.showsUserLocation = true
-          locationManager.startUpdatingLocation()
+        mapNode.mapView?.showsUserLocation = true
+        locationManager.startUpdatingLocation()
     }
     
     func askPermisionsInSettings(){
@@ -137,12 +137,12 @@ class LocationsMapNode:ASDisplayNode {
 
 extension LocationsMapNode:CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-      
         manager.stopUpdatingLocation()
         let viewRegion = MKCoordinateRegionMakeWithDistance((locations.last?.coordinate)!, 800, 800)
         mapNode.mapView?.setRegion(viewRegion, animated: true)
     }
 }
+
 extension LocationsMapNode:LocationMapCellDelegate{
     func locate(location: Location) {
         
@@ -158,8 +158,6 @@ extension LocationsMapNode:LocationMapCellDelegate{
             self?.closestViewController?.navigationController?.pushViewController(vc, animated: true)
         })
     }
-    
-    
 }
 
 

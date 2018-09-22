@@ -30,7 +30,6 @@ class HistoricalChartOfActitivyViewController:UIViewController{
         super.viewDidLoad()
         
         electricalVariablesSegment = UISegmentedControl(items: ["V","I","FP","P","Q","S"])
-        electricalVariablesSegment.selectedSegmentIndex = 0
         electricalVariablesSegment.translatesAutoresizingMaskIntoConstraints = false
         electricalVariablesSegment.tintColor = UIColor.con100tBlueColor
         electricalVariablesSegment.addTarget(self, action: #selector(changeElectricalVariable), for: .valueChanged)
@@ -53,7 +52,7 @@ class HistoricalChartOfActitivyViewController:UIViewController{
         setupCharDataManager()
         
         view.addSubview(chartView)
-        requestRecordFor(electricalVariable: .potenciaActiva)
+        requestRecordFor(electricalVariable: .voltaje)
         view.layoutIfNeeded()
     }
     func setupCharDataManager(){
@@ -62,6 +61,13 @@ class HistoricalChartOfActitivyViewController:UIViewController{
     
     @objc func changeElectricalVariable(segment:UISegmentedControl){
         let index = segment.selectedSegmentIndex + 1
+        print("indicito")
+
+
+
+
+
+        print(index)
         
         switch index {
         case 1:

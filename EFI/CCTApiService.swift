@@ -469,7 +469,7 @@ final class CCTApiService {
         
         
         let parameters = LocationsListRequestParameters()
-       
+        
         request.httpBody = encodeToJson(parameters: parameters)
         
         
@@ -495,7 +495,7 @@ final class CCTApiService {
         }
         
         task.resume()
-
+        
     }
     
     
@@ -582,6 +582,48 @@ final class CCTApiService {
         }
         
         task.resume()
+    }
+    
+    func energyConsumptionfor(location:Location? ,completion: @escaping (_ results: EnergyConsumption?, _ error: Error?) -> ()) {
+        components.path = "/api/ios/v1/consumo/localizacion"
+        
+        guard let url = components.url else { fatalError("Could not create URL from components") }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        request.allHTTPHeaderFields = headers
+        
+        var parameters = EnergyConsumptionRequestParameters()
+        parameters.ClaveLocalizacion = location?.Clave!
+        
+        request.httpBody = encodeToJson(parameters: parameters)
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) { (responseData, response, responseError) in
+            
+            DispatchQueue.main.async {
+                guard let data = responseData else {
+                    completion(nil,responseError)
+                    return
+                }
+                
+                do {
+                    
+                    let instantActivityResponse = try JSONDecoder().decode(EnergyConsumptionResponse.self, from: data)
+                    completion(instantActivityResponse.Respuesta,nil)
+                    
+                    
+                } catch let jsonErr {
+                    print(jsonErr)
+                }
+            }
+        }
+        
+        task.resume()
+        
     }
 }
 

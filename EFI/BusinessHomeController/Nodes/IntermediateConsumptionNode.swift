@@ -15,7 +15,7 @@ class IntermediateConsumptionNode:CCTNode {
     let titleTextNode:CTTTextNode!
     
     override init() {
-        kwTextNode = CTTTextNode(withFontSize: 40, color: UIColor.lightGray, with: "82,263")
+        kwTextNode = CTTTextNode(withFontSize: 30, color: UIColor.lightGray, with: "82,263")
         titleTextNode = CTTTextNode(withFontSize: 15, color: UIColor.black, with: "Intermedia")
         
         super.init()

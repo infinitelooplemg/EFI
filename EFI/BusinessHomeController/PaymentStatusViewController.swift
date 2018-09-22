@@ -13,6 +13,15 @@ class PaymentStatusViewController:UIViewController {
     var node:BusinessHomeNode!
     weak var networkService:CCTApiService?
     
+    init(energyConsumption:EnergyConsumption) {
+        super.init(nibName: nil, bundle: nil)
+         node = BusinessHomeNode(locationNodeDelegate: self, consumption: energyConsumption)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -20,8 +29,8 @@ class PaymentStatusViewController:UIViewController {
     }
     
     func setupViews(){
-        title = "Estado de Cuenta"
-        node = BusinessHomeNode(locationNodeDelegate: self)
+        title = "Energía"
+       
         navigationController?.navigationBar.isTranslucent = false
         
         view.backgroundColor = UIColor.con100tBackGroundColor
